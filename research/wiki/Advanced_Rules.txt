@@ -1,0 +1,113 @@
+''Courtesy of Ximane: Last updated: 27 November, 2015''<br>
+''[http://www.ghoxssocks.com/2014/06/ximane-advanced-solforge-rulebook/ Ximane’s Advanced SolForge Rulebook v5.0]''
+
+==Miscellaneous Definitions==
+''Triggered Ability'': any ability that automatically activates when a certain condition is met. Triggered abilities begin with “When…” Ex: {{cardtt|Fell Walker}}, {{cardtt|Vengeful Spirit}}, {{cardtt|Wildwood Sower}}, {{cardtt|Crypt Conjurer}}, {{cardtt|Flameshaper Savant}}, {{cardtt|Ashurian Mystic}}, {{cardtt|Ether Hounds}}
+
+''Basic Spell Resolution'': Whenever a creature or spell is played, that card always resolves before anything else. This means that, for example, a {{cardtt|Ferocious Roar}} cast on a {{cardtt|Wildwood Sower}} will never buff the {{cardtt|Sapling}} that gets made by the Sower, because the Roar finishes resolving before the Sower’s triggered ability happens. Note that the Forge ability that reads “When NN enters the field from your hand.” are actually triggered abilities triggered by the creature resolving, and so do NOT necessarily resolve before other abilities triggered by the creature entering the field.
+
+==Batching==
+
+''Batch'': a set of triggered abilities that were all triggered by the same event (usually a creature or spell being played). Creature and player death is only checked at the end of a batch. 
+
+''Death Check'': All creatures with 0 or lower health at the end of a batch are removed from the board in a random order (but all are removed before any abilities triggered by them dying happen), and if either player has 0 or lower life, the player with the lowest life loses the game.  If both players have the same 0 or lower life total, the game goes to Sudden Death mode, where play continues until one player has a lower life total at the end of a turn.  This can result in one player losing at a positive life total, if both players gained life.
+
+When a creature is killed by a spell that directly destroys that creature ({{cardtt|Cull the Weak}}, {{cardtt|Glacial Crush}}, {{cardtt|Dissolve}}), the batch that forms includes any abilities triggered by the casting of the spell and any abilities triggered by the creature dying ({{cardtt|Grimgaunt Devourer}}, {{cardtt|Death Seeker}}).  When a creature is killed by a spell that doesn’t say it destroys a creature ({{cardtt|Seal of Tarsus}}, {{cardtt|Lightning Spark}}), the creature doesn’t die until the end of the batch formed by the spell, and so any on-death abilities it may trigger resolve in a batch immediately following the spell’s batch.
+
+During a death check at the end of a batch, creatures die in the order in which they were killed within a batch.  For example, if {{cardtt|Lightning Spark}} kills a creature with 5 health, and {{cardtt|Flamebreak Invoker}} kills another creature from the trigger, the creature killed by {{cardtt|Lightning Spark}} will die first, then the creature killed by the Invoker.  If two Invokers are on the field facing a creature with 5 health, a creature with 2 health, and a creature with 1 health, and the Spark is played on the creature with 5 health, at the end of the batch, it dies, then the creature with 1 health, then the creature with 2 health.  However, none of these creatures’ on-death abilities can save them from dying at the end of this batch.
+
+Within a batch, abilities resolve in this order: 
+#Active player’s untargeted abilities
+#Non-active player’s untargeted abilities 
+#Active player’s targeted abilities 
+
+For example, if the non-active player has an {{cardtt|Anvillon Arbiter}} in play, its ability (non-active, untargeted ability) will resolve before anything that requires a target (like playing a {{cardtt|Technosmith}}, which targets a card in your hand), but after abilities that don’t require a target (like allied triggers).
+
+This also affects combat situations such as a {{cardtt|Vengeful Spirit}} and a {{cardtt|Fell Walker}} killing each other in combat. If the {{cardtt|Vengeful Spirit}} is controlled by the active player, it will trigger first, doing nothing because there is no creature in the opponent’s lane. If the {{cardtt|Fell Walker}} is controlled by the active player, its ability will trigger first, creating a 3/3 Zombie, then the {{cardtt|Vengeful Spirit|Vengeful Spirit's}} ability will trigger, killing the Zombie as well.
+
+When a batch has more than one triggered ability in the same group above, these abilities resolve in a random order: For example, if a player plays a level 1 {{cardtt|Spring Dryad}} followed by a level 2 {{cardtt|Weirwood Patriarch}} (WWP), half the time the {{cardtt|Spring Dryad|Spring Dryad’s}} ability buffs it to a 4/4 and the WWP’s ability does nothing (because the Dryad has over 3 attack); the other half of the time, the WWP’s ability buffs the Dryad to a 5/5, and then the Dryad’s ability buffs it to a 6/6. Likewise, if the player has a {{cardtt|Lifeshaper Savant}} 2 out and plays an {{cardtt|Ether Hounds}}, half the time that player will have the option to buff the copy of {{cardtt|Ether Hounds}}, and half the time the second Hounds won’t spawn until after the Lifeshaper’s trigger.
+
+In most cases, the rule about creature death only happening at the end of a batch makes the random ordering completely unimportant. For example, when a {{cardtt|Grimgaunt Predator}} (GGP) battles a {{cardtt|Vengeful Spirit}}, the end result is always a 4/1 GGP. The Spirit always hits the GGP down to a 5/2, and then when it dies, it triggers two abilities, its own -3/-3 and the GGP’s +2/+2. Even if the Spirit’s ability happens first, making the GGP a 2/-1, it won’t die until the end of the batch, so it will still be buffed back up to a 4/1 before the game checks to see if it’s dead.
+
+Replacement abilities resolve in the same batch as enters the field abilities: If you replace a {{cardtt|Spiritstone Druid}} with a {{cardtt|Brimstone Tyrant}}, both effects resolve in the same batch (and so in a random order).  Half the time, the spirits will die to the Tyrant, the other half they will spawn after the Tyrant’s damage. 
+
+If a random spawn triggers before a fixed spawn, and randomly chooses to spawn in the same space as the fixed spawn, the fixed spawn will not appear: Multiple creature spawns at the same time can sometimes cause issues if one of the spawns is in a fixed lane (ex: {{cardtt|Fell Walker}}) and another spawn is in a random empty lane (ex: level 3 {{cardtt|Zimus, the Undying}}). If all spawns are random, there is no problem, they just keep picking empty lanes until lanes are full. If all spawns are into the same spot they died, they obviously aren’t going to conflict.  But if, for example, a Zimus 3 and {{cardtt|Fell Walker}} die in the same combat, half the time, Zimus will randomly be determined to spawn first, and if it does so, it could randomly spawn in Fell Walker’s space. If this happens, the Zombie from {{cardtt|Fell Walker}} will not spawn.
+
+Likewise, if a creature moves into a space where a fixed spawn is set to appear ({{cardtt|Xithian Shambler|Xithian Shambler’s}} ability is the only way to do this right now), the fixed spawn will not appear.
+
+==Phases in a turn==
+#Start of turn (A batch forms here with all start of turn effects.  For example, {{cardtt|Ghox, Metamind Paragon}} and {{cardtt|Shardplate Mutant}} will sometimes leave you with 2 cards, sometimes with 3.)
+#Main phase 1 (Spells and creatures may be played.)
+#Combat (three separate batches, more on this in the Combat section)
+#Main phase 2 (Spells and creatures may be played.)
+#Discard your hand.  If your rank has gone up, your discard pile is shuffled back into your deck.
+#End of turn ({{cardtt|Brightsteel Gargoyle}}, {{cardtt|Venomous Netherscale}}) and rank up effects. (These go into the same batch.)  {{cardtt|Avalanche Invoker}} and a wounded {{cardtt|Runegrove Guardian}} always leaves the {{cardtt|Runegrove Guardian}} alive because death isn’t checked until both these effects happen, but {{cardtt|Avalanche Invoker}} will randomly either deal 1 or 3 damage to {{cardtt|Brightsteel Gargoyle}}.
+#Effects that last until end of turn wear off ({{cardtt|Witherfrost Succubus|Witherfrost Succubus'}} effect always ends after the batch where {{cardtt|Avalanche Invoker}} deals damage).  Draw 5 new cards.
+
+Poison and Regeneration: Poison happens first, but both happen in the same batch so death isn't checked until after the Regenerate has applied.
+
+==Reshuffling==
+
+Two effects can cause your discard pile to be shuffled into your deck.  The most common is rank up.  When you rank up, every card in your deck is shuffled into your library, including the cards in your previous hand (which is discarded before rank up happens).
+
+Your discard is also shuffled into your deck if you would draw cards but have none left in your deck.  This happens immediately upon trying to draw a card with no cards left in your deck.  If an effect causes you to draw more cards than there are in your deck, you draw the remaining cards in your deck, then your discard is shuffled into your deck, then the rest of the cards are drawn.  The card used to draw more cards is added to your discard pile upon resolution.  This means that {{cardtt|Energy Surge}} cannot draw itself because the draw happens during resolution, and then the card is added to the discard pile, but {{cardtt|Metamind Adept}} can because it is added to the discard pile when played, and then its enters the field ability triggers to draw the cards.
+
+Cards that are a higher level than you are not returned to your deck during a reshuffle.  They remain in the discard pile.
+
+==Static and Stat-Altering Effects==
+
+''Static Ability'': a creature ability that is always active.  The most common of these are Alloyin attack-boosting effects ({{cardtt|Alloyin General}}, {{cardtt|Battle Techtician}}, but also level 4 {{cardtt|Oros, Deepwood's Chosen}} and {{cardtt|Shardplate Behemoth}}).  If multiple static abilities are affecting the same creature, they are applied in left to right order.  For example, if a {{cardtt|Shardplate Behemoth}} is to the left of an {{cardtt|Alloyin General}}, its ability first makes its attack equal to its health, then the {{cardtt|Alloyin General|Alloyin General’s}} ability boosts its attack, which gives it 2 more attack than health.  If the Behemoth is on the right of the General, the General boosts its attack, and then its attack is set to its health, effectively negating the General’s ability.
+
+''Stat-Altering and Stat-Dependent Effects'': Health and attack boosts caused by static abilities are treated no differently than more permanent effects such as {{cardtt|Heavy Artillery}} or {{cardtt|Enrage}}, or temporary effects such as {{cardtt|Abraxas, Avatar of Kadras}} and {{cardtt|Call the Lightning}}.  Cards and abilities that care about a creature’s health or attack ({{cardtt|Trial by Combat}}, {{cardtt|Wildfire Maiden}}) only care about that creature’s current stats, regardless of how permanent those stats are.  In addition, when stat-altering effects end (such as end of turn or when the creature is no longer in a lane), they cause the inverse effect, whether or not that stat boost is still present.  For example, if you use Abraxas’ ability on {{cardtt|Wildfire Maiden}} to boost its attack to 8, then use the {{cardtt|Wildfire Maiden|Wildfire Maiden’s}} ability, it will deal 8 damage and go down to 0 attack, then at the end of the turn it will go down to -4 attack when Abraxas’ ability ends.  {{cardtt|Nexus Aeronaut}} moving into and out of the middle lane will lead to a similar result.
+
+==Combat==
+
+''Mechanics of Battle'': Three separate batches happen when you press the battle button.  First, all creatures not on the defensive deal damage to the creature across from them (or the player if there isn't a creature there), and all creatures on the defensive attacked in this way deal damage equal to their attack back. Damage is dealt in left to right order, so {{cardtt|Barrier Soldier|Barrier Soldier’s}} player armor will prevent damage from the leftmost creature first (which may impact triggers like {{cardtt|Oratek Explosives}} or Oros’s ability), but it all still happens in the same batch.  Death is checked right now (but effects caused by creature death will come later, and effects triggered by battle damage still resolve even if the creature dies). Next, a batch of all abilities triggered by damage ({{cardtt|Ashurian Mystic}}, {{cardtt|Riftlasher}}, {{cardtt|Oros, Deepwood's Chosen}}, {{cardtt|Cinderfist Brawler}}, etc.) resolve, and then death is checked again. Last, abilities triggered by creatures dying resolve ({{cardtt|Grimgaunt Predator|GGP}}, {{cardtt|Grimgaunt Devourer|GGD}}, {{cardtt|Death Seeker}}, {{cardtt|Dr. Frankenbaum}}, etc.), also in a batch.
+
+''Player Death During Combat'': Because player death is checked at the same time as creature death, this means that Oros's life gain can’t save you from dying if the initial attack would kill. It will, however, save you from the extra damage when a {{cardtt|Cinderfist Brawler}} hits you. {{cardtt|Cinderfist Brawler|Cinderfist Brawler’s}} extra damage will, in turn, kill a player before {{cardtt|Glowhive Siren}} can heal that player, and {{cardtt|Riftlasher|Riftlasher's}} or {{cardtt|Flameblade Champion|Flameblade Champion’s}} abilities can kill a {{cardtt|Grimgaunt Devourer}} before it gets the buffs from creature deaths.
+
+''Extra Battles'': The game does not regularly check to see if you have extra battles.  Only a few effects check this: playing {{cardtt|Staff of Vaerus}}, playing {{cardtt|Call the Lightning}}, playing any spell with {{cardtt|Kas, Arcweaver}} on the field, having a creature with extra battles ({{cardtt|Zyx, Storm Herald}}, {{cardtt|Saberfang}}, or a creature affected by Staff/CtL3) on the field when you battle, and playing a creature with extra battles.  If there are no creatures that can battle additional times when this effect happens, you don't get any additional battles that turn unless a later effect forces another recheck.  As a result, playing a creature without aggressive, battling, then playing {{cardtt|Staff of Vaerus}} followed by {{cardtt|Lightning Brand}} does not let you battle additional times, but playing the {{cardtt|Lightning Brand}} first, followed by the Staff does.
+
+A creature that was on the defensive through combat but then loses defensive later in the turn gets to essentially "redo" its primary battle step if you play an effect that checks for extra battles.  A creature that wasn't on the field during the primary battle step doesn't get to, even if the game checks for new battle steps.  From the previous example, playing the creature before battle leads to 2 extra battle steps, while playing the creature after the normal battle leads to only a single extra battle step.
+
+The game makes an extra battle check as soon as the first step of combat resolves.  This is where it sees if there are any creatures with extra battles on the field.  If a creature death as a result of battle damage causes an extra battle, that battle will happen.  This can happen if a static ability activates aggressive, such as {{cardtt|Lavafused Asir}Lavafused Asir’s}} bonus granting level 3 {{cardtt|Hinterland Watchman}} aggressive after the creature across from the Watchman dies in combat.  This does not happen off of any triggered abilities from combat such as {{cardtt|Glowhive Siren}} dying to pump {{cardtt|Wegu, the Ancient}} over its attack threshold or {{cardtt|Rite of the Grimgaunt}} boosting level 3 {{cardtt|Hinterland Watchman}} to 20 or more attack. 
+
+==Card Errata==
+
+''Level 4 {{cardtt|Cercee, Hand of Varna}}'': Her ability chooses how much damage to deal when it resolves.  This means that if one player has a Cercee hitting the opponent, and the other player has an Oros gaining life, the game is decided by whose turn it is.  If Cercee is on the active player's side, her ability triggers first, bringing the non-active player down to 0 life, then Oros gains life in the same batch, so the result is that the non-active player ends up with total life equal to the amount that Oros gained.  If Cercee is on the side of the non-active player, Oros gains life first, then Cercee kills the player.  Glowhive Siren, being a creature death effect, cannot save the player from Cercee, since its effect is in the next batch.
+
+''{{cardtt|Dr. Frankenbaum}} and {{cardtt|Yuru, the Necrosage}}'': Both Frankenbaum and Yuru always trigger off of every valid creature that dies at the same time as them, including in combat.  However, they only trigger off of creatures that die before or at the same time as them during a death check, even if another creature dies in the same death check.  See rules on death checks.
+
+''{{cardtt|Grimgaunt Doomrider}}'': This card merits its own section because of how unusual its ability is.  When a creature dies on its side of the field, its ability triggers.  If, when its ability resolves, the space that creature died in is available, the creature across from that space gets a debuff.  If Doomrider is still alive at this point (which may not be the case if it died in the same batch but after the creature it’s triggering off of), it moves to the dead creature’s space and gets its buff.  Like {{cardtt|Storm Bringer}}, if it’s dead at this point, it will not trigger {{cardtt|Fervent Assault}} or {{cardtt|Frostfang Maiden}}; but unlike {{cardtt|Storm Bringer}}, it will also not move to the new space.
+
+In cases where the Doomriders are alive when their abilities resolve, if multiple Doomriders trigger off of the same death, only one of them (chosen at random) will be able to move, debuff, and buff itself.  Also note that, like everything else, the active player’s Doomrider triggers will resolve before the inactive player’s.
+
+If Doomrider’s effect resolves after it has died, it will give the debuff, but nothing else will happen.  If, for example, a {{cardtt|Burnout}} kills a creature, and {{cardtt|Flamebreak Invoker}} triggers kill two Doomriders in the same batch, because the other creature dies first, the two Doomriders will both trigger, and after they have died, their abilities will resolve.  Because the space is available and neither Doomrider is alive to move into it, the creature across from it will get debuffed by both Doomriders.
+
+''{{cardtt|Restless Wanderers|Restless}}/{{cardtt|Ruthless Wanderers}}'': Currently only trigger when another Spirit Wanderer you control enters the field from your hand, not for any other reason (such as revival effects).
+
+''{{cardtt|Storm Bringer}} and Poison'': The movement effect on {{cardtt|Storm Bringer}} happens at the start of the turn, in a batch with all other effects that happen then.  Even if {{cardtt|Storm Bringer}} dies from poison or from {{cardtt|Woebringer}}, it moves as long as there’s an available lane.  The damage effect, however, doesn’t trigger if the {{cardtt|Storm Bringer}} doesn’t survive this batch.
+
+==Revival Effects==
+
+''{{cardtt|Lyria, Muse of Varna}}'': Lyria can make a copy of any creature that has died. Every time a creature dies (even level 3 {{cardtt|Zimus, the Undying}} dying), another copy of that creature is added to the list of creatures Lyria can copy, and so increases the chances that it will be brought back. At level 3, Lyria’s ability brings back up to 4 creatures in a random order, so if it were to bring back 4 copies of {{cardtt|Spring Dryad}}, they would be (in a random order) a 4/4, 5/5, 6/6, and 7/7.  Lyria 3 can also copy the same creature more than once.
+
+''{{cardtt|Varna's Pact}}'': Pact draws from the same pool as Lyria when choosing what to make a copy of. Unlike Lyria, however, Pact brings back creatures simultaneously. So if Pact 3 brings back 3 {{cardtt|Spring Dryad|Spring Dryads}}, they will all be 6/6s.
+
+''{{cardtt|Tarsus Deathweaver}}'': If multiple Deathweavers enter the field not from your hand simultaneously (i.e. through {{cardtt|Varna’s Pact}}), they will buff each other, just like {{cardtt|Spring Dryad|Spring Dryads}}.  They will also buff other creatures that enter the field at the same time.
+
+''{{cardtt|Suruzal, Emissary of Varna}}'': Suruzal’s ability functions intuitively.  The targeted creature is destroyed, then a new copy of it is put into a random lane.  Note that these effects both happen in the same batch.  {{cardtt|Grimgaunt Doomrider|Grimgaunt Doomrider’s}} ability, for instance, will never conflict with the respawn because the new creature will always appear before Doomrider’s ability resolves, so if the creature spawns in the same lane, Doomrider will never move, otherwise it will always move.
+
+==Free Spells==
+
+(testing still in progress)
+
+If left with multiple restricted free actions ({{cardtt|Master of Elements}}, {{cardtt|Ashurian Flamesculptor}}, etc.), the game will first use the ability with the highest level restriction (MoE/Sculptor 3 before MoE/Sculptor 2), but if the free actions have the same level restriction, the system will use the first one cast first.
+
+{{cardtt|Static Shock}} makes free spells wonky.  As far as I can tell, it’s consistent (will always do the same thing if you perform the same set of actions), but it behaves differently according to a set of seemingly arbitrary conditions such as: level of {{cardtt|Static Shock}}, different vs. same restrictions on free spells (MoE + MoE vs. MoE + Sculptor, even of the same level), and level difference between the Static Shock and its restriction.
+
+In brief, try to use the free actions you’ve accrued before playing cards that give you more.
+
+Thanks go to KonanTheBarbarian, Steric, Caitiri, and Djurre for helping with testing and for finding new things to test.
+[[Category:Pages needing content]]
+[[Category:Rules]]

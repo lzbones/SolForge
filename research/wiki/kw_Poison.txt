@@ -1,0 +1,6 @@
+[[File:Poi1.png|right]]
+
+==Description==
+At the start of each turn, a creature or player with Poison X is dealt X damage.
+
+Poison is a form of recurring damage which can be inflicted on a creature or player. At the beginning of each turn, a creature or player that has Poison takes damage equal to the amount of Poison it has. Since Poison is a form of damage, it can be prevented by [[Armor]] and will trigger damage based effects like those on [[Necromoeba]] or [[Dozer, the Dormant]]. Poison will 

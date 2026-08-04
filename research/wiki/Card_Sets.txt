@@ -1,0 +1,152 @@
+{|
+!style="text-align: center;"|Number
+!Name
+!Symbol
+!Release Date
+!Total Cards
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|-
+|style="text-align: center;"|[[Set 1|1.0]]
+|''Alpha''
+| rowspan="2" style="text-align: center;"|[[File:Common set1.png|28px]]
+|
+|style="text-align: center;"|184
+|-
+|style="text-align: center;"|[[Set 1.5|1.5]]
+|
+
+|
+|style="text-align: center;"|24
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|-
+|style="text-align: center;"|[[Set 2|2.0]]
+|''Rise of the Forgeborn''
+|rowspan="4" style="text-align: center;"|[[File:Common set2.png|28px]]
+|March 21, 2014
+|style="text-align: center;"|100
+|-
+|style="text-align: center;"|[[Set 2.1|2.1]]
+|''Rise of the Forgeborn: Patch 2.1''
+
+|May 12, 2014
+|style="text-align: center;"|20
+|-
+|style="text-align: center;"|[[Set 2.2|2.2]]
+|''Rise of the Forgeborn: Patch 2.2''
+
+|June 13, 2014
+|style="text-align: center;"|20
+|-
+|style="text-align: center;"|[[Set 2.3|2.3]]
+|''Rise of the Forgeborn: Patch 2.3''
+
+|July 15, 2014
+|style="text-align: center;"|16
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|-
+|style="text-align: center;"|[[Set 3|3.0]]
+|''Secrets of Solis''
+|rowspan="2" style="text-align: center;"|[[File:Common set3.png|28px]]
+|August 19, 2014
+|style="text-align: center;"|60
+|-
+|style="text-align: center;"|[[Set 3.1|3.1]]
+|''Secrets of Solis: Unveiled''
+
+|September 22, 2014
+|style="text-align: center;"|7
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|-
+|style="text-align: center;"|[[Set 4|4.0]]
+|''Imprisoned Heralds''
+|rowspan="3" style="text-align: center;"|[[File:Common set4.png|28px]]
+|November 11, 2014
+|style="text-align: center;"|60
+|-
+|style="text-align: center;"|[[Set 4.1|4.1]]
+|''Imprisoned Heralds: Unchained''
+
+|December 16, 2014
+|style="text-align: center;"|8
+|-
+|style="text-align: center;"|[[Set 4.2|4.2]]
+|''Imprisoned Heralds: Arisen''
+
+|January 15, 2015
+|style="text-align: center;"|8
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|-
+|style="text-align: center;"|[[Set 5|5.0]]
+|''Reign of Varna''
+|rowspan="3" style="text-align: center;"|[[File:Common set5.png|28px]]
+|Febuary 25, 2015
+|style="text-align: center;"|48
+|-
+|style="text-align: center;"|[[Set 5.1|5.1]]
+|''Reign of Varna: Darkness Rising''
+
+|March 30, 2015
+|style="text-align: center;"|8
+|-
+|style="text-align: center;"|[[Set 5.2|5.2]]
+|''Reign of Varna: Immortal King''
+
+|May 27, 2015
+|style="text-align: center;"|4
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|-
+|style="text-align: center;"|[[Set 6|6.0]]
+|''Darkforge Uprising''
+|rowspan="3" style="text-align: center;"|[[File:Common set6.png|28px]]
+|June 28, 2015
+|style="text-align: center;"|48
+|-
+|style="text-align: center;"|[[Set 6.1|6.1]]
+|''Darkforge Uprising: Factions United''
+
+|August 13, 2015
+|style="text-align: center;"|8
+|-
+|style="text-align: center;"|[[Set 6.2|6.2]]
+|''Darkforge Uprising: Prelude to War''
+
+|September 24, 2015
+|style="text-align: center;"|8
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|-
+|style="text-align: center;"|[[Set 7|7.0]]
+|''Raiders Unchained''
+|style="text-align: center;"|
+|May 31, 2016
+|style="text-align: center;"|48
+|-
+|style="text-align: center;"|[[Set 7.1|7.1]]
+|''Raiders Unchained: Front Line''
+|style="text-align: center;"|
+|July 21, 2016
+|style="text-align: center;"|8
+|-
+|style="text-align: center;"|[[Set 7.2|7.2]]
+|''Raiders Unchained: Ancient Grudge''
+|style="text-align: center;"|
+|September 22, 2016
+|style="text-align: center;"|8
+|-
+|style="text-align: center;"|[[Set 7.3|7.3]]
+|''Raiders Unchained: Rise to Power''
+|style="text-align: center;"|
+|November 14, 2016
+|style="text-align: center;"|8
+|-
+| colspan="5" style="padding: 2px; background: #262626;"|
+|}
+
+{{GameInfo}}
+[[Category:Pages needing content]]

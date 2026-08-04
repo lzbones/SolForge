@@ -1,0 +1,4 @@
+==Description==
+When this enters the field, it gets the ability listed after this keyword if it replaced a creature.
+
+Creatures that have been replaced to not go into the dead pile and will not count for cards like [[Varna's Pact]] or [[Immortal Echoes]].

@@ -1,0 +1,2 @@
+==Description==
+A Spawned creature enters play in a friendly available space at random.

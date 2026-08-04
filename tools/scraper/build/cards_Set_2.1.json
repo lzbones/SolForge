@@ -1,0 +1,735 @@
+{
+ "set": "Set_2.1",
+ "count": 20,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Aegis Knight",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}}<br>\n{{Forge}}: Each friendly creature deals damage equal to its {{Armor}} to the opposing creature.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|2}}<br>\n{{Forge}}: Each friendly creature deals damage equal to its {{Armor}} to the opposing creature.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|5}}<br>\n{{Forge}}: Each friendly creature deals damage equal to its {{Armor}} to the opposing creature.",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Aegis Knight 2.jpg",
+    "Aegis Knight 3.jpg"
+   ],
+   "altImages": [
+    "Aegis Knight AA 2.jpg",
+    "Aegis Knight AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Aether Root",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you play an Uterra spell, Aether Root gets +2 attack and +2 health.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "When you play an Uterra spell, Aether Root gets +3 attack and +3 health.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "When you play an Uterra spell, Aether Root gets +4 attack and +4 health.",
+     "attack": "10",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Aether Root 2.jpg",
+    "Aether Root 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Aetherforge Oracle",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may discard and level up a spell.",
+     "attack": "6",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may discard and level up a spell.",
+     "attack": "12",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may discard and level up a spell.",
+     "attack": "18",
+     "health": "6"
+    }
+   ],
+   "images": [
+    "Aetherforge Oracle 2.jpg",
+    "Aetherforge Oracle 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Avalanche Guardian",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ice Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}<br>\n{{Mobility|1}}",
+     "attack": "5",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}<br>\n{{Mobility|1}}",
+     "attack": "9",
+     "health": "15"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}<br>\n{{Mobility|1}}",
+     "attack": "15",
+     "health": "23"
+    }
+   ],
+   "images": [
+    "Avalanche Guardian 2.jpg",
+    "Avalanche Guardian 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Borean Mystic",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wind Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Move another friendly creature to an available space adjacent to Borean Mystic.",
+     "attack": "4",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Move another friendly creature to an available space adjacent to Borean Mystic.",
+     "attack": "8",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Move another friendly creature to an available space adjacent to Borean Mystic.",
+     "attack": "14",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Borean Mystic 2.jpg",
+    "Borean Mystic 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Chistlehearth Archer",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Deal 4 damage to an enemy creature with {{Mobility}}. {{Negate}} {{Mobility}} from that creature.",
+     "attack": "2",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Deal 8 damage to an enemy creature with {{Mobility}}. {{Negate}} {{Mobility}} from that creature.",
+     "attack": "5",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Deal 16 damage to an enemy creature with {{Mobility}}. {{Negate}} {{Mobility}} from that creature.",
+     "attack": "10",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Chistlehearth Archer 2.jpg",
+    "Chistlehearth Archer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cypien Battlesuit",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give an Alloyin creature gets +5 attack and {{Armor|1}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give an Alloyin creature gets +10 attack and {{Armor|2}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give an Alloyin creature gets +15 attack and {{Armor|4}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Cypien Battlesuit 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Everflame Mystic",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Giant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Everflame Mystic deals battle damage to a player on your turn, you may play an additional spell this turn.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When Everflame Mystic deals battle damage to a player on your turn, you may play two additional spells this turn.",
+     "attack": "8",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "When Everflame Mystic deals battle damage to a player on your turn, you may play three additional spells this turn.",
+     "attack": "13",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Everflame Mystic 2.jpg",
+    "Everflame Mystic 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Flowstone Primordial",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "6",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "7",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "15",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Flowstone Primordial 2.jpg",
+    "Flowstone Primordial 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nyrali Symbiote",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ooze"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If Nyrali Symbiote is opposed, it gets {{Regenerate|2}}.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If Nyrali Symbiote is opposed, it gets {{Regenerate|4}}.",
+     "attack": "10",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If Nyrali Symbiote is opposed, it gets {{Regenerate|6}}.",
+     "attack": "15",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Nyrali Symbiote 2.jpg",
+    "Nyrali Symbiote 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Oreian Fieldmarshal",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Each other friendly creature gets +1 attack.",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Each other friendly creature gets +3 attack.",
+     "attack": "9",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Each other friendly creature gets +5 attack.",
+     "attack": "14",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Oreian Fieldmarshal 2.jpg",
+    "Oreian Fieldmarshal 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Savage Oath",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give an Uterra creature +2 attack, +2 health, and {{Breakthrough}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give an Uterra creature +6 attack, +6 health, and {{Breakthrough}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give an Uterra creature +15 attack, +15 health, and {{Breakthrough}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Savage Oath 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Scatterspore Eidolon",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, {{Spawn}} a 3/3 {{cardtt|Seedling}}.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, {{Spawn}} a 5/5 {{cardtt|Sapling}}.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, {{Spawn}} a 7/7 {{cardtt|Treefolk}}.",
+     "attack": "8",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Scatterspore Eidolon 2.jpg",
+    "Scatterspore Eidolon 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spirit Torrent",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 2.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature {{Regenerate|2}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nGive a creature {{Regenerate|3}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nGive a creature {{Regenerate|4}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Power Torrent 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spiritbloom Dryad",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dryad"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Each player gains +4 health.",
+     "attack": "6",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Each player gains +6 health.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Each player gains +8 health.",
+     "attack": "12",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Spiritbloom Dryad 2.jpg",
+    "Spiritbloom Dryad 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spitesower Acolyte",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}, Deal 2 damage to Spitesower Acolyte: Give a creature −2 attack and −2 health.",
+     "attack": "2",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}, Deal 4 damage to Spitesower Acolyte: Give a creature −4 attack and −4 health.",
+     "attack": "3",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}, Deal 6 damage to Spitesower Acolyte: Give a creature −6 attack and −6 health.",
+     "attack": "4",
+     "health": "22"
+    }
+   ],
+   "images": [
+    "Spitesower Acolyte 2.jpg",
+    "Spitesower Acolyte 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Tarsian Pact",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a Nekrium creature +2 attack, +2 health, and {{Regenerate|2}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a Nekrium creature +3 attack, +3 health, and {{Regenerate|3}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a Nekrium creature +5 attack, +2 health, and {{Regenerate|5}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Tarsian Pact 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Tremorcharge",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 2.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a Tempys creature +4 health and {{Mobility|1}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a Tempys creature +8 health and {{Mobility|2}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a Tempys creature +12 health and {{Mobility|3}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Tremorcharge 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Vyric Ebonskull",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Vampire"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Vyric deals battle damage to a player, destroy an enemy level 1 creature at random.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "When Vyric deals battle damage to a player, destroy an enemy level 2 or lower creature at random.",
+     "attack": "7",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "When Vyric deals battle damage to a player, destroy an enemy creature at random. Then {{Spawn}} a copy of that creature.",
+     "attack": "13",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Vyric Ebonskull 2.jpg",
+    "Vyric Ebonskull 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "War Merchant",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 2.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}<br>\n{{Activate}}: Target creature in the center space gets +4 attack.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}<br>\n{{Activate}}: Target creature in the center space gets +6 attack.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}<br>\n{{Activate}}: Target creature in the center space gets +8 attack.",
+     "attack": "8",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "War Merchant 2.jpg",
+    "War Merchant 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

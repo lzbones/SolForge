@@ -1,0 +1,10 @@
+[[File:Fre1.png|right]]
+
+==Description==
+A free card does not count towards your two card plays per turn.
+
+However, if you discard a Free card to level it, it will count towards one of your two plays, just like a non-free card. The Free keyword applies only to playing the card, not discarding it. Cards can only be discarded for free if you have been granted additional plays by cards like [[Master of Elements]] or [[Bramblewood Tracker]].
+
+==Card List==
+The following cards have the Free keyword.
+

@@ -1,0 +1,11 @@
+import "./shared.js";
+import "./set1.js";
+import "./set1-alloyin.js";
+import "./set1-nekrium.js";
+import "./set1-tempys.js";
+import "./set1-uterra.js";
+import "./set15.js";
+import "./set2-alloyin.js";
+import "./set2-nekrium.js";
+import "./set2-tempys.js";
+import "./set2-uterra.js";

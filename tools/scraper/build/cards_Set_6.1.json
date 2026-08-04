@@ -1,0 +1,245 @@
+{
+ "set": "Set_6.1",
+ "count": 8,
+ "skipped": [
+  "Set 6.1"
+ ],
+ "cards": [
+  {
+   "name": "Enduring Vitality",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 6.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Overload}} <br>\nYou get, \"When a friendly Uterra creature enters play, it gets +1 attack and +1 health.\"",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Enduring Vitality 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ice Grasp",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 6.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Overload}}<br>\nYou get, \"When you play a Tempys spell, deal 2 damage to the enemy player.\"",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Ice Grasp 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Infernal Ritual",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 6.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Overload}} <br>\nYou get, \"Each friendly Nekrium creature in a side space gets {{Regenerate|2}}.\"",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Infernal Ritual 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nexus Bubble",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 6.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Overload}} <br>\nYou get, \"Friendly Alloyin creatures in the center space get {{Armor|3}}.\"",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Nexus Bubble 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Patron of Anvillon",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 6.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Cyborg"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If you have three or more Alloyin cards in your hand, give a level 1 creature 2x attack.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If you have three or more Alloyin cards in your hand, give a level 2 or lower creature 2x attack.",
+     "attack": "6",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If you have three or more Alloyin cards in your hand, give a creature 2x attack.",
+     "attack": "9",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Patron of Anvillon 2.jpg",
+    "Patron of Anvillon 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Patron of Deepwood",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 6.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If you have three or more Uterra cards in your hand, you may put a copy of Patron of Deepwood into an adjacent space.",
+     "attack": "7",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If you have three or more Uterra cards in your hand, you may put a copy of Patron of Deepwood into an adjacent space.",
+     "attack": "10",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If you have three or more Uterra cards in your hand, you may put a copy of Patron of Deepwood into an adjacent space.",
+     "attack": "16",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Patron of Deepwood 2.jpg",
+    "Patron of Deepwood 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Patron of Kadras",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 6.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Earth Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If you have three or more Tempys cards in your hand, each friendly creature gets +4 attack this turn.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If you have three or more Tempys cards in your hand, each friendly creature gets +8 attack this turn.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If you have three or more Tempys cards in your hand, each friendly creature gets +12 attack this turn.",
+     "attack": "12",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Patron of Kadras 2.jpg",
+    "Patron of Kadras 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Patron of Tarsus",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 6.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Demon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If you have three or more Nekrium cards in your hand, each enemy creature gets -1 attack and -1 health.",
+     "attack": "5",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If you have three or more Nekrium cards in your hand, each enemy creature gets -3 attack and -3 health.",
+     "attack": "9",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If you have three or more Nekrium cards in your hand, each enemy creature gets -6 attack and -6 health.",
+     "attack": "14",
+     "health": "11"
+    }
+   ],
+   "images": [
+    "Patron of Tarsus 2.jpg",
+    "Patron of Tarsus 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

@@ -1,0 +1,8 @@
+[[File:Reg1.png|right]]
+
+==Description==
+At the start of each turn, a creature with Regenerate X heals X damage from itself.
+
+A creature cannot Regenerate health above their starting health stat. If a creature's health is increased with an effect such as [[Enrage]], they can regenerate up to their new starting health stat, which will be equal to their starting health plus the health gained from [[Enrage]]. 
+
+Regenerate stacks, meaning that if two effects add Regenerate to a creature, the final R

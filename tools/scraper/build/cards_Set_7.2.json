@@ -1,0 +1,291 @@
+{
+ "set": "Set_7.2",
+ "count": 8,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Avarice, the Insatiable",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 7.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}} <br>\n{{Forge}}: Discard down to one card at random. You may play an additional spell this turn.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}} <br>\n{{Forge}}: Discard down to one card at random. You may play an additional spell this turn.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}} <br>\n{{Forge}}: You may play an additional spell this turn.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Avarice, the Insatiable 2.jpg",
+    "Avarice, the Insatiable 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Blazing Hostility",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 7.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 6 damage to an enemy creature. If that creature is Nekrium, deal 6 damage to the enemy player as well.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 9 damage to an enemy creature. If that creature is Nekrium, deal 9 damage to the enemy player as well.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 20 damage to an enemy creature. If that creature is Nekrium, deal 20 damage to the enemy player as well.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Blazing Hostility 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Bottomless Puncture",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 7.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give an enemy creature {{Poison|3}}. If that creature is Tempys, give the enemy player {{Poison|1}} as well.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give an enemy creature {{Poison|6}}. If that creature is Tempys, give the enemy player {{Poison|2}} as well.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give an enemy creature {{Poison|9}}. If that creature is Tempys, give the enemy player {{Poison|3}} as well.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Bottomless Puncture 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Death's Possession",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 7.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Destroy an enemy creature with 4 or less attack. If that creature is Alloyin, {{Spawn}} a copy of it.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Destroy an enemy creature with 8 or less attack. If that creature is Alloyin, {{Spawn}} a copy of it.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Destroy an enemy creature with 12 or less attack. If that creature is Alloyin, {{Spawn}} a copy of it.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Death's Possession 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Frontline Combatant",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 7.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{armor|4}} <br>\n{{Forge}}: You may have Frontline Combatant deal damage equal to its Armor to an enemy creature. If you do, that creature deals damage equal to its attack back to Frontline Combatant.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{armor|6}} <br>\n{{Forge}}: You may have Frontline Combatant deal damage equal to its Armor to an enemy creature. If you do, that creature deals damage equal to its attack back to Frontline Combatant.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{armor|12}} <br>\n{{Forge}}: You may have Frontline Combatant deal damage equal to its Armor to an enemy creature. If you do, that creature deals damage equal to its attack back to Frontline Combatant.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Frontline Combatant 2.jpg",
+    "Frontline Combatant 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Murderous Necromancer",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 7.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, {{Spawn}} a random level 1 creature that was destroyed this game.",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, {{Spawn}} a random level 2 or lower creature that was destroyed this game.",
+     "attack": "10",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, {{Spawn}} a random creature that was destroyed this game. If that creature is opposed, destroy the creature opposing it.",
+     "attack": "17",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Murderous Necromancer 2.jpg",
+    "Murderous Necromancer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Primeval Ancient",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 7.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the end of your turn, you gain 3 health. <br>\n{{Forge}}: If there are no enemy creatures, {{Spawn}} a copy of this.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "At the end of your turn, you gain 4 health. <br>\n{{Forge}}: If there are no enemy creatures, {{Spawn}} a copy of this.",
+     "attack": "5",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "At the end of your turn, you gain 5 health. <br>\n{{Forge}}: If there are no enemy creatures, {{Spawn}} a copy of this.",
+     "attack": "9",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Primeval Ancient 2.jpg",
+    "Primeval Ancient 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Repress",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 7.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give an enemy creature -3 attack. If that creature is Uterra, remove all abilities from it.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give an enemy creature -9 attack. If that creature is Uterra, remove all abilities from it.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give an enemy creature -25 attack. If that creature is Uterra, remove all abilities from it.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Repress 1.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

@@ -1,0 +1,104 @@
+==Currently Available==
+*Set 6.1: {{decktt|Call of Deepwood}}, {{decktt|Kadras' Fury}}, {{decktt|Tarsus Unleashed}}, {{decktt|Might of Anvillon}}
+*Set 7.1 {{decktt|Toxic Shards}}, {{decktt|Winds of Fury}}, {{decktt|Ghastly Echoes}}, {{decktt|Cypien Technology}}
+
+==Out of Print==
+*Set 1: {{decktt|Alloyin Faction Starter}},  {{decktt|Nekrium Faction Starter}},  {{decktt|Tempys Faction Starter}},  {{decktt|Uterra Faction Starter}}
+*Set 2: {{decktt|Cruel Corrosion}}, {{decktt|Death March}}, {{decktt|Dinosaurs!}}
+*Set 2.3: {{decktt|Wyvern's Wrath}}, {{decktt|Ironmind Intuition}}, {{decktt|Nethershriek Negation}}, {{decktt|Ridgeback's Rage}}
+*Set 3.1: {{decktt|Spare Parts}}, {{decktt|Future Forged}}, {{decktt|Burning Rage}}, {{decktt|Awakened Fury}}
+*Set 4.1: {{decktt|Titan's Assault}}, {{decktt|Verdant Fortress}}
+*Set 4.2: {{decktt|Umbruk Uprising}}, {{decktt|Onyxium Twilight}}
+*Set 5.1: {{decktt|Blistering Chaos}}, {{decktt|Dark Retribution}}
+*Set 5.2: {{decktt|Iron Tide}}, {{decktt|Dragon Forge}}
+*Set 6.2: {{decktt|Nature's Defenses}}, {{decktt|Unlikely Alliance}}
+
+==Legendary Inclusions==
+The following table lists legendary cards that can be obtained in preconstructed decks. Cards obtained in these decks are sharable.
+
+{| class="article-table sortable"
+!width="200px" |Card
+!width="60px" |Set
+!Deck(s)
+|-
+|{{cardtt|Relic Hunter}}||[[Set 4.1]]|| {{decktt|Cypien Technology}}
+|-
+|{{cardtt|Enduring Vitality}}||[[Set 6.1]]||{{decktt|Call of Deepwood}}
+|-
+|{{cardtt|Ice Grasp}}||[[Set 6.1]]||{{decktt|Kadras' Fury}}
+|-
+|{{cardtt|Infernal Ritual}}||[[Set 6.1]]||{{decktt|Tarsus Unleashed}}
+|-
+|{{cardtt|Nexus Bubble}}||[[Set 6.1]]||{{decktt|Might of Anvillon}}
+|-
+|{{cardtt|Shardplate Toxoid}}||[[Set 7.1]]||{{decktt|Toxic Shards}}
+|-
+|{{cardtt|Malice Hermit}}||[[Set 5.1]]||{{decktt|Toxic Shards}}
+|-
+|{{cardtt|Nug, Fury Fists}}||[[Set 7.1]]||{{decktt|Winds of Fury}}
+|-
+|{{cardtt|Frostmane Dragon}}||[[Set 3]]||{{decktt|Winds of Fury}}
+|-
+|{{cardtt|Lichmane Dragon}}||[[Set 7.1]]||{{decktt|Ghastly Echoes}}
+|-
+|{{cardtt|Xerxes, the Executioner}}||[[Set 6]]||{{decktt|Ghastly Echoes}}
+|-
+|{{cardtt|Crux, Metamind Rogue}}||[[Set 7.1]]||{{decktt|Cypien Technology}}
+|}
+
+==Heroic Inclusions==
+The following table lists heroic cards that can be obtained in preconstructed decks.
+
+{| class="article-table sortable"
+!width="200px" |Card
+!width="60px" |Set
+!Deck(s)
+|-
+|{{cardtt|Epidemic}}||[[Set 1]]||{{decktt|Ghastly Echoes}}
+|-
+|{{cardtt|Hellforged Avatar}}||[[Set 1]]||{{decktt|Tarsus Unleashed}}
+|-
+|{{cardtt|Forge Oracle}}||[[Set 3.1]]||{{decktt|Cypien Technology}}
+|-
+|{{cardtt|Steelforged Avatar}}||[[Set 1]]||{{decktt|Might of Anvillon}}
+|-
+|{{cardtt|Frostfang Maiden}}||[[Set 3]]||{{decktt|Winds of Fury}}
+|-
+|{{cardtt|Patron of Deepwood}}||[[Set 6.1]]||{{decktt|Call of Deepwood}}
+|-
+|{{cardtt|Tremorsaur}}||[[Set 6]]||{{decktt|Call of Deepwood}}
+|-
+|{{cardtt|Rootforged Avatar}}||[[Set 1]]||{{decktt|Call of Deepwood}}
+|-
+|{{cardtt|Patron of Kadras}}||[[Set 6.1]]||{{decktt|Kadras' Fury}}
+|-
+|{{cardtt|Sparkweaver Acolyte}}||[[Set 6]]||{{decktt|Kadras' Fury}}
+|-
+|{{cardtt|Stormforged Avatar}}||[[Set 1]]||{{decktt|Kadras' Fury}}
+|-
+|{{cardtt|Patron of Tarsus}}||[[Set 6.1]]||{{decktt|Tarsus Unleashed}}
+|-
+|{{cardtt|Zombie Dreadknight}}||[[Set 6]]||{{decktt|Tarsus Unleashed}}
+|-
+|{{cardtt|Patron of Anvillon}}||[[Set 6.1]]||{{decktt|Might of Anvillon}}
+|-
+|{{cardtt|Forgewatch Sentry}}||[[Set 6]]||{{decktt|Might of Anvillon}}
+|-
+|{{cardtt|Killer Bee}}||[[Set 5]]||{{decktt|Toxic Shards}}
+|-
+|{{cardtt|Demara's Pitguard}}||[[Set 7]]||{{decktt|Toxic Shards}}
+|-
+|{{cardtt|Leyline Vermin}}||[[Set 7.1]]||{{decktt|Toxic Shards}}
+|-
+|{{cardtt|Cyclone Rider}}||[[Set 7]]||{{decktt|Winds of Fury}}
+|-
+|{{cardtt|Avalanche Invoker}}||[[Set 1]]||{{decktt|Winds of Fury}}
+|-
+|{{cardtt|Necroplasm}}||[[Set 7]]||{{decktt|Ghastly Echoes}}
+|-
+|{{cardtt|Ceaseless Grimgaunt}}||[[Set 7]]||{{decktt|Ghastly Echoes}}
+|-
+|{{cardtt|Cypien Experimentation}}||[[Set 7]]||{{decktt|Cypien Technology}}
+|-
+|{{cardtt|Alloyin Highlander}}||[[Set 1]]||{{decktt|Cypien Technology}}
+|}

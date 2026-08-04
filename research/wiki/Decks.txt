@@ -1,0 +1,18 @@
+==Deck Construction==
+Solforge decks must contain exactly 30 cards from no more than two factions. Cards with the [[Solbind]] ability may further increase the size of the deck at the beginning of the game, but the starting size must be 30. Additionally, no more than three copies of any one card may be included. Players can create their own decks in the [[Deck Builder]], use a starter deck or use a pre-constructed deck purchased from the [[Store]]. This is the basic deck format in Solforge and is referred to as [[Standard]].
+
+==Alternate Formats==
+Many other play formats exist all of which use different rules for deck construction. These are typically only availble for organized play during [[Weekend Warrior]] events.
+*[[Unlegendary]]: No Legendaries
+*[[Unheroic]]: No Legendaries or Heroics
+*No copy Limit: The number of copies of a card may exceed three
+*20 Card: Deck size is 20 instead of 30 (guarantees that you will see your whole deck in a rank)
+*4 Faction Singleton: Can include all factions but only one copy of each card.
+
+==Preconstructed Decks==
+Preconstructed decks are availble in the online store at [http://solforgegame.com solforgegame.com]. They are typically released with small sets to give players a way to have direct access to new cards. Details on what cards are available in preconstructed decks can be found on the main article page.
+{{Main|Preconstructed Decks}}
+
+==Player Decks==
+
+{{GameInfo}}

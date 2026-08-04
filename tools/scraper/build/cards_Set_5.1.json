@@ -1,0 +1,291 @@
+{
+ "set": "Set_5.1",
+ "count": 8,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Ambriel Archangel",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 5.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Angel"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While Ambriel Archangel is your only creature, you get {{Armor|10}} and this gets {{Armor|2}} and {{Mobility|1}}.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "While Ambriel Archangel is your only creature, you get {{Armor|15}} and this gets {{Armor|3}} and {{Mobility|1}}.",
+     "attack": "10",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "While Ambriel Archangel is your only creature, you get {{Armor|20}} and this gets {{Armor|4}} and {{Mobility|1}}.",
+     "attack": "16",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Ambriel Archangel 2.jpg",
+    "Ambriel Archangel 3.jpg"
+   ],
+   "altImages": [
+    "Ambriel Archangel AA 2.jpg",
+    "Ambriel Archangel AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Ambriel's Edict",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 5.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Overload}} <br>\nIf each player has at least one creature in play, destroy all but the highest attack creature that each player controls. <br>\nThen discard your hand.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Ambriel's Edict 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Malice Hermit",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 5.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Yeti"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Each other creature gets {{Poison|1}}. <br>\nWhen a creature with Poison is destroyed, Malice Hermit gets +1 attack and +1 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Each other creature gets {{Poison|2}}. <br>\nWhen a creature with Poison is destroyed, Malice Hermit gets +2 attack and +2 health.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Each other creature gets {{Poison|4}}. <br>\nWhen a creature with Poison is destroyed, Malice Hermit gets +4 attack and +4 health.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Malice Hermit 2.jpg",
+    "Malice Hermit 3.jpg"
+   ],
+   "altImages": [
+    "Malice Hermit AA 2.jpg",
+    "Malice Hermit AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Primordial Invoker",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 5.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Deal 4 damage divided at random between enemy creatures and the enemy player.",
+     "attack": "6",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Deal 6 damage divided at random between enemy creatures and the enemy player.",
+     "attack": "10",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Deal 8 damage divided at random between enemy creatures and the enemy player.",
+     "attack": "16",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Primordial Invoker 2.jpg",
+    "Primordial Invoker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spiritstone Sentry",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 5.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: If Spiritstone Sentry was in a side space, {{Spawn}} a Spiritstone Sentry.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: If Spiritstone Sentry was in a side space, {{Spawn}} a Spiritstone Sentry.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: If Spiritstone Sentry was in a side space, {{Spawn}} a Spiritstone Sentry.",
+     "attack": "10",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Spiritstone Sentry 2.jpg",
+    "Spiritstone Sentry 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Stinging Invocation",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 5.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Spawn}} 1 to 3 {{cardtt|Killer Bee|Killer Bees}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Spawn}} 1 to 3 {{cardtt|Killer Bee|Killer Bees}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Spawn}} 1 to 3 {{cardtt|Killer Bee|Killer Bees}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Stinging Invocation 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Windspark Elemental",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 5.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Lightning Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When an enemy creature takes non-battle damage, deal 2 damage to the enemy player.",
+     "attack": "2",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "When an enemy creature takes non-battle damage, deal 4 damage to the enemy player.",
+     "attack": "5",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "When an enemy creature takes non-battle damage, deal 6 damage to the enemy player.",
+     "attack": "8",
+     "health": "21"
+    }
+   ],
+   "images": [
+    "Windspark Elemental 2.jpg",
+    "Windspark Elemental 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Xithian Tormentor",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 5.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Destroy each other friendly creature.",
+     "attack": "6",
+     "health": "10"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Destroy each other friendly creature.",
+     "attack": "12",
+     "health": "16"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Destroy each other friendly creature.",
+     "attack": "22",
+     "health": "28"
+    }
+   ],
+   "images": [
+    "Xithian Tormentor 2.jpg",
+    "Xithian Tormentor 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

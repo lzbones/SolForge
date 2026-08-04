@@ -1,0 +1,2 @@
+==Description==
+While a creature with an Activate ability is on the {{offensive}}, you can tap or click it to use that ability once on each of your turns.

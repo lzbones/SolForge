@@ -1,0 +1,6 @@
+[[File:Mol1.png|right]]
+
+==Description==
+While a creature with Mobility X is on the offensive, you can tap or click it to move it to one of your available spaces up to X lanes away once on each of your turns. 
+
+The Mobility number indicates how many spaces the creature can move. A creature with {{Mobility|2}} may move up to two spaces in either direction. However, a creature can only move once per turn, regardless of how much Mobility it has. A creature cannot move into a lane if it is occupied 

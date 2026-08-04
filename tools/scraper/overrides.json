@@ -1,0 +1,11 @@
+{
+  "_comment": "Manual patches applied on top of scraped data (applied by merge_overrides.py, TBD). Values marked null are UNKNOWN — the SolForge wiki itself lacks them (verified across all 9 page revisions, 2013–2016). Fill in from game-client data or another reliable source before implementing this card.",
+  "Lifeshaper Savant": {
+    "reason": "wiki data gap: attack/health for all levels and level-1 text missing",
+    "levels": [
+      {"level": 1, "text": null, "attack": null, "health": null},
+      {"level": 2, "attack": null, "health": null},
+      {"level": 3, "attack": null, "health": null}
+    ]
+  }
+}

@@ -1,0 +1,404 @@
+{
+ "set": "Set_4.2",
+ "count": 11,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Bron, Wild Tamer",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Tuskin"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Upgrade|Dinosaur}}: Replace Bron with a level 1 {{cardtt|Dino Knight}}. <br>\nWhen this deals battle damage to a player, heal 3 damage from each other friendly creature.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Upgrade|Dinosaur}}: Replace Bron with a level 2 {{cardtt|Dino Knight}}. <br>\nWhen this deals battle damage to a player, heal 5 damage from each other friendly creature.",
+     "attack": "7",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Upgrade|Dinosaur}}: Replace Bron with a level 3 {{cardtt|Dino Knight}}. <br>\nWhen this deals battle damage to a player, heal 7 damage from each other friendly creature.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Bron, Wild Tamer 2.jpg",
+    "Bron, Wild Tamer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Dino Knight",
+   "faction": "Uterra",
+   "rarity": "Token",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Breakthrough}} <br>\n{{Aggressive}} <br>\nWhen this deals battle damage to a player, heal 3 damage from each other friendly creature. <br>\n{{Vengeance}}: Put a level 1 {{cardtt|Bron, Wild Tamer}} into this space.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Breakthrough}} <br>\n{{Aggressive}} <br>\nWhen this deals battle damage to a player, heal 5 damage from each other friendly creature. <br>\n{{Vengeance}}: Put a level 2 {{cardtt|Bron, Wild Tamer}} into this space.",
+     "attack": "12",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Breakthrough}} <br>\n{{Aggressive}} <br>\nWhen this deals battle damage to a player, heal 7 damage from each other friendly creature. <br>\n{{Vengeance}}: Put a level 2 {{cardtt|Bron, Wild Tamer}} into this space.",
+     "attack": "18",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Dino Knight 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Discordant Strike",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 4.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give an enemy creature -4 attack <br>\n{{Allied|Nekrium}}: Give an enemy creature -4 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give an enemy creature -6 attack <br>\n{{Allied|Nekrium}}: Give an enemy creature -6 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give an enemy creature -10 attack <br>\n{{Allied|Nekrium}}: Give an enemy creature -10 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Discordant Strike 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Duskmaw, Twilight Drake",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Solbind}}: {{cardtt|Tendrils of Twilight}}<br>\n{{Mobility|1}}",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}",
+     "attack": "10",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}",
+     "attack": "17",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Duskmaw, Twilight Drake 2.jpg",
+    "Duskmaw, Twilight Drake 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Epoch Hawk",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Mech"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While you have 6 or more cards in hand, this gets \"{{Activate}}: Put a 4/4 {{cardtt|Epoch Soldier}} into an available space.\"",
+     "attack": "4",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "While you have 6 or more cards in hand, this gets \"{{Activate}}: Put a 7/7 {{cardtt|Epoch Soldier}} into an available space.\"",
+     "attack": "7",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "While you have 6 or more cards in hand, this gets \"{{Activate}}: Put a 10/10 {{cardtt|Epoch Soldier}} into an available space.\"",
+     "attack": "10",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Epoch Hawk 2.jpg",
+    "Epoch Hawk 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Epoch Soldier",
+   "faction": "Alloyin",
+   "rarity": "Token",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Epoch Soldier deals battle damage to a player on your turn, draw a card at the end of turn.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "When Epoch Soldier deals battle damage to a player on your turn, draw a card at the end of turn.",
+     "attack": "7",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "When Epoch Soldier deals battle damage to a player on your turn, draw a card at the end of turn.",
+     "attack": "10",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Epoch Soldier 2.jpg",
+    "Epoch Soldier 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Gemhide Ravager",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Gemhide Ravager deals battle damage to a player, you gain that much health. <br>\n{{Allied|Tempys}}: {{Mobility|1}}",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When Gemhide Ravager deals battle damage to a player, you gain that much health. <br>\n{{Allied|Tempys}}: {{Mobility|2}}",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When Gemhide Ravager deals battle damage to a player, you gain that much health. <br>{{Allied|Tempys}}: {{Mobility|3}}",
+     "attack": "15",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Gemhide Ravager 2.jpg",
+    "Gemhide Ravager 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lug, Uranti Charger",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Yeti"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When a friendly creature moves on your turn, Lug battles an additional time.",
+     "attack": "3",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "When a friendly creature moves on your turn, Lug battles an additional time.",
+     "attack": "5",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "When a friendly creature moves on your turn, Lug battles an additional time.",
+     "attack": "9",
+     "health": "19"
+    }
+   ],
+   "images": [
+    "Lug, Uranti Charger 2.jpg",
+    "Lug, Uranti Charger 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Progeny of Xith",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 4.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: {{Spawn}} a level 2 Progeny of Xith.",
+     "attack": "2",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: {{Spawn}} a level 3 Progeny of Xith.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "-",
+     "attack": "6",
+     "health": "6"
+    }
+   ],
+   "images": [
+    "Progeny of Xith 2.jpg",
+    "Progeny of Xith 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Tendrils of Twilight",
+   "faction": "Nekrium",
+   "rarity": "Token",
+   "set": "Set 4.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Free}} <br>\nGive an enemy creature -1 attack and -1 health. <br>\nIf that creature is opposing a friendly {{cardtt|Duskmaw, Twilight Drake|Duskmaw}}, give that creature -7 attack and -7 health instead.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}} <br>\nGive an enemy creature -1 attack and -1 health. <br>\nIf that creature is opposing a friendly {{cardtt|Duskmaw, Twilight Drake|Duskmaw}}, give that creature -9 attack and -9 health instead.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}} <br>\nGive an enemy creature -1 attack and -1 health. <br>\nIf that creature is opposing a friendly {{cardtt|Duskmaw, Twilight Drake|Duskmaw}}, give that creature -11 attack and -11 health instead.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Tendrils of Twilight 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Thunderstomp",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 4.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 5 damage to an enemy creature. Then, if there is a friendly Dinosaur, deal another 5 damage to an enemy creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 8 damage to an enemy creature. Then, if there is a friendly Dinosaur, deal another 8 damage to an enemy creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 12 damage to an enemy creature. Then, if there is a friendly Dinosaur, deal another 12 damage to an enemy creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Thunderstomp 1.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

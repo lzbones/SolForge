@@ -1,0 +1,744 @@
+{
+ "set": "Set_2.2",
+ "count": 20,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Agamemnon",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Giant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Agamemnon deals battle damage to a creature on your turn, this battles again.",
+     "attack": "4",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}<br>\nWhen Agamemnon deals battle damage to a creature on your turn, this battles again.",
+     "attack": "8",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}<br>\n{{Aggressive}}<br>\nWhen Agamemnon deals battle damage to a creature on your turn, this battles again.",
+     "attack": "14",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Agamemnon 2.jpg",
+    "Agamemnon 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Blightskull Phantasm",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you gain a {{Rank}}, the opposing creature gets -3 attack and -3 health.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you gain a {{Rank}}, the opposing creature gets -6 attack and -6 health.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you gain a {{Rank}}, the opposing creature gets -9 attack and -9 health.",
+     "attack": "14",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Blightskull Phantasm 2.jpg",
+    "Blightskull Phantasm 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Flamebreak Invoker",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Giant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you play a Tempys spell, deal 1 damage to each enemy creature.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you play a Tempys spell, deal 1 damage to each enemy creature.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you play a Tempys spell, deal 1 damage to each enemy creature.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Flamebreak Invoker 2.jpg",
+    "Flamebreak Invoker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Gemheart Sprout",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}<br>\n{{Activate}}: You gain health equal to the number of friendly creatures.",
+     "attack": "3",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}<br>\n{{Activate}}: You gain health equal to 2X the number of friendly creatures.",
+     "attack": "5",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}<br>\n{{Activate}}: You gain health equal to 3X the number of friendly creatures.",
+     "attack": "7",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Gemheart Sprout 2.jpg",
+    "Gemheart Sprout 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ice Torrent",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 2.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 2 damage to the enemy player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nDeal 3 damage to the enemy player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nDeal 4 damage to the enemy player.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Ice Torrent 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Metamind Overseer",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Metamind"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you gain a {{Rank}}, draw 2 cards.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you gain a {{Rank}}, draw 2 cards.",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you gain a {{Rank}}, draw 2 cards.",
+     "attack": "15",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Metamind Overseer 2.jpg",
+    "Metamind Overseer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Mimicwurm",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wurm"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "7",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may put a level 1 Mimicwurm into another space.",
+     "attack": "7",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may put a level 2 Mimicwurm into another space. Then you may put a level 1 Mimicwurm into another space.",
+     "attack": "7",
+     "health": "7"
+    }
+   ],
+   "images": [
+    "Mimicwurm 2.jpg",
+    "Mimicwurm 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Palladium Simulacrum",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Shapeshifter"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}/{{Flank}}: If Palladium Simulacrum is in the center space, {{Spawn}} a copy.",
+     "attack": "4",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}<br>\n{{Forge}}/{{Flank}}: If Palladium Simulacrum is in the center space, {{Spawn}} a copy.",
+     "attack": "8",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|2}}\n{{Forge}}/{{Flank}}: If Palladium Simulacrum is in the center space, {{Spawn}} a copy.",
+     "attack": "16",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Palladium Simulacrum 2.jpg",
+    "Palladium Simulacrum 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Phalanx Squadron",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Give a friendly creature with {{Armor}} +2 attack and +2 health.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Give a friendly creature with {{Armor}} +3 attack and +3 health.",
+     "attack": "7",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Give a friendly creature with {{Armor}} +4 attack and +4 health.",
+     "attack": "14",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Phalanx Squadron 2.jpg",
+    "Phalanx Squadron 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Razortooth Stalker",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\nWhen Razortooth Stalker deals battle damage to a player, it gets +2 attack and +2 health.",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}<br>\nWhen Razortooth Stalker deals battle damage to a player, it gets +3 attack and +3 health.",
+     "attack": "8",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}<br>\nWhen Razortooth Stalker deals battle damage to a player, it gets +5 attack and +5 health.",
+     "attack": "12",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Razortooth Stalker 2.jpg",
+    "Razortooth Stalker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Shardthief Druid",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Metamind"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: {{Negate}} and remove all {{Regenerate}} from an enemy creature. Shardthief Druid gets that much {{Regenerate}}.",
+     "attack": "5",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: {{Negate}} and remove all {{Regenerate}} from an enemy creature. Shardthief Druid gets that much {{Regenerate}}.",
+     "attack": "8",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: {{Negate}} and remove all {{Regenerate}} from an enemy creature. Shardthief Druid gets that much {{Regenerate}}.",
+     "attack": "13",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Shardthief Druid 2.jpg",
+    "Shardthief Druid 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Shimmerfang Serpent",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Snake"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Shimmerfang Serpent deals battle damage to a creature, that creature gets that much {{Poison}}.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When Shimmerfang Serpent deals battle damage to a creature, that creature gets that much {{Poison}}.",
+     "attack": "5",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When Shimmerfang Serpent deals battle damage to a creature, that creature gets that much {{Poison}}.",
+     "attack": "7",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Shimmerfang Serpent 2.jpg",
+    "Shimmerfang Serpent 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Sigmund Fraud",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}<br>\n{{Activate}}, Destroy another friendly creature:  Deal 4 damage to the enemy player and gain 4 health.",
+     "attack": "3",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}<br>\n{{Activate}}, Destroy another friendly creature:  Deal 8 damage to the enemy player and gain 8 health.",
+     "attack": "5",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}<br>\n{{Activate}}, Destroy another friendly creature:  Deal 12 damage to the enemy player and gain 12  health.",
+     "attack": "7",
+     "health": "19"
+    }
+   ],
+   "images": [
+    "Sigmund Fraud 2.jpg",
+    "Sigmund Fraud 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spirit Reaver",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Demon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When the enemy player gains health, Spirit Reaver gets +2 attack and +2 health.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When the enemy player gains health, Spirit Reaver gets +3 attack and +3 health.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When the enemy player gains health, Spirit Reaver gets +4 attack and +4 health.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Spirit Reaver 2.jpg",
+    "Spirit Reaver 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spiritforge Sentinel",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}}",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|2}}",
+     "attack": "6",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|6}}",
+     "attack": "9",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Spiritforge Sentinel 2.jpg",
+    "Spiritforge Sentinel 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spiritfrost Shaman",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you gain a {{Rank}}, deal 5 damage to the enemy player.",
+     "attack": "7",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "When you gain a {{Rank}}, deal 7 damage to the enemy player.",
+     "attack": "11",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "When you gain a {{Rank}}, deal 9 damage to the enemy player.",
+     "attack": "17",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Spiritfrost Shaman 2.jpg",
+    "Spiritfrost Shaman 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Stygian Lotus",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If Stygian Lotus is opposed, {{Spawn}} a copy ot it. Then repeat this for each copy.",
+     "attack": "4",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If Stygian Lotus is opposed, {{Spawn}} a copy ot it. Then repeat this for each copy.",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If Stygian Lotus is opposed, {{Spawn}} a copy ot it. Then repeat this for each copy.",
+     "attack": "8",
+     "health": "7"
+    }
+   ],
+   "images": [
+    "Stygian Lotus 2.jpg",
+    "Stygian Lotus 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Umbraglim Mantis",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Insect"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you gain a {{Rank}}, you get +8 health.",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "When you gain a {{Rank}}, you get +10 health.",
+     "attack": "9",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "When you gain a {{Rank}}, you get +12 health.",
+     "attack": "14",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Umbraglim Mantis 2.jpg",
+    "Umbraglim Mantis 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Xithian Host",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: Deal 3 damage to the enemy player and you gain 3 health.",
+     "attack": "3",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Deal 3 damage to the enemy player and you gain 5 health.",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Deal 3 damage to the enemy player and you gain 9 health.",
+     "attack": "9",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Xithian Host 2.jpg",
+    "Xithian Host 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Yuru, the Necrosage",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 2.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}<br>\nWhen an adjacent non-Spirit creature is destroyed, put a 5/5 {{cardtt|Spirit (Nekrium)|Spirit}} into that space.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}<br>\nWhen an adjacent non-Spirit creature is destroyed, put a 8/8 {{cardtt|Spirit (Nekrium)|Spirit}} into that space.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}<br>\nWhen an adjacent non-Spirit creature is destroyed, put a 14/14 {{cardtt|Spirit (Nekrium)|Spirit}} into that space.",
+     "attack": "3",
+     "health": "3"
+    }
+   ],
+   "images": [
+    "Yuru, the Necrosage 2.jpg",
+    "Yuru, the Necrosage 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

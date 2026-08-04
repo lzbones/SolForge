@@ -1,0 +1,4 @@
+==Description==
+When this enters play from your hand, it gets the ability listed after this keyword if you have a card of the specified type in your hand.
+
+Play order is important. For example, if you start your turn with a hand of {{cardtt|Esperian Scarab}}, three Alloyin cards and a Uterra card, make sure you play the Scarab first. If you play the Uterra card first, the Allied Uterra ability will no longer trigger because your hand only contains Alloyin cards. Also note that the "from your hand" clause prevents Scarab from filling the board when it is played. Since the copy does not enter play from your hand, its Allied ability does not trigger, leaving you with two total copies of Scarab.

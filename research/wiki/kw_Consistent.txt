@@ -1,0 +1,13 @@
+[[File:Consistent.png|right|Consistent]]
+
+==Description==
+Whenever this card would be shuffled into your deck, shuffle it into the top twenty cards instead.
+
+The keyword Consistent is triggered with the reshuffling of the library. The deck is then separated into Pile A – which consists of all the cards with the Consistent ability – and Pile B with all the other cards.
+
+<gallery>
+pile-a-consistent.png
+pile-b-othercards.png
+</gallery>
+
+If Pile A has fewer than twenty Consistent cards, Pile A is fi

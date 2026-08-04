@@ -1,0 +1,319 @@
+{
+ "set": "Set_6.2",
+ "count": 9,
+ "skipped": [
+  "Set 6.2"
+ ],
+ "cards": [
+  {
+   "name": "Cryophoenix",
+   "faction": "Tempys",
+   "rarity": "Token",
+   "set": "Set 6.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Phoenix"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Cryophoenix enters play or moves, deal damage equal to its attack to the opposing creature. <br>\nIf there is no opposing creature, deal that damage to the enemy player instead.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When Cryophoenix enters play or moves, deal damage equal to its attack to the opposing creature. <br>\nIf there is no opposing creature, deal that damage to the enemy player instead.",
+     "attack": "7",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}} <br>\nWhen Cryophoenix enters play or moves, deal damage equal to its attack to the opposing creature. <br>\nIf there is no opposing creature, deal that damage to the enemy player instead.",
+     "attack": "11",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Cryophoenix 2.jpg",
+    "Cryophoenix 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Grimgaunt Warrior",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 6.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Grimgaunt"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When an adjacent creature is destroyed, Grimgaunt Warrior gets +2 attack and +2 health.",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "When an adjacent creature is destroyed, Grimgaunt Warrior gets +3 attack and +3 health.",
+     "attack": "7",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "When an adjacent creature is destroyed, Grimgaunt Warrior gets +4 attack and +4 health.",
+     "attack": "10",
+     "health": "11"
+    }
+   ],
+   "images": [
+    "Grimgaunt Warrior 2.jpg",
+    "Grimgaunt Warrior 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Phoenix Call",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 6.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Spawn}} a 3/6 {{cardtt|Cryophoenix}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Spawn}} a 7/10 {{cardtt|Cryophoenix}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Spawn}} a 11/14 {{cardtt|Cryophoenix}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Phoenix Call 2.jpg",
+    "Phoenix Call 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Remembrance",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 6.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Banish}} a level 1 creature from your discard pile, then {{Spawn}} a copy of it.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Banish}} a level 2 or lower creature from your discard pile, then {{Spawn}} a copy of it.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Banish}} a creature from your discard pile, then {{Spawn}} a copy of it.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Remembrance 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Rubyscale Dragon",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 6.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}} <br>\nAt the end of your turn, you and each other friendly creature you control gets +1 health.",
+     "attack": "2",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}} <br>\nAt the end of your turn, you and each other friendly creature you control gets +2 health.",
+     "attack": "8",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}} <br>\nAt the end of your turn, you and each other friendly creature you control gets +5 health.",
+     "attack": "18",
+     "health": "24"
+    }
+   ],
+   "images": [
+    "Rubyscale Dragon 2.jpg",
+    "Rubyscale Dragon 3.jpg"
+   ],
+   "altImages": [
+    "Rubyscale AA 2.jpg",
+    "Rubyscale AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Shardplate Graft",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 6.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a friendly creature +2 attack and +2 health and, \"At the start of your turn, this gets +2 attack and +2 health.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a friendly creature +4 attack and +4 health and, \"At the start of your turn, this gets +4 attack and +4 health.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a friendly creature +6 attack and +6 health and, \"At the start of your turn, this gets +6 attack and +6 health.\"",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Shardplate Graft 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Sparky, Forge Guard Dog",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 6.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot Guardian"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}, Destroy Sparky, Forge Guard Dog and another friendly Sparky: {{Spawn}} a level 2 Sparky.",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}, Destroy Sparky, Forge Guard Dog and another friendly Sparky: {{Spawn}} a level 3 Sparky.",
+     "attack": "10",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}, Destroy Sparky, Forge Guard Dog and another friendly level 3 Sparky: {{Spawn}} a 20/20 {{cardtt|Forge Guardian Omega}}.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Sparky, Forge Guard Dog 2.jpg",
+    "Sparky, Forge Guard Dog 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Trial by Combat",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 6.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a friendly creature +3 attack this turn. <br>\nThen it and an enemy creature deal damage equal to their attacks to each other.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a friendly creature +6 attack this turn. <br>\nThen it and an enemy creature deal damage equal to their attacks to each other.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a friendly creature +9 attack this turn. <br>\nThen it and an enemy creature deal damage equal to their attacks to each other.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Trial by Combat 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Wipe Clean",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 6.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Overload}} <br>\nRemove all abilities from each creature and player.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Wipe Clean 1.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

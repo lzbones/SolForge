@@ -1,0 +1,2 @@
+==Description==
+When this enters play from your hand, it gets the ability listed after this keyword.

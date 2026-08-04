@@ -1,0 +1,4 @@
+==Description==
+When this enters the field from your hand, it gets the ability listed after this keyword if there are no other creatures in its lane.
+
+Note the "from your hand" clause in the keyword definition. If you reanimate an Assault creature with a card like {{cardtt|Varna's Pact}}, that creature's Assault ability will not trigger. Furthermore, if you use cards like {{cardtt|Stinging Invocation}} or {{cardtt|Phoenix Call}} with an {{cardtt|Ator, Thunder Titan}} in play, the creatures it creates will not have Aggressive.

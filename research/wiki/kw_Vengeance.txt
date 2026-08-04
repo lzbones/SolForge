@@ -1,0 +1,2 @@
+==Description==
+When this is destroyed, it gets the ability listed after this keyword.

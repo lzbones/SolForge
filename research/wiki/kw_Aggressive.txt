@@ -1,0 +1,11 @@
+[[File:Agg1.png|right]]
+
+==Description==
+Creatures with Aggressive are always on the offensive. 
+
+Aggressive creatures can attack and use abilities such as [[Activate]] and [[Mobility]] the turn they enter play. Certain cards like the [[Flamestoke Shaman]] can give Aggressive to a creature when they are still on the defensive. Giving Aggressive to a creature with [[Defender]] does not allow them to attack.
+
+==Card List==
+The following cards have or give Aggressive.
+{{CardList byCat|Aggressive}}
+

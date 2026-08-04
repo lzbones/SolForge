@@ -1,0 +1,4 @@
+==Description==
+You start the game with the following cards added to your deck.
+
+The Solbind effect triggers at the start of each game, adding the cards listed after the ability to your deck. Having multiple extra cards in your deck lowers the probability to consistently see the cards you want, but luckily there are ways to deal with it.

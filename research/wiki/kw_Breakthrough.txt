@@ -1,0 +1,15 @@
+[[File:Bre1.png|right]]
+
+==Description==
+While a creature with Breakthrough is on the offensive, battle damge in excess of the opponent's creature's health is also dealt to the opponent.
+
+*Example
+
+<gallery orientation="none" columns="1" position="center" widths="310">
+Breakthrough 1.png|Deepbranch Prowler Vs. Seedling
+Breakthrough 2.png|Attack Phase: Deepbranch 7/7 Vs. Seedling 1/1
+Breakthrough 3.png|Deepbranch Prowler Deals 1 Damage To Seedling And 6 To Player
+</gallery>
+
+==Card List==
+A compl

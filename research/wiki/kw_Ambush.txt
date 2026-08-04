@@ -1,0 +1,4 @@
+==Description==
+The following text is active while in your hand.
+
+Currently, Ambush is only used on the four Leyline creatures, which put copies of themselves into play when your opponent performs a specific action. Since they are not techincally played "from your hand" (they [[Spawn]] copies), other cards like {{cardtt|Tarsus Deathweaver}}, {{cardtt|Oreian Justicar}} and {{cardtt|Herald of Destruction}} will trigger when they enter play.

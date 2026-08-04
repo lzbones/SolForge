@@ -1,0 +1,300 @@
+{
+ "set": "Set_7.1",
+ "count": 8,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Ceaseless Grimgaunt",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 7.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Grimgaunt"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: If there are no friendly creatures in play, {{Spawn}} a copy of Ceaseless Grimgaunt.",
+     "attack": "5",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: If there are no friendly creatures in play, {{Spawn}} a copy of Ceaseless Grimgaunt.",
+     "attack": "8",
+     "health": "1"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: If there are no friendly creatures in play, {{Spawn}} a copy of Ceaseless Grimgaunt.",
+     "attack": "13",
+     "health": "1"
+    }
+   ],
+   "images": [
+    "Ceaseless Grimgaunt 2.jpg",
+    "Ceaseless Grimgaunt 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Crux, Metamind Rogue",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 7.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Metamind"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If Crux is your only friendly creature, it gets {{Armor|3}}.<br>\n{{Upgrade}}: Give an enemy creature -4 attack.",
+     "attack": "7",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If Crux is your only friendly creature, it gets {{Armor|4}}.<br>\n{{Upgrade}}: Give an enemy creature -8 attack.",
+     "attack": "12",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If Crux is your only friendly creature, it gets {{Armor|5}}.<br>\n{{Upgrade}}: Give an enemy creature -12 attack.",
+     "attack": "17",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Crux, Metamind Rogue 2.jpg",
+    "Crux, Metamind Rogue 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cyclone Rider",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 7.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wind Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When an enemy creature enters play, if it is unopposed, move Cyclone Rider to the space opposing that creature.",
+     "attack": "8",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "When an enemy creature enters play, if it is unopposed, move Cyclone Rider to the space opposing that creature.",
+     "attack": "10",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "When an enemy creature enters play, if it is unopposed, move Cyclone Rider to the space opposing that creature.",
+     "attack": "16",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Cyclone Rider 2.jpg",
+    "Cyclone Rider 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cypien Experimentation",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 7.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a random friendly creature +5 attack.<br>\nGive a random friendly creature {{Armor|5}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a random friendly creature +6 attack.<br>\nGive a random friendly creature {{Armor|6}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a random friendly creature +10 attack.<br>\nGive a random friendly creature {{Armor|10}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Cypien Experimentation 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Leyline Vermin",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 7.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Insect"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Ambush}}: When an enemy creature with {{Poison}} is destroyed on the enemy player's turn, {{Spawn}} a copy of Leyline Vermin. Then discard and level up Leyline Vermin.",
+     "attack": "6",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Ambush}}: When an enemy creature with {{Poison}} is destroyed on the enemy player's turn, {{Spawn}} a copy of Leyline Vermin. Then discard and level up Leyline Vermin.",
+     "attack": "12",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "{{Ambush}}: When an enemy creature with {{Poison}} is destroyed on the enemy player's turn, {{Spawn}} a copy of Leyline Vermin. Then discard and level up Leyline Vermin.",
+     "attack": "18",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Leyline Vermin 2.jpg",
+    "Leyline Vermin 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lichmane Dragon",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 7.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\n{{Formation}}: {{Spawn}} an enemy creature that was destroyed this game.",
+     "attack": "6",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}<br>\n{{Formation}}: {{Spawn}} an enemy creature that was destroyed this game.",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}<br>\n{{Formation}}: {{Spawn}} an enemy creature that was destroyed this game.",
+     "attack": "15",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Lichmane Dragon 2.jpg",
+    "Lichmane Dragon 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nug, Fury Fists",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 7.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Yeti"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, each other friendly creature deals damage equal to its attack to the creature opposing it.",
+     "attack": "7",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, each other friendly creature deals damage equal to its attack to the creature opposing it.",
+     "attack": "10",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, each other friendly creature deals damage equal to its attack to the creature opposing it.",
+     "attack": "15",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Nug, Fury Fists 2.jpg",
+    "Nug, Fury Fists 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Shardplate Toxoid",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 7.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Insect"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Give an enemy creature {{Poison|2}}.<br>\nAt the end of the enemy player's turn, each enemy creature gets {{Poison|1}}.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Give an enemy creature {{Poison|4}}.<br>\nAt the end of the enemy player's turn, each enemy creature gets {{Poison|2}}.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Give an enemy creature {{Poison|10}}.<br>\nAt the end of the enemy player's turn, each enemy creature gets {{Poison|5}}.",
+     "attack": "12",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Shardplate Toxoid 2.jpg",
+    "Shardplate Toxoid 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

@@ -1,0 +1,76 @@
+==Layout==
+
+==Faction==
+Each card belongs to one of the four factions of Solis, indicated by the color of the card's border and the faction symbol in the center of the card. A deck in the [[Standard]] format may include cards from up to two factions but no more. 
+:[[File:Alloyin_symbol.png|30px]] - [[Alloyin]]
+:[[File:Nekrium_symbol.png|30px]] - [[Nekrium]]
+:[[File:Tempys_symbol.png|30px]] - [[Tempys]]
+:[[File:Uterra_symbol.png|30px]] - [[Uterra]]
+
+==Type==
+There are two types of cards in Solforge; [[Creatures]] and [[Spell|Spells]]. 
+
+==Creature Type==
+All creatures have a creature type. Some cards reference the creature type of other cards to generate effects. For example, [[Xrath, Dreadnight of Varna]] gives other Zombies [[Regenerate]] and [[Brightsteel Sentinel]] temporarily grants [[Armor]] to [[:category:Robot|Robots]]. There are currently no spells with subtypes.
+
+==Rarity==
+Cards are distributed with a four tiered rarity system and are identified by a colored bar along the bottom of the card. In the full card view, the rarity is written out explicitly in the top border. There are no restrictions in deck building based on the rarity of the cards in the [[Standard]] [[Constructed]] format. A card of any rarity may have up to three copies in a deck. Other formats such as [[Unlegendary]] and [[Unheroic]] limit deck building based on card rarity.
+:Common - <span style="color: #5A8236; font-weight: bold;">Green</span>
+:Rare - <span style="color: #607C93; font-weight: bold;">Blue</span>
+:Heroic - <span style="color: #DBBB68; font-weight: bold;">Yellow</span>
+:Legendary - <span style="color: #A34542; font-weight: bold;">Red</span>
+
+==Card Packs==
+The main source for collecting cards is through opening packs. Solforge Boosters (as labeled in the store) contain cards from every set that has been released. Set specific boosters contain cards only from the chosen set. The drop rates listed in the table for higher rarity cards are approximate.
+
+<center>
+{| class="article-table"
+!style="background-color:#101B26;"|
+!style="background-color:#101B26;"|Image
+!width="150px" style="background-color:#101B26;"|Contents
+!width="60px" style="background-color:#101B26;"|Cost
+!style="background-color:#101B26;"|Where to Get
+|-
+!style="background-color:#101B26;"|Solforge Booster
+|[[file:Solforge Booster.png|75px]]
+|1 {{Rare}}<br>5 {{Common}}<br>~50% chance of a {{Heroic}}<br>~10% chance of a {{Legendary}}
+|7,500 {{silver|15px}}<br>290 {{Gold|15px}}
+|[[Store]]<br>Tournament Rewards
+|-
+!style="background-color:#101B26;"|Set Booster
+|[[file:Raiders Unchained Booster.png|75px]]
+|1 {{Rare}}<br>5 {{Common}}<br>~50% chance of a {{Heroic}}<br>~10% chance of a {{Legendary}}<br>All cards are from the<br>chosen set
+|290 {{Gold|15px}}
+|[[Store]]<br>Ranked Rewards
+|}
+</center>
+
+==Card Forging==
+Cards can also be collected through the forging system. By paying an amount of silver, players can add specific cards to their collection. Through the same system, excess cards can be scrapped to gain silver. Players may only scrap cards if they have more than three of them in their collection. Cards can be scrapped individually or all at once using the Bulk Scrap option. For cards from the current set release, forging costs are doubled but the scrap price remains the same.
+{| class="article-table"
+!Rarity!!Forge!!Scrap
+|-
+|Common
+|250 {{Silver|15px}}
+|25 {{Silver|15px}}
+|-
+|Rare
+|2,500 {{Silver|15px}}
+|250 {{Silver|15px}}
+|-
+|Heroic
+|25,000 {{Silver|15px}}
+|5,000 {{Silver|15px}}
+|-
+|Legendary
+|100,000 {{Silver|15px}}
+|25,000 {{Silver|15px}}
+|}
+
+==Sharing==
+A third way to collect cards is through the sharing system. If a card is sharable, you can send a copy of it to another player. You will retain a copy of the card but it will be unsharable from then on. Using this system, players can set up mutual sharing agreements to exchange cards.
+
+Sharable cards are collected by using gold to either purchase card packs or enter tournaments. Cards opened or won in this way will be sharable. Additionally, prizes from [[Elite Tournaments]] are sharable, regardless of how the Elite Tickets were obtained.
+
+{{GameInfo}}
+[[Category:Pages needing content]]

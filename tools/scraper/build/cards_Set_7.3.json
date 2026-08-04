@@ -1,0 +1,339 @@
+{
+ "set": "Set_7.3",
+ "count": 11,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Cercee's Call",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 7.3",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Spawn}} a copy of a friendly Zombie that was destroyed this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>{{Spawn}} a copy of a friendly Zombie that was destroyed this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Cercee's Call 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cyrus, the Merciless",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Grimgaunt"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Formation}}: Destroy each other creature with 5 or less attack. <br>Whenever a creature is destroyed, Cyrus, the Merciless gets +1 attack and +1 health.",
+     "attack": "3",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Formation}}: Destroy each other creature with 7 or less attack. <br>Whenever a creature is destroyed, Cyrus, the Merciless gets +1 attack and +1 health.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Formation}}: Destroy each other creature with 9 or less attack. <br>Whenever a creature is destroyed, Cyrus, the Merciless gets +1 attack and +1 health.",
+     "attack": "9",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Cyrus, the Merciless 2.jpg",
+    "Cyrus, the Merciless 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Frost Hulk",
+   "faction": "Tempys",
+   "rarity": "Token",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "9",
+     "health": "9"
+    }
+   ],
+   "images": [
+    "Frost Hulk 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "G.S.F. Commando",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Metamind"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}}<br>\n{{Forge}}: G.S.F. Commando gets +1 {{Armor}} for each other friendly Metamind.<br>\n{{Activate}}: Deal damage equal to G.S.F. Commando's armor to an enemey creature.",
+     "attack": "3",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|2}}<br>\n{{Forge}}: G.S.F. Commando gets +1 {{Armor}} for each other friendly Metamind.<br>\n{{Activate}}: Deal damage equal to 2x G.S.F. Commando's armor to an enemey creature.",
+     "attack": "6",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|3}}<br>\n{{Forge}}: G.S.F. Commando gets +1 {{Armor}} for each other friendly Metamind.<br>\n{{Activate}}: Deal damage equal to 3x G.S.F. Commando's armor to an enemey creature.",
+     "attack": "11",
+     "health": "19"
+    }
+   ],
+   "images": [],
+   "altImages": []
+  },
+  {
+   "name": "Lava Golem",
+   "faction": "Tempys",
+   "rarity": "Token",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Friendly creatures have +4 attack.",
+     "attack": "4",
+     "health": "6"
+    }
+   ],
+   "images": [
+    "Lava Golem 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lightning Titan",
+   "faction": "Tempys",
+   "rarity": "Token",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Friendly creatures have {{Aggressive}}.",
+     "attack": "6",
+     "health": "4"
+    }
+   ],
+   "images": [
+    "Lightning Titan 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Quakeasaurus Wrecks",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Raid}}: Deal damage to an enemy creature at random and to the enemy player equal to 2x the number of friendly Dinosaurs.",
+     "attack": "5",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Raid}}: Deal damage to an enemy creature at random and to the enemy player equal to 3x the number of friendly Dinosaurs.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Raid}}: Deal damage to an enemy creature at random and to the enemy player equal to 4x the number of friendly Dinosaurs.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Quakeasaurus Wrecks 2.jpg",
+    "Quakeasaurus Wrecks 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ramble, Eternal Witness",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Shuffle the level 2 version of this into your deck.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Shuffle the level 3 version of this into your deck.",
+     "attack": "7",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: {{Spawn}} a random creature from your deck.",
+     "attack": "12",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Ramble, Eternal Witness 2.jpg",
+    "Ramble, Eternal Witness 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ritual of the Elements",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 7.3",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Spawn}} a {{cardtt|Lava Golem}}, {{cardtt|Frost Hulk}}, or {{cardtt|Lightning Titan}} at random.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Ritual of the Elements 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Specimen 001",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 7.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ooze"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Specimen 001 is dealt non-battle damage, each other friendly creature gets +2 attack and {{Armor|1}}",
+     "attack": "2",
+     "health": "12"
+    },
+    {
+     "level": 2,
+     "text": "When Specimen 001 is dealt non-battle damage, each other friendly creature gets +3 attack and {{Armor|2}}",
+     "attack": "3",
+     "health": "16"
+    },
+    {
+     "level": 3,
+     "text": "When Specimen 001 is dealt non-battle damage, each other friendly creature gets +4 attack and {{Armor|3}}",
+     "attack": "4",
+     "health": "22"
+    }
+   ],
+   "images": [
+    "Specimen 001 2.jpg",
+    "Specimen 001 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Wegu's Embrace",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 7.3",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a friendly creature +3 attack, +3 health, and \"When this creature deals battle damage to the enemy player this turn, you gain that much health.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a friendly creature +5 attack, +5 health, and \"When this creature deals battle damage to the enemy player this turn, you gain that much health.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a friendly creature +10 attack, +10 health, and \"When this creature deals battle damage to the enemy player this turn, you gain that much health.\"",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Wegu's Embrace 1.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

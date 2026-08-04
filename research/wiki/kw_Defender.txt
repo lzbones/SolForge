@@ -1,0 +1,12 @@
+[[File:Def1.png|right]]
+
+==Description==
+A creature with defender does not start a battle.
+
+Creatures with Defender never attack although they do become offensive and can use [[Activate]] and [[Mobility]]. They can engage in battle and inflict damage to other creatures but they cannot attack players.
+
+Certain cards like [[Flamerift Instigator]] can remove Defender from a creature and allow them to attack.
+
+[[Energy Prison]] can add Defender to a creature, stopping it from attacking players. 
+
+==

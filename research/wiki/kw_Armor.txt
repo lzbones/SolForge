@@ -1,0 +1,8 @@
+[[File:Arm1.png|right]]
+
+==Description==
+A creature or player with Armor X prevents the first X damage dealt to it each turn.
+
+Armor is an additional layer of protection that a creature or player can have in excess of its [[Health|health]]. Armor will neutralize the first damage done to a creature per turn, up to the number of Armor points the creature has. Any damage done in excess of the amount of Armor is inflicted on the creature's health.
+
+Unlike health, Armor is not reduced when it absorbs

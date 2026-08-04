@@ -1,0 +1,628 @@
+{
+ "set": "Set_2.3",
+ "count": 17,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Byzerak Frostmaiden",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}/{{Flank}}: If Byzerak Frostmaiden is opposed, the opposing creature gets -2 attack and this gets +2 attack.<br>\n{{Allied|Tempys}}: {{Mobility|1}}",
+     "attack": "1",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}/{{Flank}}: If Byzerak Frostmaiden is opposed, the opposing creature gets -4 attack and this gets +4 attack.<br>\n{{Allied|Tempys}}: {{Mobility|2}}",
+     "attack": "3",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}/{{Flank}}: If Byzerak Frostmaiden is opposed, the opposing creature gets -6 attack and this gets +6 attack.<br>\n{{Allied|Tempys}}: {{Mobility|3}}",
+     "attack": "5",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Byzerak Frostmaiden 2.jpg",
+    "Byzerak Frostmaiden 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cindersmoke Wyvern",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\n{{Flank}}: Deal damage equal to its attack to the opposing creature.  If there is no opposing creature, deal that damage to the enemy player instead.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|2}}<br>\n{{Flank}}: Deal damage equal to its attack to the opposing creature.  If there is no opposing creature, deal that damage to the enemy player instead.",
+     "attack": "6",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|4}}<br>\n{{Flank}}: Deal damage equal to its attack to the opposing creature.  If there is no opposing creature, deal that damage to the enemy player instead.",
+     "attack": "10",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Cindersmoke Wyvern 2.jpg",
+    "Cindersmoke Wyvern 3.jpg"
+   ],
+   "altImages": [
+    "Cindersmoke Wyvern AA 2.jpg",
+    "Cindersmoke Wyvern AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Esperian Steelplate",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Insect"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Heal 3 damage from each friendly creature.<br>\n{{Allied|Alloyin}}: {{Armor|2}}",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Heal 5 damage from each friendly creature.<br>\n{{Allied|Alloyin}}: {{Armor|4}}",
+     "attack": "6",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Heal 8 damage from each friendly creature.<br>\n{{Allied|Alloyin}}: {{Armor|7}}",
+     "attack": "9",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Esperian Steelplate 2.jpg",
+    "Esperian Steelplate 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Fangwood Bear",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Bear"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "10",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "16",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Fangwood Bear 2.jpg",
+    "Fangwood Bear 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Frostshatter Strike",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 2.3",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 4 damage to an enemy creature. Give a friendly creature +4 attack this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 7 damage to an enemy creature. Give a friendly creature +7 attack this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 11 damage to an enemy creature. Give a friendly creature +11 attack this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Frostshatter Strike 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ironmind Acolyte",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Gnome"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If you have five or more cards in your hand, you may play an additional card this turn.",
+     "attack": "6",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If you have five or more cards in your hand, you may play an additional card this turn.",
+     "attack": "10",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If you have five or more cards in your hand, you may play an additional card this turn.",
+     "attack": "15",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Ironmind Acolyte 2.jpg",
+    "Ironmind Acolyte 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Legion Titan",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Legion Titan gets +1 attack and +1 health for each enemy creature with 3 or less attack.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Legion Titan gets +2 attack and +2 health for each enemy creature with 5 or less attack.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Legion Titan gets +3 attack and +3 health for each enemy creature with 6 or less attack.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Legion Titan 2.jpg",
+    "Legion Titan 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Netherdrake",
+   "faction": "Nekrium",
+   "rarity": "Token",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When this enters play or moves into a lane, destroy the opposing level 1 creature.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "When this enters play or moves into a lane, destroy the opposing level 2 or lower creature.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}<br>\nWhen this enters play or moves into a lane, destroy the opposing creature.",
+     "attack": "15",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Netherdrake 2.jpg",
+    "Netherdrake 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nethershriek",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 2.3",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Spawn}} a 4/4 {{cardtt|Netherdrake}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Spawn}} a 8/8 {{cardtt|Netherdrake}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Spawn}} a 15/15 {{cardtt|Netherdrake}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Nethershriek 2.jpg",
+    "Nethershriek 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Onyxium Allomancer",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Allied|Nekrium}}: {{Regenerate|3}}<br>\n{{Activate}}: Discard and level up a card.",
+     "attack": "2",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Allied|Nekrium}}: {{Regenerate|5}}<br>\n{{Activate}}: Discard and level up a card.",
+     "attack": "4",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Allied|Nekrium}}: {{Regenerate|8}}<br>\n{{Activate}}: Discard and level up a card.",
+     "attack": "8",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Onyxium Allomancer 2.jpg",
+    "Onyxium Allomancer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Power Torrent",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 2.3",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +2 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nGive a creature +3 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nGive a creature +4 attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Power Torrent 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Sonic Burst",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 2.3",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature −8 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature −9 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature −10 attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Sonic Burst 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Sorrow Harvester",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When a friendly Abomination is destroyed on your turn, draw a card.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When a friendly Abomination is destroyed on your turn, draw a card.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When a friendly Abomination is destroyed on your turn, draw a card.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Sorrow Harvester 2.jpg",
+    "Sorrow Harvester 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Stranglevine Hydra",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Hydra"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Stranglevine Hydra deals battle damage to a player, it gets {{Regenerate|1}}.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When Stranglevine Hydra deals battle damage to a player, it gets {{Regenerate|2}}.",
+     "attack": "8",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "When Stranglevine Hydra deals battle damage to a player, it gets {{Regenerate|3}}.",
+     "attack": "15",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Stranglevine Hydra 2.jpg",
+    "Stranglevine Hydra 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Umbruk Icecrusher",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Allied|Uterra}}: This gets +2 attack, +2 health, and {{Breakthrough}}<br>\nWhen Umbruk Icecrusher deals battle damage to a player, deal that much damage to that player again.",
+     "attack": "6",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Allied|Uterra}}: This gets +2 attack, +2 health, and {{Breakthrough}}<br>\nWhen Umbruk Icecrusher deals battle damage to a player, deal that much damage to that player again.",
+     "attack": "10",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Allied|Uterra}}: This gets +2 attack, +2 health, and {{Breakthrough}}<br>\nWhen Umbruk Icecrusher deals battle damage to a player, deal that much damage to that player again.",
+     "attack": "14",
+     "health": "6"
+    }
+   ],
+   "images": [
+    "Umbruk Icecrusher 2.jpg",
+    "Umbruk Icecrusher 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Uranti Warstoker",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Yeti"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Each other friendly Yeti gets +3 attack this turn.",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Each other friendly Yeti gets +4 attack this turn.",
+     "attack": "8",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Each other friendly Yeti gets +6 attack this turn.",
+     "attack": "12",
+     "health": "11"
+    }
+   ],
+   "images": [
+    "Uranti Warstoker 2.jpg",
+    "Uranti Warstoker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Uterradon Ridgeback",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 2.3",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Breakthrough}}<br>\nWhen Uterradon Ridgeback deals battle damage to a player on your turn, each friendly creature gets +1 attack and +1 health.",
+     "attack": "7",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Breakthrough}}<br>\nWhen Uterradon Ridgeback deals battle damage to a player on your turn, each friendly creature you control gets +2 attack and +2 health.",
+     "attack": "11",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Breakthrough}}<br>\nWhen Uterradon Ridgeback deals battle damage to a player on your turn, each friendly creature you control gets +4 attack and +4 health and {{Breakthrough}}.",
+     "attack": "17",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Uterradon Ridgeback 2.jpg",
+    "Uterradon Ridgeback 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

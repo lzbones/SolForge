@@ -1,0 +1,163 @@
+{
+ "set": "Set_5.2",
+ "count": 4,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Doppelbot",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 5.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Look at the creatures in the enemy player's hand and choose one. Replace Doppelbot with a copy of the chosen creature.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Look at the creatures in the enemy player's hand and choose one. Replace Doppelbot with a copy of the chosen creature, then give it +5 attack.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Look at the creatures in the enemy player's hand and choose one. Replace Doppelbot with a copy of the chosen creature, then give it +10 attack.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Doppelbot 2.jpg",
+    "Doppelbot 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Dragonwake",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 5.2",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Search your deck for a level 2 or lower Dragon and {{Spawn}} a copy of it. <br>\nIt gets {{Aggressive}} and \"At the end of your turn, destroy this.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Search your deck for a Dragon and {{Spawn}} a copy of it. <br>\nIt gets {{Aggressive}} and \"At the end of your turn, destroy this.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Search your deck for a Dragon and {{Spawn}} a copy of it. <br>\nIt gets {{Aggressive}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Dragonwake 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Everflow Eidolon",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 5.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Everflow Eidolon gains health, you gain that much health.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When Everflow Eidolon gains health, you gain that much health.",
+     "attack": "10",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When Everflow Eidolon gains health, you gain 2x that much health.",
+     "attack": "16",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Everflow Eidolon 2.jpg",
+    "Everflow Eidolon 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Varna, Immortal King",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 5.2",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Forgeborn"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: {{Spawn}} a copy of a random friendly creature that was destroyed this turn.",
+     "attack": "4",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: {{Spawn}} a copy of a random friendly creature that was destroyed this turn.",
+     "attack": "6",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: {{Spawn}} a copy of a random friendly creature that was destroyed this turn.",
+     "attack": "12",
+     "health": "22"
+    },
+    {
+     "level": 4,
+     "text": "{{Forge}}: Destroy each other creature. <br>\nThen {{Spawn}} a copy of a random friendly creature that was destroyed this turn.",
+     "attack": "18",
+     "health": "30"
+    }
+   ],
+   "images": [
+    "Varna, Immortal King 2.jpg",
+    "Varna, Immortal King 3.jpg",
+    "Varna, Immortal King 4.jpg"
+   ],
+   "altImages": [
+    "Varna, Immortal King AA 2.jpg",
+    "Varna, Immortal King AA 3.jpg",
+    "Varna, Immortal King AA 4.jpg"
+   ]
+  }
+ ]
+}

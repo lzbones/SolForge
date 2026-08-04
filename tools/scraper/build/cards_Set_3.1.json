@@ -1,0 +1,253 @@
+{
+ "set": "Set_3.1",
+ "count": 7,
+ "skipped": [
+  "Roaming Warclaw (original)"
+ ],
+ "cards": [
+  {
+   "name": "Ashurian Flamesculptor",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 3.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may play an additional level 1 Tempys spell this turn.",
+     "attack": "9",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may play an additional level 2 or lower Tempys spell this turn.",
+     "attack": "15",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Ashurian Flamesculptor 2.jpg",
+    "Ashurian Flamesculptor 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Bramblewood Tracker",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 3.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "-",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may play an additional level 1 Uterra creature this turn.",
+     "attack": "7",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may play an additional level 2 or lower Uterra creature this turn.",
+     "attack": "12",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Bramblewood Tracker 2.jpg",
+    "Bramblewood Tracker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Forge Oracle",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 3.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may discard and level up an Alloyin card.",
+     "attack": "1",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may discard and level up an Alloyin card.",
+     "attack": "10",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may discard and level up an Alloyin card.",
+     "attack": "20",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Forge Oracle 2.jpg",
+    "Forge Oracle 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nexus Aeronaut",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 3.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}} <br>\nWhile Nexus Aeronaut is in the center space, each other friendly creature gets +2 attack. <br>\nOtherwise, this gets {{Armor|2}}.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}} <br>\nWhile Nexus Aeronaut is in the center space, each other friendly creature gets +3 attack. <br>\nOtherwise, this gets {{Armor|3}}.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}} <br>\nWhile Nexus Aeronaut is in the center space, each other friendly creature gets +6 attack. <br>\nOtherwise, this gets {{Armor|6}}.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Nexus Aeronaut 2.jpg",
+    "Nexus Aeronaut 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Rage of Kadras",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 3.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Overload}} <br>\nEach friendly Tempys creature gets +1 attack and deals damage equal to its attack to the creature opposing it.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Rage of Kadras 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Suruzal, Emissary of Varna",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 3.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may destroy another friendly level 1 creature. <br>\nIf you do, {{Spawn}} a copy of it.",
+     "attack": "4",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may destroy another friendly level 2 or lower creature. <br>\nIf you do, {{Spawn}} a copy of it.",
+     "attack": "8",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may destroy another friendly creature. <br>\nIf you do, {{Spawn}} a copy of it.",
+     "attack": "14",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Suruzal, Emissary of Varna 2.jpg",
+    "Suruzal, Emissary of Varna 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Tomb Pillager",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 3.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may {{Banish}} a Nekrium card from your discard pile.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may {{Banish}} a Nekrium card from your discard pile.",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Consistent}} <br>\n{{Forge}}: You may {{Banish}} a Nekrium card from your discard pile.",
+     "attack": "15",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Tomb Pillager 2.jpg",
+    "Tomb Pillager 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

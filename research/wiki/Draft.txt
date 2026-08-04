@@ -1,0 +1,56 @@
+==How To Play==
+[[File:Draft Picks.jpg|350px|right]]
+Drafts begin with the player opening a pack that contains six cards of heroic rarity. All packs after that will contain a mix of rarities with most cards being commons and rares and occaisional heroic and legendary cards showing up. Instead of passing the packs around a virtual table where a set group of players pick cards, an algorithm removes cards based on their pick popularity in the larger draft setting. Consequently, more popular cards and cards of higher rarity are less likely to show up as the packs get smaller. Once the pack is down to two cards, a new pack of six is opened. This continues until the player has chosen 30 cards, all of which will be included in their draft deck.
+
+At the beginning of the draft, the player can choose any faction from the first pack. Once the player has picked two cards from different factions, they will be locked into that faction pair. Subsequent packs will contain only cards from those two factions for the rest of the draft. It's important to know that the cards you pick during the draft will be added to your collection, regardless of how well you do in the tournament. Sometimes you may want to pick a high rarity card for your collection rather than a good card for your deck.
+
+After your deck is drafted you can enter the tournament queues. Here you can play until you have either two losses or seven wins. The game will try to match you with players of a similar record as you progress through the tournament. Once you finish, you will receive prizes based on the number of wins you accumulated.
+
+==Tournaments==
+
+===''Draft''===
+Draft tournaments have an entry fee of 4 Event Tickets. In addition to booster packs, players can win Event Tickets, allowing them to play more tournaments, as well as Elite Tickets, which can be used to play in monthly [[Elite Tournaments]] with large prize payouts. Players also get to keep the cards that they picked in the draft.
+
+===''Weekend Warrior Formats''===
+Many of the Weekend Warrior events use alternate draft formats such as mono-faction, 4-faction, or high-rarity. These tournaments typically have a four round structure rather than a play to X wins or losses structure.
+
+===''Rewards''===
+{| class="article-table" style="font-size: 80%; text-align:center;"
+!
+!width="150px" style="text-align:center;"|Draft
+!style="text-align:center;"|Weekend Warrior Alt Draft
+|-
+|style="text-align:center; background-color:#101B26;"|Entry Fee||4 {{Event Ticket}}||2 {{Event Ticket}} or<br>40,000 {{silver|15px}} or<br>360 {{gold|15px}}
+|-
+|style="text-align:center; background-color:#101B26;"|Keep Cards||Yes||No
+|-
+|colspan="3" style="text-align:center; background-color:#101B26;"|Rewards
+|-
+|style="text-align:center; background-color:#101B26;"|0 Wins||style="padding: 5px 2px; line-height: 1.5"|{{BoosterPack|12px}}||{{BoosterPack|12px}}
+|-
+|style="text-align:center; background-color:#101B26;"|1 Wins
+|style="padding: 5px 2px; vertical-align: center;"|<div style="display: inline-block;">{{Silver|20px}}<br>2,500</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}</div>
+|style="padding: 5px 2px; vertical-align: center;"|<div style="display: inline-block;">{{Event Ticket}}<br>1</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}</div>
+|-
+|style="text-align:center; background-color:#101B26;"|2 Wins||style="padding: 5px 2px;"|<div style="display: inline-block;">{{Silver|20px}}<br>5,000</div>  <div style="display: inline-block;">{{Event Ticket}}<br>1</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}</div>
+|style="padding: 5px 2px; vertical-align: center;"|<div style="display: inline-block;">{{Event Ticket}}<br>1</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}  {{BoosterPack|12px}}</div>
+|-
+|style="text-align:center; background-color:#101B26;"|3 Wins||style="padding: 5px 2px;"|<div style="display: inline-block;">{{Silver|20px}}<br>7,500</div>  <div style="display: inline-block;">{{Event Ticket}}<br>1</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}</div>
+|style="padding: 5px 2px; vertical-align: center;"|<div style="display: inline-block;">{{Event Ticket}}<br>2</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}  {{BoosterPack|12px}}</div>
+|-
+|style="text-align:center; background-color:#101B26;"|4 Wins||style="padding: 5px 2px;"|<div style="display: inline-block;">{{Silver|20px}}<br>10,000</div>  <div style="display: inline-block;">{{Event Ticket}}<br>2</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}</div>
+|style="padding: 5px 2px; vertical-align: center;"|<div style="display: inline-block;">{{Event Ticket}}<br>2</div>  <div style="display: inline-block;">Legendary<br>Card</div>
+|-
+|style="text-align:center; background-color:#101B26;"|5 Wins||style="padding: 5px 2px; "|<div style="display: inline-block;">{{Silver|20px}}<br>12,500</div>  <div style="display: inline-block;">{{Event Ticket}}<br>3</div>  <div style="display: inline-block;">{{Elite Ticket}}<br>1</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}</div>||
+|-
+|style="text-align:center; background-color:#101B26;"|6 Wins||style="padding: 5px 2px; "|<div style="display: inline-block;">{{Silver|20px}}<br>15,000</div>  <div style="display: inline-block;">{{Event Ticket}}<br>4</div>  <div style="display: inline-block;">{{Elite Ticket}}<br>2</div>  <div style="display: inline-block; vertical-align: top;">{{BoosterPack|12px}}</div>||
+|-
+|style="text-align:center; background-color:#101B26;"|7 Wins||style="padding: 5px 2px; line-height: 1.5"|<div style="display: inline-block;">{{Silver|20px}}<br>20,000</div>  <div style="display: inline-block;">{{Event Ticket}}<br>8</div>  <div style="display: inline-block;">{{Elite Ticket}}<br>3</div>  <div style="display: inline-block;">Legendary<br>Card</div>||
+|}
+
+==Draft Card Pool==
+The cards that are used in draft change periodically. The pool is typically refreshed with major set releases and contains all of the new cards along with a selection of cards from older sets. In addition to the cards listed on the draft pool page, legendaries from all sets have a chance of showing up in packs. Both Draft and Expert Draft use the same card pool.
+:''[[Draft Pool|Current draft pool]]''
+
+{{GameInfo}}
+[[Category:Pages needing content]]

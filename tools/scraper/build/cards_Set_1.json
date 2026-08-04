@@ -1,0 +1,7105 @@
+{
+ "set": "Set_1",
+ "count": 192,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Abraxas, Avatar of Kadras",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Hydra"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Give an adjacent creature 2X attack this turn.",
+     "attack": "4",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Each adjacent creature gets 2X attack this turn.",
+     "attack": "7",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Each friendly creature gets 2X attack this turn.",
+     "attack": "12",
+     "health": "21"
+    }
+   ],
+   "images": [
+    "Abraxas, Avatar of Kadras 1.jpg",
+    "Abraxas, Avatar of Kadras 2.jpg",
+    "Abraxas, Avatar of Kadras 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Aegis Conscript",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Give a friendly creature {{Armor|1}}.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Give a friendly creature {{Armor|2}}.",
+     "attack": "6",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Give a friendly creature {{Armor|4}}.",
+     "attack": "12",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Aegis Conscript 1.jpg",
+    "Aegis Conscript 2.jpg",
+    "Aegis Conscript 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Aerial Surge",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature {{Mobility|1}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nGive a creature {{Mobility|2}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nGive a creature {{Mobility|3}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Aerial Surge 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Alloyin General",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Adjacent creatures get +2 attack",
+     "attack": "2",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "Adjacent creatures get +4 attack",
+     "attack": "4",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "Adjacent creatures get +6 attack",
+     "attack": "6",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Alloyin General 1.jpg",
+    "Alloyin General 2.jpg",
+    "Alloyin General 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Alloyin Highlander",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While Alloyin Highlander is your only friendly creature, it gets +4 attack and {{Armor|2}}.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "While Alloyin Highlander is your only friendly creature, it gets +8 attack and {{Armor|4}}.",
+     "attack": "7",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "While Alloyin Highlander is your only friendly creature, it gets +16 attack and {{Armor|8}}.",
+     "attack": "10",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Alloyin Highlander 1.jpg",
+    "Alloyin Highlander 2.jpg",
+    "Alloyin Highlander 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Aquatic Embrace",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +5 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature +10 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature +20 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Aquatic Embrace 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Arboris, Grove Dragon",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While you have over 100 health, Arboris gets +4 attack and +4 health.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "While you have over 100 health, Arboris gets +8 attack and +8 health.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "While you have over 100 health, Arboris gets +80 attack and +80 health.",
+     "attack": "20",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Arboris, Grove Dragon 1.jpg",
+    "Arboris, Grove Dragon 2.jpg",
+    "Arboris, Grove Dragon 3.jpg"
+   ],
+   "altImages": [
+    "Arboris, Grove Dragon AA 1.jpg",
+    "Arboris, Grove Dragon AA 2.jpg",
+    "Arboris, Grove Dragon AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Arcflight Squadron",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: You may play an additional level 1 Robot this turn.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: You may play an additional level 2 or lower Robot this turn.",
+     "attack": "7",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: You may play an additional Robot this turn.",
+     "attack": "10",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Arcflight Squadron 1.jpg",
+    "Arcflight Squadron 2.jpg",
+    "Arcflight Squadron 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ashurian Mystic",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Aggressive}}<br>\nWhen Ashurian Mystic deals battle damage to a player, it gets +1 attack and +1 health.",
+     "attack": "3",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Aggressive}}<br>\nWhen Ashurian Mystic deals battle damage to a player, it gets +2 attack and +2 health.",
+     "attack": "6",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Aggressive}}<br>\nWhen Ashurian Mystic deals battle damage to a player, it gets +4 attack and +4 health.",
+     "attack": "10",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Ashurian Mystic 1.jpg",
+    "Ashurian Mystic 2.jpg",
+    "Ashurian Mystic 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Asir's Blessing",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature “When this creature deals battle damage to a player, it gets +1 attack and +1 health.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature “When this creature deals battle damage to a player, it gets +2 attack and +2 health.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature “When this creature deals battle damage to a player, it gets +3 attack and +3 health.”",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Asir's Blessing 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Avalanche Invoker",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Earth Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you gain a {{Rank}}, deal 3 damage to each non-Tempys creature.",
+     "attack": "6",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "When you gain a {{Rank}}, deal 6 damage to each non-Tempys creature.",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you gain a {{Rank}}, deal 12 damage to each non-Tempys creature.",
+     "attack": "14",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Avalanche Invoker 1.jpg",
+    "Avalanche Invoker 2.jpg",
+    "Avalanche Invoker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Battle Techtician",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While Battle Techtician is in the center space, each other friendly creature gets +2 attack.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "While Battle Techtician is in the center space, each other friendly creature gets +4 attack.",
+     "attack": "7",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "While Battle Techtician is in the center space, each other friendly creature gets +8 attack.",
+     "attack": "14",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Battle Techtician 1.jpg",
+    "Battle Techtician 2.jpg",
+    "Battle Techtician 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Blight Walker",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Blight Walker deals battle damage to a level 1 creature, destroy that creature.",
+     "attack": "1",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "When Blight Walker deals battle damage to a level 2 or lower creature, destroy that creature.",
+     "attack": "3",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When Blight Walker deals battle damage to a creature, destroy that creature.",
+     "attack": "7",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Blight Walker 1.jpg",
+    "Blight Walker 2.jpg",
+    "Blight Walker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Bonescythe Reaver",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may destroy a level 1 enemy creature.",
+     "attack": "8",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may destroy a level 2 or lower enemy creature.",
+     "attack": "13",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Bonescythe Reaver 1.jpg",
+    "Bonescythe Reaver 2.jpg",
+    "Bonescythe Reaver 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Botanimate",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Replace an enemy level 1 creature with a 3/3 {{cardtt|Sapling}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Replace an enemy level 2 or lower creature with a 3/3 {{cardtt|Sapling}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Replace an enemy creature with a 3/3 {{cardtt|Sapling}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Botanimate 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Bramblewood Guardian",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "-",
+     "attack": "2",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "-",
+     "attack": "6",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "-",
+     "attack": "12",
+     "health": "24"
+    }
+   ],
+   "images": [
+    "Bramblewood Guardian 1.jpg",
+    "Bramblewood Guardian 2.jpg",
+    "Bramblewood Guardian 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Brightsteel Gargoyle",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\nAt the end of your turn, Brightsteel Gargoyle gets {{Armor|2}} and {{Defender}} until the end of the next turn.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|2}}<br>\nAt the end of your turn, Brightsteel Gargoyle gets {{Armor|5}} and {{Defender}} until the end of the next turn.",
+     "attack": "10",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|3}}<br>\nAt the end of your turn, Brightsteel Gargoyle gets {{Armor|10}} and {{Defender}} until the end of the next turn.",
+     "attack": "16",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Brightsteel Gargoyle 1.jpg",
+    "Brightsteel Gargoyle 2.jpg",
+    "Brightsteel Gargoyle 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Brightsteel Sentinel",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Each friendly Robot you control get {{Armor|5}} this turn.",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Each friendly Robot you control get {{Armor|10}} this turn.",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Each friendly Robot you control get {{Armor|15}} this turn.",
+     "attack": "14",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Brightsteel Sentinel 1.jpg",
+    "Brightsteel Sentinel 2.jpg",
+    "Brightsteel Sentinel 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Bulwark Bash",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal damage equal to the Armor on a friendly creature to an enemy creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal damage equal to 2X the Armor on a friendly creature to an enemy creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal damage equal to 3X the Armor on a friendly creature to an enemy creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Bulwark Bash 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cadaverous Thicket",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Cadaverous Thicket deals damage to a creature, give that creature {{Poison|1}}.",
+     "attack": "1",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "When Cadaverous Thicket deals damage to a creature, give that creature {{Poison|3}}.",
+     "attack": "3",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "When Cadaverous Thicket deals damage to a creature, give that creature {{Poison|5}}.",
+     "attack": "5",
+     "health": "22"
+    }
+   ],
+   "images": [
+    "Cadaverous Thicket 1.jpg",
+    "Cadaverous Thicket 2.jpg",
+    "Cadaverous Thicket 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Call the Lightning",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Each friendly creature battles an additional time this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Each friendly creature gets +2 attack this turn. Those creatures battle an additional time this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Each friendly creature gets +4 attack this turn. Those creatures battle an additional time this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Call the Lightning 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cavern Hydra",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Hydra"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Regenerate|1}}",
+     "attack": "4",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|3}}",
+     "attack": "7",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|5}}",
+     "attack": "11",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Cavern Hydra 1.jpg",
+    "Cavern Hydra 2.jpg",
+    "Cavern Hydra 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Chrogias",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "1",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|2}}<br>\n{{Defender}}<br>\nWhen Chrogias is dealt damage, you gain that much health",
+     "attack": "0",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|5}}<br>\n{{Breakthrough}}<br>\nWhen Chrogias is dealt damage, you gain that much health",
+     "attack": "40",
+     "health": "40"
+    }
+   ],
+   "images": [
+    "Chrogias 1.jpg",
+    "Chrogias 2.jpg",
+    "Chrogias 3.jpg"
+   ],
+   "altImages": [
+    "Chrogias AA 1.jpg",
+    "Chrogias AA 2.jpg",
+    "Chrogias AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Cinderfist Brawler",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Cinderfist Brawler deals battle damage to a player, deal that much damage to that player again.",
+     "attack": "7",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "When Cinderfist Brawler deals battle damage to a player, deal that much damage to that player again.",
+     "attack": "10",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "When Cinderfist Brawler deals battle damage to a player, deal that much damage to that player again.",
+     "attack": "14",
+     "health": "7"
+    }
+   ],
+   "images": [
+    "Cinderfist Brawler 1.jpg",
+    "Cinderfist Brawler 2.jpg",
+    "Cinderfist Brawler 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Contagion Surge",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature −1 attack and −1 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nGive a creature −2 attack and −2 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nGive a creature −3 attack and −3 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Contagion Surge 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Corpse Crawler",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Destroy a friendly creature.",
+     "attack": "8",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Destroy a friendly creature.",
+     "attack": "12",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Destroy a friendly creature.",
+     "attack": "20",
+     "health": "21"
+    }
+   ],
+   "images": [
+    "Corpse Crawler 1.jpg",
+    "Corpse Crawler 2.jpg",
+    "Corpse Crawler 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cull the Weak",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Destroy target creature with 4 or less attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Destroy target creature with 8 or less attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Destroy target creature with 14 or less attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Cull the Weak 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cultivate",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Replace a friendly Plant with a 9/9 {{cardtt|Treefolk}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Replace a friendly Plant with a 14/14 {{cardtt|Treefolk}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Replace a friendly Plant with a 21/21 {{cardtt|Treefolk}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Cultivate 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Cypien Augmentation",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature in a center space +2 attack and +2 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nGive a creature in a center space +4 attack and +4 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nGive a creature in a center space +6 attack and +6 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Cypien Augmentation 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Darkheart Wanderer",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you play a spell, Darkheart Wanderer gets {{Regenerate|1}}.",
+     "attack": "3",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "When you play a spell, Darkheart Wanderer gets {{Regenerate|2}}.",
+     "attack": "6",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "When you play a spell, Darkheart Wanderer gets {{Regenerate|4}}.",
+     "attack": "12",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Darkheart Wanderer 1.jpg",
+    "Darkheart Wanderer 2.jpg",
+    "Darkheart Wanderer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Darkshaper Savant",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you play a level 1 Nekrium card, you may give an enemy creature -3 attack and -3 health.",
+     "attack": "6",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you play a level 2 or lower Nekrium card, you may give an enemy creature -5 attack and -5 health.",
+     "attack": "12",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Darkshaper Savant 1.jpg",
+    "Darkshaper Savant 2.jpg",
+    "Darkshaper Savant 3.jpg"
+   ],
+   "altImages": [
+    "Darkshaper Savant AA 1.jpg",
+    "Darkshaper Savant AA 2.jpg",
+    "Darkshaper Savant AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Death Seeker",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: Put a 5/5 {{cardtt|Spirit_(Nekrium)|Spirit}} into this space.",
+     "attack": "1",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Put a 10/10 {{cardtt|Spirit_(Nekrium)|Spirit}} into this space.",
+     "attack": "1",
+     "health": "1"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Put a 15/15 {{cardtt|Spirit_(Nekrium)|Spirit}} into this space.",
+     "attack": "1",
+     "health": "1"
+    }
+   ],
+   "images": [
+    "Death Seeker 1.jpg",
+    "Death Seeker 1.jpg",
+    "Death Seeker 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Deepbranch Ancient",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Hydra"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If there is a friendly creature in each space, Deepbranch Ancient gets +4 attack and +4 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If there is a friendly creature in each space, Deepbranch Ancient gets +8 attack and +8 health.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If there is a friendly creature in each space, Deepbranch Ancient gets +12 attack and +12 health.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Deepbranch Ancient 1.jpg",
+    "Deepbranch Ancient 2.jpg",
+    "Deepbranch Ancient 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Deepbranch Prowler",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Cat"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Breakthrough}}",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Breakthrough}}",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Breakthrough}}",
+     "attack": "10",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Deepbranch Prowler 1.jpg",
+    "Deepbranch Prowler 2.jpg",
+    "Deepbranch Prowler 3.jpg"
+   ],
+   "altImages": [
+    "Deepbranch Prowler AA 1.jpg",
+    "Deepbranch Prowler AA 2.jpg",
+    "Deepbranch Prowler AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Deepwood Bear Rider",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Lupin"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "16",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "18",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Deepwood Bear Rider 1.jpg",
+    "Deepwood Bear Rider 2.jpg",
+    "Deepwood Bear Rider 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Disintegrate",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 1 to 8 damage to the enemy player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 1 to 15 damage to the enemy player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 1 to 25 damage to the enemy player.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Disintegrate 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Doomwing, Dire Drake",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\n{{Flank}}: Destroy the opposing level 1 creature.",
+     "attack": "6",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|2}}<br>\n{{Flank}}: Destroy the opposing level 2 or lower creature.",
+     "attack": "10",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|3}}<br>\n{{Flank}}: Destroy the opposing creature.",
+     "attack": "18",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Doomwing, Dire Drake 1.jpg",
+    "Doomwing, Dire Drake 2.jpg",
+    "Doomwing, Dire Drake 3.jpg"
+   ],
+   "altImages": [
+    "Doomwing, Dire Drake AA 1.jpg",
+    "Doomwing, Dire Drake AA 2.jpg",
+    "Doomwing, Dire Drake AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Dr. Frankenbaum",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When a friendly Abomination is destroyed, deal 2 damage to the enemy player.",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "When a friendly Abomination is destroyed, deal 3 damage to the enemy player.",
+     "attack": "9",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "When a friendly Abomination is destroyed, deal 4 damage to the enemy player.",
+     "attack": "14",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Dr. Frankenbaum 1.jpg",
+    "Dr. Frankenbaum 2.jpg",
+    "Dr. Frankenbaum 3.jpg"
+   ],
+   "altImages": [
+    "Dr. Frankenbaum AA 1.jpg",
+    "Dr. Frankenbaum AA 2.jpg",
+    "Dr. Frankenbaum AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Dreadbolt",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Destroy a level 1 creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Destroy a level 2 or lower creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Destroy a creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Dreadbolt 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Druid's Chant",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "You gain +8 Health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "You gain +12 Health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "You gain +20 Health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Druid's Chant 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Echowisp",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may put a copy of Echowisp into an adjacent space.",
+     "attack": "7",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may put a copy of Echowisp into an adjacent space.",
+     "attack": "8",
+     "health": "3"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may put a copy of Echowisp into each available spaces.",
+     "attack": "10",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Echowisp 1.jpg",
+    "Echowisp 2.jpg",
+    "Echowisp 3.jpg"
+   ],
+   "altImages": [
+    "Echowisp AA 1.jpg",
+    "Echowisp AA 2.jpg",
+    "Echowisp AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Electro Net",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature −5 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature −10 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature −15 attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Electro Net 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Energy Prison",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a level 1 creature {{Defender}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a level 2 or lower creature {{Defender}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nGive a creature {{Defender}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Energy Prison 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Energy Surge",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Draw 1 card.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nDraw 2 cards.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\n{{Overload}}<br>\nDraw 3 cards.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Energy Surge 1.jpg"
+   ],
+   "altImages": [
+    "Energy Surge AA 1.jpg"
+   ]
+  },
+  {
+   "name": "Enrage",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +3 attack and +3 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature +6 attack and +6 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature +12 attack and +12 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Enrage 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Epidemic",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Each enemy creature gets -2 attack and -2 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Each enemy creature gets -4 attack and -4 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Each enemy creature gets -6 attack and -6 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Epidemic 1.jpg"
+   ],
+   "altImages": [
+    "Epidemic AA 1.jpg"
+   ]
+  },
+  {
+   "name": "Ether Hounds",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may put a copy of this into a friendly available space.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may put a copy of this into a friendly available space.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may put a copy of this into a friendly available space.",
+     "attack": "9",
+     "health": "9"
+    }
+   ],
+   "images": [
+    "Ether Hounds 1.jpg",
+    "Ether Hounds 2.jpg",
+    "Ether Hounds 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Everflame Phoenix",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Phoenix"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}",
+     "attack": "7",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}<br>\nWhen you gain a {{Rank}}, replace Everflame Phoenix with a level 3 Everflame Phoenix.",
+     "attack": "0",
+     "health": "1"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|2}}<br>\n{{Vengeance}}: Put a level 2 Everflame Phoenix into this space.",
+     "attack": "22",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Everflame Phoenix 1.jpg",
+    "Everflame Phoenix 2.jpg",
+    "Everflame Phoenix 3.jpg"
+   ],
+   "altImages": [
+    "Everflame Phoenix AA 1.jpg",
+    "Everflame Phoenix AA 2.jpg",
+    "Everflame Phoenix AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Explosive Demise",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Destroy a friendly level 2 or lower creature. Deal damage equal to its attack to the enemy player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Destroy a friendly creature. Deal damage equal to its attack to the enemy player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Destroy a friendly creature. Deal damage equal to its attack to the enemy player. You gain that much health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Explosive Demise 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Fangwood Ravager",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Beast"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "17",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Fangwood Ravager 1.jpg",
+    "Fangwood Ravager 2.jpg",
+    "Fangwood Ravager 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Fell Walker",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: Put a 3/3 {{cardtt|Zombie}} into this space.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Put a 5/5 {{cardtt|Zombie}} into this space.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Put a 9/9 {{cardtt|Zombie}} into this space.",
+     "attack": "9",
+     "health": "9"
+    }
+   ],
+   "images": [
+    "Fell Walker 1.jpg",
+    "Fell Walker 2.jpg",
+    "Fell Walker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Feral Instinct",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +1 attack, +1 health, and {{Breakthrough}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature +3 attack, +3 health, and {{Breakthrough}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature +8 attack, +8 health, and {{Breakthrough}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Feral Instinct 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ferocious Roar",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Each friendly creature gets +2 attack and +2 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Each friendly creature gets +3 attack and +3 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Each friendly creature gets +5 attack, +5 health, and {{Breakthrough}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Ferocious Roar 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Fervent Assault",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a friendly creature {{Mobility|1}} and “{{Flank}}: Deal 3 damage to opposing creature.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a friendly creature {{Mobility|2}} and “{{Flank}}: Deal 6 damage to opposing creature.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a friendly creature {{Mobility|3}} and “{{Flank}}: Deal 12 damage to opposing creature.”",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Fervent Assault 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Firefist Uranti",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Yeti"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Deal damage equal to Firefist Uranti's Attack to a creature.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Deal damage equal to Firefist Uranti's Attack to a creature.",
+     "attack": "5",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Deal damage equal to Firefist Uranti's Attack to a creature.",
+     "attack": "7",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Firefist Uranti 1.jpg",
+    "Firefist Uranti 2.jpg",
+    "Firefist Uranti 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Firestorm",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 5 damage to each creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 6 damage to each creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 7 damage to each creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Firestorm 1.jpg"
+   ],
+   "altImages": [
+    "[[File:Firestorm_AA_1.jpg"
+   ]
+  },
+  {
+   "name": "Flame Speaker",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you play a spell, deal 2 damage to the enemy player.",
+     "attack": "2",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you play a spell, deal 3 damage to the enemy player.",
+     "attack": "6",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "When you play a spell, deal 5 damage to the enemy player.",
+     "attack": "13",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Flame Speaker 1.jpg",
+    "Flame Speaker 2.jpg",
+    "Flame Speaker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Flameblade Champion",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Flameblade Champion deals battle damage to a player, deal that much damage to each creature that player controls.",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "When Flameblade Champion deals battle damage to a player, deal that much damage to each creature that player controls.",
+     "attack": "7",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "When Flameblade Champion deals battle damage to a player, deal that much damage to each creature that player controls.",
+     "attack": "12",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Flameblade Champion 1.jpg",
+    "Flameblade Champion 2.jpg",
+    "Flameblade Champion 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Flameshaper Savant",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you play a level 1 Tempys card, you may have Flameshaper Savant deal 4 damage to target creature or player.",
+     "attack": "6",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you play a level 2 or lower Tempys card, you may have Flameshaper Savant deal 7 damage to target creature or player.",
+     "attack": "12",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Flameshaper Savant 1.jpg",
+    "Flameshaper Savant 2.jpg",
+    "Flameshaper Savant 3.jpg"
+   ],
+   "altImages": [
+    "Flameshaper Savant AA 1.jpg",
+    "Flameshaper Savant AA 2.jpg",
+    "Flameshaper Savant AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Flamestoke Shaman",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Give an adjacent level 1 creature {{Aggressive}}.",
+     "attack": "6",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Give an adjacent level 2 or lower creature {{Aggressive}}.",
+     "attack": "12",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Give an adjacent creature {{Aggressive}}.",
+     "attack": "18",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Flamestoke Shaman 1.jpg",
+    "Flamestoke Shaman 2.jpg",
+    "Flamestoke Shaman 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Fleshfiend",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Put a level 1 Fleshfiend into this space.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Put a level 2 Fleshfiend into this space.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Fleshfiend 1.jpg",
+    "Fleshfiend 2.jpg",
+    "Fleshfiend 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Flowsteel Prototype",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Shapeshifter"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "3",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "When you play a level 1 creature, Flowsteel Prototype gets +attack equal to its attack.",
+     "attack": "6",
+     "health": "15"
+    },
+    {
+     "level": 3,
+     "text": "When you play a level 2 or lower creature, Flowsteel Prototype gets +attack equal to its attack.",
+     "attack": "8",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Flowsteel Prototype 1.jpg",
+    "Flowsteel Prototype 2.jpg",
+    "Flowsteel Prototype 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Forcefield",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature {{Armor|5}} this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature {{Armor|10}} this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature {{Armor|20}} this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Forcefield 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Forge Guardian Alpha",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot Guardian"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}",
+     "attack": "4",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}",
+     "attack": "8",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}",
+     "attack": "20",
+     "health": "26"
+    }
+   ],
+   "images": [
+    "Forge Guardian Alpha 1.jpg",
+    "Forge Guardian Alpha 2.jpg",
+    "Forge Guardian Alpha 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Forge Guardian Beta",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot Guardian"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}}",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|2}}",
+     "attack": "8",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|4}}",
+     "attack": "20",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Forge Guardian Beta 1.jpg",
+    "Forge Guardian Beta 2.jpg",
+    "Forge Guardian Beta 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Forge Guardian Gamma",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot Guardian"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}, Sacrifice five friendly Robot Guardians: Put a 25/25 {{cardtt|Forge Guardian Omega}} into this space.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}, Sacrifice five friendly Robot Guardians: Put a 50/50 {{cardtt|Forge Guardian Omega}} into this space.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}, Sacrifice five friendly Robot Guardians: Put a 80/80 {{cardtt|Forge Guardian Omega}} into this space.",
+     "attack": "16",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Forge Guardian Gamma 1.jpg",
+    "Forge Guardian Gamma 2.jpg",
+    "Forge Guardian Gamma 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Forge Guardian Omega",
+   "faction": "Alloyin",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot Guardian"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|10}}<br>\n{{Breakthrough}}<br>\n{{Consistent}}<br>\n{{Mobility|1}}<br>\n{{Aggressive}}",
+     "attack": "25",
+     "health": "25"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|20}}<br>\n{{Breakthrough}}<br>\n{{Consistent}}<br>\n{{Mobility|2}}<br>\n{{Aggressive}}",
+     "attack": "50",
+     "health": "50"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|40}}<br>\n{{Breakthrough}}<br>\n{{Consistent}}<br>\n{{Mobility|4}}<br>\n{{Aggressive}}",
+     "attack": "80",
+     "health": "80"
+    }
+   ],
+   "images": [
+    "Forge Guardian Omega 1.jpg",
+    "Forge Guardian Omega 2.jpg",
+    "Forge Guardian Omega 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Forgeplate Sentry",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}}",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|3}}",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|5}}",
+     "attack": "15",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Forgeplate Sentry 1.jpg",
+    "Forgeplate Sentry 2.jpg",
+    "Forgeplate Sentry 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Frostwild Tracker",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Tigrin"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "4",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may play an additional level 1 creature this turn.",
+     "attack": "7",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may play an additional level 2 or lower creature this turn.",
+     "attack": "12",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Frostwild Tracker 1.jpg",
+    "Frostwild Tracker 2.jpg",
+    "Frostwild Tracker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Frozen Solid",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a level 1 creature “When this is dealt damage, destroy it.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a level 2 or lower creature “When this is dealt damage, destroy it.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature “When this is dealt damage, destroy it.”",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Frozen Solid 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Gemhide Basher",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While Gemhide Basher is opposed, it gets {{Aggressive}}.",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "While Gemhide Basher is opposed, it gets {{Aggressive}}.",
+     "attack": "10",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "While Gemhide Basher is opposed, it gets {{Aggressive}}.",
+     "attack": "16",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Gemhide Basher 1.jpg",
+    "Gemhide Basher 2.jpg",
+    "Gemhide Basher 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ghastly Touch",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature −3 attack and −3 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature −6 attack and −6 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature −12 attack and −12 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Ghastly Touch 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ghostscale Cobra",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Snake"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Ghostscale Cobra deals battle damage to a creature, that creature gets {{Poison|4}}.",
+     "attack": "4",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "When Ghostscale Cobra deals battle damage to a creature, that creature gets {{Poison|6}}.",
+     "attack": "6",
+     "health": "3"
+    },
+    {
+     "level": 3,
+     "text": "When Ghostscale Cobra deals battle damage to a creature, that creature gets {{Poison|10}}.",
+     "attack": "10",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Ghostscale Cobra 1.jpg",
+    "Ghostscale Cobra 2.jpg",
+    "Ghostscale Cobra 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ghox, Metamind Paragon",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Metamind"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, draw 1 card.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, draw 2 cards.",
+     "attack": "8",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, draw 3 cards.",
+     "attack": "12",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Ghox, Metamind Paragon 1.jpg",
+    "Ghox, Metamind Paragon 2.jpg",
+    "Ghox, Metamind Paragon 3.jpg"
+   ],
+   "altImages": [
+    "Ghox, Metamind Paragon AA 1.jpg",
+    "Ghox, Metamind Paragon AA 2.jpg",
+    "Ghox, Metamind Paragon AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Glacial Colossus",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ice Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}",
+     "attack": "6",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}",
+     "attack": "10",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}",
+     "attack": "16",
+     "health": "19"
+    }
+   ],
+   "images": [
+    "Glacial Colossus 1.jpg",
+    "Glacial Colossus 2.jpg",
+    "Glacial Colossus 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Gloomreaper Witch",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may destroy an enemy creature with 1 or less attack.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may destroy an enemy creature with 4 or less attack.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may destroy an enemy creature with 7 or less attack.",
+     "attack": "15",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Gloomreaper Witch 1.jpg",
+    "Gloomreaper Witch 2.jpg",
+    "Gloomreaper Witch 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Glowstride Stag",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You gain +5 health.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You gain +10 health.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You gain +15 health.",
+     "attack": "12",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Glowstride Stag 1.jpg",
+    "Glowstride Stag 2.jpg",
+    "Glowstride Stag 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Grave Ghast",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Regenerate|2}}",
+     "attack": "5",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|4}}",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|6}}",
+     "attack": "11",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Grave Ghast 1.jpg",
+    "Grave Ghast 2.jpg",
+    "Grave Ghast 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Grave Pact",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Destroy a friendly creature. Destroy a level 2 or lower enemy creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Destroy a friendly creature. Destroy a lower enemy creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nDestroy a friendly creature. Destroy a lower enemy creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Grave Pact 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Graveborn Glutton",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: Deal 1 to 4 damage to the enemy player.",
+     "attack": "6",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Deal 2 to 8 damage to the enemy player.",
+     "attack": "11",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Deal 4 to 12 damage to the enemy player.",
+     "attack": "17",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Graveborn Glutton 1.jpg",
+    "Graveborn Glutton 2.jpg",
+    "Graveborn Glutton 3.jpg"
+   ],
+   "altImages": [
+    "Graveborn Glutton AA 1.jpg",
+    "Graveborn Glutton AA 2.jpg",
+    "Graveborn Glutton AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Grimgaunt Devourer",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Grimgaunt"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When a creature is destroyed, Grimgaunt Devourer gets +1 attack and +1 health.",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "When a creature is destroyed, Grimgaunt Devourer gets +2 attack and +2 health.",
+     "attack": "7",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "When a creature is destroyed, Grimgaunt Devourer gets +3 attack and +3 health.",
+     "attack": "9",
+     "health": "7"
+    }
+   ],
+   "images": [
+    "Grimgaunt Devourer 1.jpg",
+    "Grimgaunt Devourer 2.jpg",
+    "Grimgaunt Devourer 3.jpg"
+   ],
+   "altImages": [
+    "Grimgaunt Devourer AA 1.jpg",
+    "Grimgaunt Devourer AA 2.jpg",
+    "Grimgaunt Devourer AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Grimgaunt Predator",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Grimgaunt"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\nWhen the opposing creature is destroyed, Grimgaunt Predator gets +2 attack and +2 health.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}<br>\nWhen the opposing creature is destroyed, Grimgaunt Predator gets +4 attack and +4 health.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}<br>\nWhen the opposing creature is destroyed, Grimgaunt Predator gets +6 attack and +6 health.",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Grimgaunt Predator 1.jpg",
+    "Grimgaunt Predator 2.jpg",
+    "Grimgaunt Predator 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Grimgaunt Spectre",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Grimgaunt"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}",
+     "attack": "11",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Grimgaunt Spectre 1.jpg",
+    "Grimgaunt Spectre 2.jpg",
+    "Grimgaunt Spectre 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Grove Huntress",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Give a friendly creature +1 attack and +1 health.",
+     "attack": "4",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Give a friendly creature +3 attack and +3 health.",
+     "attack": "7",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Give a friendly creature +5 attack and +5 health.",
+     "attack": "11",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Grove Huntress 1.jpg",
+    "Grove Huntress 2.jpg",
+    "Grove Huntress 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Grove Matriarch",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: Put a 1/1 {{cardtt|Seedling}} into this space.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Put a 3/3 {{cardtt|Sapling}} into this space.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Put a 5/5 {{cardtt|Treefolk}} into this space.",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Grove Matriarch 1.jpg",
+    "Grove Matriarch 2.jpg",
+    "Grove Matriarch 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Heart Tree",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Regenerate|2}}<br>\n{{Defender}}<br>\nEach other friendly creature gets {{Regenerate|2}}",
+     "attack": "0",
+     "health": "10"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|4}}<br>\n{{Defender}}<br>\nEach other friendly creature gets {{Regenerate|4}}",
+     "attack": "0",
+     "health": "15"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|6}}<br>\n{{Defender}}<br>\nEach other friendly creature gets {{Regenerate|6}}",
+     "attack": "0",
+     "health": "30"
+    }
+   ],
+   "images": [
+    "Heart Tree 1.jpg",
+    "Heart Tree 2.jpg",
+    "Heart Tree 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Heavy Artillery",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +5 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature +10 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature +15 attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Heavy Artillery 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Hellforged Avatar",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Regenerate|1}}<br>\n{{Forge}}: Hellforged Avatar gets +1 attack and +1 health for each Nekrium card in your hand.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|2}}<br>\n{{Forge}}: Hellforged Avatar gets +2 attack and +2 health for each Nekrium card in your hand.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|3}}<br>\n{{Forge}}: Hellforged Avatar gets +3 attack and +3 health for each Nekrium card in your hand.",
+     "attack": "5",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Hellforged Avatar 1.jpg",
+    "Hellforged Avatar 2.jpg",
+    "Hellforged Avatar 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Hinterland Watchman",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Mech"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While Hinterland Watchman has 5 or more attack, it gets {{Mobility|3}}.",
+     "attack": "4",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "While Hinterland Watchman has 10 or more attack, it gets {{Armor|5}} and\n{{Mobility|3}}.",
+     "attack": "7",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "While Hinterland Watchman has 20 or more attack, it gets <br>\n{{Armor|5}}, <br>\n{{Breakthrough}}, <br>\n{{Aggressive}}, <br>\n{{Mobility|3}} and <br>\n{{Regenerate|5}}.",
+     "attack": "15",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Hinterland Watchman 1.jpg",
+    "Hinterland Watchman 2.jpg",
+    "Hinterland Watchman 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Hungering Strike",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a friendly creature +3 attack. Give an enemy creature −3 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a friendly creature +5 attack. Give an enemy creature −5 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a friendly creature +9 attack. Give an enemy creature −9 attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Hungering Strike 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Hunting Pack",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wolf"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Hunting Pack enters play, you have a 50% chance to put a copy of Hunting Pack into an available space.",
+     "attack": "3",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "When Hunting Pack enters play, you have a 50% chance to put a copy of Hunting Pack into an available space.",
+     "attack": "6",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "When Hunting Pack enters play, you have a 50% chance to put a copy of Hunting Pack into an available space.",
+     "attack": "12",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Hunting Pack 1.jpg",
+    "Hunting Pack 2.jpg",
+    "Hunting Pack 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Iceborn Fortitude",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Each friendly creature gets +3 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Each friendly creature gets +5 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Each friendly creature gets +10 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Iceborn Fortitude 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Ionic Warcharger",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}",
+     "attack": "4",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}",
+     "attack": "9",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}",
+     "attack": "15",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Ionic Warcharger 1.jpg",
+    "Ionic Warcharger 2.jpg",
+    "Ionic Warcharger 3.jpg"
+   ],
+   "altImages": [
+    "Ionic Warcharger AA 1.jpg",
+    "Ionic Warcharger AA 2.jpg",
+    "Ionic Warcharger AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Jet Pack",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +3 attack and {{Mobility|1}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature +6 attack and {{Mobility|1}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature +9 attack and {{Mobility|1}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Jet Pack 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Keeper of the Damned",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Another friendly level 1 creature gets, \"{{Vengeance}}: {{Spawn}} this\" this turn.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Another friendly level 2 or lower creature gets, \"{{Vengeance}}: {{Spawn}} this\" this turn.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Another friendly creature gets, \"{{Vengeance}}: {{Spawn}} this\" this turn.",
+     "attack": "15",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Keeper of the Damned 1.jpg",
+    "Keeper of the Damned 2.jpg",
+    "Keeper of the Damned 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Leafkin Progenitor",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Replace this with a level 2 Leafkin Progenitor.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Replace this with a level 3 Leafkin Progenitor.",
+     "attack": "7",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Put a level 1 Leafkin Progenitor into an adjacent available space.",
+     "attack": "11",
+     "health": "11"
+    }
+   ],
+   "images": [
+    "Leafkin Progenitor 1.jpg",
+    "Leafkin Progenitor 2.jpg",
+    "Leafkin Progenitor 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lifeblood Dryad",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dryad"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: If there is a friendly creature in each space, each other friendly creature gets +2 attack and +2 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: If there is a friendly creature in each space, each other friendly creature gets +3 attack and +3 health.",
+     "attack": "7",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: If there is a friendly creature in each space, each other friendly creature gets +6 attack and +6 health.",
+     "attack": "9",
+     "health": "9"
+    }
+   ],
+   "images": [
+    "Lifeblood Dryad 1.jpg",
+    "Lifeblood Dryad 2.jpg",
+    "Lifeblood Dryad 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lifeshaper Savant",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Seraph"
+   ],
+   "levels": [
+    {
+     "level": 2,
+     "text": "When you play a level 1 Uterra card, you may give another friendly creature +3 attack and +3 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "When you play a level 2 or lower Uterra card, you may give another friendly creature +5 attack and +5 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Lifeshaper Savant 1.jpg",
+    "Lifeshaper Savant 2.jpg",
+    "Lifeshaper Savant 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lightbringer Cleric",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Tuskin"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, you gain +1 to +4 health.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, you gain +3 to +8 health.",
+     "attack": "10",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, you gain +7 to +13 health.",
+     "attack": "15",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Lightbringer Cleric 1.jpg",
+    "Lightbringer Cleric 2.jpg",
+    "Lightbringer Cleric 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lightning Brand",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a level 2 or lower creature +1 attack and {{Aggressive}} this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature +2 attack and {{Aggressive}} this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature +4 attack and {{Aggressive}} this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Lightning Brand 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lightning Spark",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 6 damage to a creature or player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 8 damage to a creature or player.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 12 damage to a creature or player.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Lightning Spark 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lightning Wyrm",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Lightning Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Aggressive}}",
+     "attack": "4",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Aggressive}}",
+     "attack": "7",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "{{Aggressive}}",
+     "attack": "11",
+     "health": "8"
+    }
+   ],
+   "images": [
+    "Lightning Wyrm 1.jpg",
+    "Lightning Wyrm 2.jpg",
+    "Lightning Wyrm 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lightshield Patrol",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While Lightshield Patrol has 5 or more attack, it gets {{Armor|2}}.",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "While Lightshield Patrol has 10 or more attack, it gets {{Armor|3}}.",
+     "attack": "7",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "While Lightshield Patrol has 20 or more attack, it gets {{Armor|4}}.",
+     "attack": "15",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Lightshield Patrol 1.jpg",
+    "Lightshield Patrol 2.jpg",
+    "Lightshield Patrol 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Lyria, Muse of Varna",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: {{Spawn}} a random creature that was destroyed this game.",
+     "attack": "8",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Put a random creature that was destroyed this game into each of your available spaces.",
+     "attack": "15",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Lyria, Muse of Varna 1.jpg",
+    "Lyria, Muse of Varna 2.jpg",
+    "Lyria, Muse of Varna 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Magma Hound",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Earth Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may deal 2 damage to an enemy creature.",
+     "attack": "4",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may deal 4 damage to an enemy creature.",
+     "attack": "8",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may deal 6 damage to an enemy creature.",
+     "attack": "13",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Magma Hound 1.jpg",
+    "Magma Hound 2.jpg",
+    "Magma Hound 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Marrow Fiend",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Skeleton"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "8",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "11",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "17",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Marrow Fiend 1.jpg",
+    "Marrow Fiend 2.jpg",
+    "Marrow Fiend 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Master of Elements",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may play an additional level 1 spell this turn.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may play an additional level 2 or lower spell this turn.",
+     "attack": "17",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Master of Elements 1.jpg",
+    "Master of Elements 2.jpg",
+    "Master of Elements 3.jpg"
+   ],
+   "altImages": [
+    "Master of Elements AA 1.jpg",
+    "Master of Elements AA 2.jpg",
+    "Master of Elements AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Matrix Warden",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Give a friendly creature +3 attack.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Give a friendly creature +5 attack.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Give a friendly creature +10 attack.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Matrix Warden 1.jpg",
+    "Matrix Warden 2.jpg",
+    "Matrix Warden 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Metamind Adept",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Metamind"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Draw 1 card.",
+     "attack": "5",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Draw 2 cards.",
+     "attack": "9",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Draw 3 cards.",
+     "attack": "15",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Metamind Adept 1.jpg",
+    "Metamind Adept 2.jpg",
+    "Metamind Adept 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Metasculpt",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Remove all abilities from a level 2 or lower creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Remove all abilities from a creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nRemove all abilities from a creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Metasculpt 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Mossbeard Patriarch",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Give another creature +4 health.",
+     "attack": "1",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Give another creature +6 health.",
+     "attack": "3",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Give another creature +8 health.",
+     "attack": "7",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Mossbeard Patriarch 1.jpg",
+    "Mossbeard Patriarch 2.jpg",
+    "Mossbeard Patriarch 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Munitions Drone",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Give another creature +3 attack.",
+     "attack": "1",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Give another creature +5 attack.",
+     "attack": "3",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Give another creature +10 attack.",
+     "attack": "7",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Munitions Drone 1.jpg",
+    "Munitions Drone 2.jpg",
+    "Munitions Drone 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nargath Bruiser",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Earth Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Give a friendly creature +2 health.",
+     "attack": "5",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Give a friendly creature +4 health.",
+     "attack": "8",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Give a friendly creature +8 health.",
+     "attack": "14",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Nargath Bruiser 1.jpg",
+    "Nargath Bruiser 2.jpg",
+    "Nargath Bruiser 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Natural Selection",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "If there is a friendly creature in each space, destroy a level 1 creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "If there is a friendly creature in each space, destroy a level 2 or lower creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "If there is a friendly creature in each space, destroy a creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Natural Selection 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Necroslime",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ooze"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}, deal 3 damage to another friendly creature: Necroslime gets +2 attack and +2 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}, deal 3 damage to another friendly creature: Necroslime gets +4 attack and +4 health.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}, deal 3 damage to another friendly creature: Necroslime gets +8 attack and +8 health.",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Necroslime 1.jpg",
+    "Necroslime 2.jpg",
+    "Necroslime 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Necrotic Wurm",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wurm"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "7",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "18",
+     "health": "19"
+    }
+   ],
+   "images": [
+    "Necrotic Wurm 1.jpg",
+    "Necrotic Wurm 2.jpg",
+    "Necrotic Wurm 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Necrovive",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature {{Regenerate|3}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature {{Regenerate|6}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature {{Regenerate|12}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Necrovive 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nether Embrace",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 4 damage to the enemy player. You gain 4 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 7 damage to the enemy player. You gain 7 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 12 damage to the enemy player. You gain 12 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Nether Embrace 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nexus Core",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}",
+     "attack": "0",
+     "health": "15"
+    },
+    {
+     "level": 2,
+     "text": "{{Defender}}",
+     "attack": "0",
+     "health": "25"
+    },
+    {
+     "level": 3,
+     "text": "{{Defender}}",
+     "attack": "0",
+     "health": "40"
+    }
+   ],
+   "images": [
+    "Nexus Core 1.jpg",
+    "Nexus Core 2.jpg",
+    "Nexus Core 3.jpg"
+   ],
+   "altImages": [
+    "Nexus Core AA 1.jpg",
+    "Nexus Core AA 2.jpg",
+    "Nexus Core AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Nexus Pilot",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "While Nexus Pilot is in the center space, it gets +3 attack and +4 health.",
+     "attack": "3",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "While Nexus Pilot is in the center space, it gets +5 attack and +7 health.",
+     "attack": "5",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "While Nexus Pilot is in the center space, it gets +8 attack and +10 health.",
+     "attack": "8",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Nexus Pilot 1.jpg",
+    "Nexus Pilot 2.jpg",
+    "Nexus Pilot 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Oozeling (green)",
+   "faction": "Nekrium",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ooze"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "*",
+     "health": "*"
+    }
+   ],
+   "images": [
+    "Oozeling (green) 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Oreian Battledroid",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|5}}",
+     "attack": "5",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|7}}",
+     "attack": "7",
+     "health": "1"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|17}}",
+     "attack": "17",
+     "health": "1"
+    }
+   ],
+   "images": [
+    "Oreian Battledroid 1.jpg",
+    "Oreian Battledroid 2.jpg",
+    "Oreian Battledroid 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Oreian Warwalker",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Oreian Warwalker gets 2X attack.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Oreian Warwalker gets 2X attack.",
+     "attack": "5",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Oreian Warwalker gets 3X attack.",
+     "attack": "9",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Oreian Warwalker 1.jpg",
+    "Oreian Warwalker 2.jpg",
+    "Oreian Warwalker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Oxidon Spitter",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: {{Negate}} Armor from an enemy creature.",
+     "attack": "7",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: {{Negate}} Armor from an enemy creature.",
+     "attack": "9",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: {{Negate}} Armor from each enemy creature.",
+     "attack": "14",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Oxidon Spitter 1.jpg",
+    "Oxidon Spitter 2.jpg",
+    "Oxidon Spitter 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Palladium Pulsemage",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Give a creature −4 attack this turn.",
+     "attack": "2",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Give a creature −8 attack this turn.",
+     "attack": "8",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Give a creature −12 attack this turn.",
+     "attack": "12",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Palladium Pulsemage 1.jpg",
+    "Palladium Pulsemage 2.jpg",
+    "Palladium Pulsemage 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Phytobomb",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Put a 1/1 {{cardtt|Seedling}} into each players available spaces.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Put a 3/3 {{cardtt|Sapling}} into each players available spaces.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Put a 5/5 {{cardtt|Treefolk}} into each players available spaces.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Phytobomb 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Primal Surge",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +1 attack and +1 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}<br>\nGive a creature +2 attack and +2 health.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}<br>\nGive a creature +3 attack and +3 health.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Primal Surge 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Primordial Slam",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature +7 attack this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature +11 attack this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature +15 attack this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Primordial Slam 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Pyre Giant",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Giant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Aggressive}}<br>\nWhile Pyre Giant is unopposed, it gets +4 attack.",
+     "attack": "4",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Aggressive}}<br>\nWhile Pyre Giant is unopposed, it gets +6 attack.",
+     "attack": "6",
+     "health": "3"
+    },
+    {
+     "level": 3,
+     "text": "{{Aggressive}}<br>\nWhile Pyre Giant is unopposed, it gets +8 attack.",
+     "attack": "8",
+     "health": "4"
+    }
+   ],
+   "images": [
+    "Pyre Giant 1.jpg",
+    "Pyre Giant 2.jpg",
+    "Pyre Giant 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Rageborn Hellion",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When a friendly creature deals battle damage to a player, Rageborn Hellion gets +1 attack and +1 health.",
+     "attack": "4",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "When a friendly creature deals battle damage to a player, Rageborn Hellion gets +2 attack and +2 health.",
+     "attack": "6",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "When a friendly creature deals battle damage to a player, Rageborn Hellion gets +3 attack and +3 health.",
+     "attack": "9",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Rageborn Hellion 1.jpg",
+    "Rageborn Hellion 2.jpg",
+    "Rageborn Hellion 3.jpg"
+   ],
+   "altImages": [
+    "Rageborn Hellion AA 1.jpg",
+    "Rageborn Hellion AA 2.jpg",
+    "Rageborn Hellion AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Restless Wanderers",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit Wanderer"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When another friendly Spirit Wanderer enters play, Restless Wanderers gets +3 attack and +3 health.",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "When another friendly Spirit Wanderer enters play, Restless Wanderers gets +6 attack and +6 health.",
+     "attack": "10",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "When another friendly Spirit Wanderer enters play, Restless Wanderers gets +9 attack and +9 health.",
+     "attack": "14",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Restless Wanderers 1.jpg",
+    "Restless Wanderers 2.jpg",
+    "Restless Wanderers 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Riftlasher",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Fire Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Riftlasher deals battle damage to a player on your turn, you deal that much damage to an enemy creature.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When Riftlasher deals battle damage to a player on your turn, you deal that much damage to an enemy creature.",
+     "attack": "5",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When Riftlasher deals battle damage to a player on your turn, you deal that much damage to an enemy creature.",
+     "attack": "9",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Riftlasher 1.jpg",
+    "Riftlasher 2.jpg",
+    "Riftlasher 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Rimehorn Charger",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ram"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}",
+     "attack": "5",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}",
+     "attack": "8",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}",
+     "attack": "10",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Rimehorn Charger 1.jpg",
+    "Rimehorn Charger 2.jpg",
+    "Rimehorn Charger 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Rite of the Grimgaunt",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature \"When a creature is destroyed, this creature gets +1 attack and +1 health.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature \"When a creature is destroyed, this creature gets +2 attack and +2 health.\"",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature \"When a creature is destroyed, this creature gets +3 attack and +3 health.\"",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Rite of the Grimgaunt 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Rootforged Avatar",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Breakthrough}}<br>\n{{Forge}}: Rootforged Avatar gets +1 attack and +1 health for each Uterra card in your hand.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Breakthrough}}<br>\n{{Forge}}: Rootforged Avatar gets +2 attack and +2 health for each Uterra card in your hand.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Breakthrough}}<br>\n{{Forge}}: Rootforged Avatar gets +3 attack and +3 health for each Uterra card in your hand.",
+     "attack": "5",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Rootforged Avatar 1.jpg",
+    "Rootforged Avatar 2.jpg",
+    "Rootforged Avatar 3.jpg"
+   ],
+   "altImages": [
+    "Rootforged Avatar AA 1.jpg",
+    "Rootforged Avatar AA 2.jpg",
+    "Rootforged Avatar AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Runegrove Guardian",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you gain a {{Rank}}, Runegrove Guardian gets +4 attack and +4 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "When you gain a {{Rank}}, Runegrove Guardian gets +8 attack and +8 health.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "When you gain a {{Rank}}, Runegrove Guardian gets +14 attack and +14 health.",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Runegrove Guardian 1.jpg",
+    "Runegrove Guardian 2.jpg",
+    "Runegrove Guardian 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Sapling",
+   "faction": "Uterra",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "*",
+     "health": "*"
+    }
+   ],
+   "images": [
+    "Sapling 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Scavenger Scorpion",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Regenerate|1}}",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|2}}",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|3}}",
+     "attack": "11",
+     "health": "11"
+    }
+   ],
+   "images": [
+    "Scavenger Scorpion 1.jpg",
+    "Scavenger Scorpion 2.jpg",
+    "Scavenger Scorpion 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Scorchmane Dragon",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dragon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Defender}}",
+     "attack": "0",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}<br>\n{{Forge}}: Deal 5 damage to the opposing creature.",
+     "attack": "12",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|2}}<br>\n{{Forge}}: Deal 5 damage to each enemy creature and player.",
+     "attack": "24",
+     "health": "24"
+    }
+   ],
+   "images": [
+    "Scorchmane Dragon 1.jpg",
+    "Scorchmane Dragon 2.jpg",
+    "Scorchmane Dragon 3.jpg"
+   ],
+   "altImages": [
+    "Scorchmane Dragon AA 1.jpg",
+    "Scorchmane Dragon AA 2.jpg",
+    "Scorchmane Dragon AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Scourgeflame Sorcerer",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}, destroy another friendly creature: Destroy a level 2 or lower enemy creature.",
+     "attack": "3",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}, destroy another friendly creature: Destroy an enemy creature.",
+     "attack": "5",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Destroy an enemy creature.",
+     "attack": "8",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Scourgeflame Sorcerer 1.jpg",
+    "Scourgeflame Sorcerer 2.jpg",
+    "Scourgeflame Sorcerer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Scout Drone",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "2",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Free}}",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Free}}",
+     "attack": "6",
+     "health": "6"
+    }
+   ],
+   "images": [
+    "Scout Drone 1.jpg",
+    "Scout Drone 2.jpg",
+    "Scout Drone 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Scrapforge Titan",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}}",
+     "attack": "1",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|5}}",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|10}}",
+     "attack": "20",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Scrapforge Titan 1.jpg",
+    "Scrapforge Titan 2.jpg",
+    "Scrapforge Titan 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Seedling",
+   "faction": "Uterra",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "*",
+     "health": "*"
+    }
+   ],
+   "images": [
+    "Seedling 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Seismic Adept",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Move an enemy creature to another available enemy space.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Move an enemy creature to another available enemy space.",
+     "attack": "7",
+     "health": "12"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Move an enemy creature to another available enemy space.",
+     "attack": "12",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Seismic Adept 1.jpg",
+    "Seismic Adept 2.jpg",
+    "Seismic Adept 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Shardplate Delver",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, Shardplate Delver gets +2 attack and +2 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, Shardplate Delver gets +4 attack and +4 health.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, Shardplate Delver gets +6 attack and +6 health.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Shardplate Delver 1.jpg",
+    "Shardplate Delver 2.jpg",
+    "Shardplate Delver 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Shardplate Mutant",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Insect"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, discard down to 2 cards at random.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, discard down to 2 cards at random.",
+     "attack": "14",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, discard down to 2 cards at random.",
+     "attack": "21",
+     "health": "21"
+    }
+   ],
+   "images": [
+    "Shardplate Mutant 1.jpg",
+    "Shardplate Mutant 2.jpg",
+    "Shardplate Mutant 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Sonic Pulse",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Each enemy creature gets −4 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Each enemy creature gets −6 attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Each enemy creature gets −8 attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Sonic Pulse 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Soothing Radiance",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Heal 6 damage from each friendly creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Heal 12 damage from each friendly creature.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Heal 24 damage from each friendly creature.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Soothing Radiance 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Soul Drinker",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Vampire"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "-",
+     "attack": "1",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: The opposing creature's attack gets reduced to 0 and Soul Drinker gets that much attack.",
+     "attack": "1",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}<br>\n{{Forge}}/{{Flank}}: The opposing creature's attack gets reduced to 0 and Soul Drinker gets that much attack.",
+     "attack": "1",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Soul Drinker 1.jpg",
+    "Soul Drinker 2.jpg",
+    "Soul Drinker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Soul Harvest",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Destroy a friendly creature. You may play an additional level 1 card this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Destroy a friendly creature. You may play an additional card this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Destroy a friendly creature. You may play two additional cards this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Soul Harvest 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spark Bot",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "9",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "14",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Spark Bot 1.jpg",
+    "Spark Bot 2.jpg",
+    "Spark Bot 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Sparkblade Assassin",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "4",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "12",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "14",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Sparkblade Assassin 1.jpg",
+    "Sparkblade Assassin 2.jpg",
+    "Sparkblade Assassin 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spirit (Nekrium)",
+   "faction": "Nekrium",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "*",
+     "health": "*"
+    }
+   ],
+   "images": [
+    "Spirit (Nekrium) 1.jpg",
+    "Spirit (Nekrium) 2.jpg",
+    "Spirit (Nekrium) 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spiritflame Mystic",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: Deal 2 damage to each creature.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Deal 4 damage to each creature.",
+     "attack": "6",
+     "health": "?"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Deal 6 damage to each creature.",
+     "attack": "9",
+     "health": "?"
+    }
+   ],
+   "images": [
+    "Spiritflame Mystic 1.jpg",
+    "Spiritflame Mystic 2.jpg",
+    "Spiritflame Mystic 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spring Dryad",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dryad"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When a friendly creature enters play, Spring Dryad gets +1 attack and +1 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "When a friendly creature enters play, Spring Dryad gets +2 attack and +2 health.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "When a friendly creature enters play, Spring Dryad gets +3 attack and +3 health.",
+     "attack": "9",
+     "health": "9"
+    }
+   ],
+   "images": [
+    "Spring Dryad 1.jpg",
+    "Spring Dryad 2.jpg",
+    "Spring Dryad 3.jpg"
+   ],
+   "altImages": [
+    "Spring Dryad AA 1.jpg",
+    "Spring Dryad AA 2.jpg",
+    "Spring Dryad AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Stasis Warden",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Metamind"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you play a spell, give a friendly creature {{Defender}} until the start of your next turn.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you play a spell, give a friendly creature {{Defender}} until the start of your next turn.",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you play a spell, give a friendly creature {{Defender}} until the start of your next turn.",
+     "attack": "15",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Stasis Warden 1.jpg",
+    "Stasis Warden 2.jpg",
+    "Stasis Warden 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Static Shock",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 1 damage to target creature or player.  You may play an additional level 1 spell this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 2 damage to target creature or player.  You may play an additional level 2 or lower spell this turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 4 damage to target creature or player.  You may play an additional spell this turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Static Shock 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Steelforged Avatar",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Cyborg"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}}<br>\n{{Forge}}: Steelforged Avatar gets +1 attack and +1 health for each Alloyin card in your hand.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|2}}<br>\n{{Forge}}: Steelforged Avatar gets gets +2 attack and +2 health for each Alloyin card in your hand.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|3}}<br>\n{{Forge}}: Steelforged Avatar gets gets +3 attack and +3 health for each Alloyin card in your hand.",
+     "attack": "5",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Steelforged Avatar 1.jpg",
+    "Steelforged Avatar 2.jpg",
+    "Steelforged Avatar 3.jpg"
+   ],
+   "altImages": [
+    "Steelforged Avatar AA 1.jpg",
+    "Steelforged Avatar AA 2.jpg",
+    "Steelforged Avatar AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Steelshaper Savant",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you play a level 1 Alloyin card, you may give a friendly creature {{Armor|2}}.",
+     "attack": "6",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "When you play a level 2 or lower Alloyin card, you may give a friendly creature {{Armor|4}}.",
+     "attack": "12",
+     "health": "16"
+    }
+   ],
+   "images": [
+    "Steelshaper Savant 1.jpg",
+    "Steelshaper Savant 2.jpg",
+    "Steelshaper Savant 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Stonefist Giant",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Earth Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "7",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "16",
+     "health": "24"
+    }
+   ],
+   "images": [
+    "Stonefist Giant 1.jpg",
+    "Stonefist Giant 2.jpg",
+    "Stonefist Giant 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Storm Bringer",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wind Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of each turn, Storm Bringer moves to an available spaces at random.<br>\n{{Flank}}: Deal 2 damage to the opposing creature.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "At the start of each turn, Storm Bringer moves to an available spaces at random.<br>\n{{Flank}}: Deal 4 damage to the opposing creature.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "At the start of each turn, Storm Bringer moves to an available spaces at random.<br>\n{{Flank}}: Deal 6 damage to the opposing creature.",
+     "attack": "14",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Storm Bringer 1.jpg",
+    "Storm Bringer 2.jpg",
+    "Storm Bringer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Storm Caller",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wind Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "8",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "11",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "14",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Storm Caller 1.jpg",
+    "Storm Caller 2.jpg",
+    "Storm Caller 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Stormforged Avatar",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Manticore"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\n{{Forge}}: Stormforged Avatar gets +1 attack and +1 health for each Tempys card in your hand.",
+     "attack": "3",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|2}}<br>\n{{Forge}}: Stormforged Avatar gets +2 attack and +2 health for each Tempys card in your hand.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|3}}<br>\n{{Forge}}: Stormforged Avatar gets +3 attack and +3 health for each Tempys card in your hand.",
+     "attack": "5",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Stormforged Avatar 1.jpg",
+    "Stormforged Avatar 2.jpg",
+    "Stormforged Avatar 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Swampmoss Lurker",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Dinosaur"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "8",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "13",
+     "health": "6"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "22",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Swampmoss Lurker 1.jpg",
+    "Swampmoss Lurker 2.jpg",
+    "Swampmoss Lurker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Synapsis Oracle",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Discard and level up a card.",
+     "attack": "3",
+     "health": "9"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Discard and level up a card.",
+     "attack": "5",
+     "health": "15"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Level up a card in your hand.",
+     "attack": "8",
+     "health": "24"
+    }
+   ],
+   "images": [
+    "Synapsis Oracle 1.jpg",
+    "Synapsis Oracle 2.jpg",
+    "Synapsis Oracle 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Talisin, Bard of Abundance",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Satyr"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of each player's turn, that player may play an additional card.",
+     "attack": "8",
+     "health": "10"
+    },
+    {
+     "level": 2,
+     "text": "At the start of each player's turn, that player may play an additional card.",
+     "attack": "12",
+     "health": "14"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, you may play an additional card.",
+     "attack": "16",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Talisin, Bard of Abundance 1.jpg",
+    "Talisin, Bard of Abundance 2.jpg",
+    "Talisin, Bard of Abundance 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Tech Upgrade",
+   "faction": "Alloyin",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a friendly Robot +4 attack and {{Armor|2}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a friendly Robot +6 attack and {{Armor|3}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a friendly Robot +12 attack and {{Armor|6}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Tech Upgrade 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Technosmith",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may discard and level up a card.",
+     "attack": "5",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may discard and level up a card.",
+     "attack": "9",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may discard and level up a card.",
+     "attack": "15",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Technosmith 1.jpg",
+    "Technosmith 2.jpg",
+    "Technosmith 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Touch of Blight",
+   "faction": "Nekrium",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature “When this creature deals battle damage to a level 1 creature, destroy that creature.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature “When this creature deals battle damage to a level 2 or lower creature, destroy that creature.”",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature “When this creature deals battle damage to a creature, destroy that creature.”",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Touch of Blight 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Toxic Spores",
+   "faction": "Uterra",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a creature {{Poison|5}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature {{Poison|7}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature {{Poison|12}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Toxic Spores 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Treefolk",
+   "faction": "Uterra",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Plant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "*",
+     "health": "*"
+    }
+   ],
+   "images": [
+    "Treefolk 1.jpg"
+   ],
+   "altImages": [
+    "Treefolk AA 1.jpg"
+   ]
+  },
+  {
+   "name": "Unrelenting Dead",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Regenerate|4}}",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|8}}",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|14}}",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Unrelenting Dead 1.jpg",
+    "Unrelenting Dead 2.jpg",
+    "Unrelenting Dead 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Uranti Bolt",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Deal 3 damage to a creature. It gets {{Defender}} until the start of your next turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Deal 10 damage to a creature. It gets {{Defender}} until the start of your next turn.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Deal 20 damage to a creature. It gets {{Defender}} until the start of your next turn.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Uranti Bolt 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Uranti Cryomancer",
+   "faction": "Tempys",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ice Yeti"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Deal 1 damage to a creature.",
+     "attack": "2",
+     "health": "8"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Deal 3 damage to a creature.",
+     "attack": "4",
+     "health": "13"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Deal 5 damage to a creature.",
+     "attack": "7",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Uranti Cryomancer 1.jpg",
+    "Uranti Cryomancer 2.jpg",
+    "Uranti Cryomancer 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Uterra Packmaster",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Each other friendly Uterra creature gets +1 attack and +1 health.",
+     "attack": "6",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Each other friendly Uterra creature gets +2 attack and +2 health.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Each other friendly Uterra creature gets +4 attack and +4 health.",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Uterra Packmaster 1.jpg",
+    "Uterra Packmaster 2.jpg",
+    "Uterra Packmaster 3.jpg"
+   ],
+   "altImages": [
+    "Uterra Packmaster AA 1.jpg",
+    "Uterra Packmaster AA 2.jpg",
+    "Uterra Packmaster AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Vault Technician",
+   "faction": "Alloyin",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "-",
+     "attack": "6",
+     "health": "3"
+    },
+    {
+     "level": 2,
+     "text": "-",
+     "attack": "12",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "-",
+     "attack": "18",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Vault Technician 1.jpg",
+    "Vault Technician 2.jpg",
+    "Vault Technician 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Vengeful Spirit",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Spirit"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Vengeance}}: Give the opposing creature -3 attack and -3 health.",
+     "attack": "3",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: Give the opposing creature -6 attack and -6 health.",
+     "attack": "5",
+     "health": "3"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: Give the opposing creature -9 attack and -9 health.",
+     "attack": "7",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Vengeful Spirit 1.jpg",
+    "Vengeful Spirit 2.jpg",
+    "Vengeful Spirit 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Volcanic Giant",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Earth Giant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "At the start of your turn, deal 1 to 4 damage to the enemy player.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "At the start of your turn, deal 3 to 8 damage to the enemy player.",
+     "attack": "10",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "At the start of your turn, deal 7 to 13 damage to the enemy player.",
+     "attack": "15",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Volcanic Giant 1.jpg",
+    "Volcanic Giant 2.jpg",
+    "Volcanic Giant 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Warmonger Mod",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Give a level 2 or lower creature 2X attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Give a creature 2X attack.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Give a creature 3X attack.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Warmonger Mod 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Water Walker",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Ice Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "12",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "14",
+     "health": "11"
+    }
+   ],
+   "images": [
+    "Water Walker 1.jpg",
+    "Water Walker 2.jpg",
+    "Water Walker 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Wildwood Sower",
+   "faction": "Uterra",
+   "rarity": "Rare",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When you play a spell, you may put a 1/1 {{cardtt|Seedling}} into an available space.",
+     "attack": "3",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "When you play a spell, you may put a 3/3 {{cardtt|Sapling}} into an available space.",
+     "attack": "6",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "When you play a spell, you may put a 5/5 {{cardtt|Treefolk}} into an available space.",
+     "attack": "12",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Wildwood Sower 1.jpg",
+    "Wildwood Sower 2.jpg",
+    "Wildwood Sower 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Wind Primordial",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wind Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}",
+     "attack": "6",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|2}}",
+     "attack": "10",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|3}}",
+     "attack": "16",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Wind Primordial 1.jpg",
+    "Wind Primordial 2.jpg",
+    "Wind Primordial 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Windcaller Shaman",
+   "faction": "Tempys",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Wind Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: You may move another friendly level 1 creature to an available space adjacent to Windcaller Shaman.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: You may move another friendly level 2 or lower creature to an available space adjacent to Windcaller Shaman.",
+     "attack": "7",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: You may move another friendly creature to an available space adjacent to Windcaller Shaman.",
+     "attack": "13",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Windcaller Shaman 1.jpg",
+    "Windcaller Shaman 2.jpg",
+    "Windcaller Shaman 3.jpg"
+   ],
+   "altImages": [
+    "Windcaller Shaman AA 1.jpg",
+    "Windcaller Shaman AA 2.jpg",
+    "Windcaller Shaman AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Witherfrost Succubus",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Demon"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}: Give a creature −3 attack and −3 health this turn.",
+     "attack": "1",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}: Give a creature −5 attack and −5 health this turn.",
+     "attack": "4",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}: Give a creature −7 attack and −7 health this turn.",
+     "attack": "7",
+     "health": "18"
+    }
+   ],
+   "images": [
+    "Witherfrost Succubus 1.jpg",
+    "Witherfrost Succubus 2.jpg",
+    "Witherfrost Succubus 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Xithian Hulk",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "4",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "8",
+     "health": "11"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "14",
+     "health": "17"
+    }
+   ],
+   "images": [
+    "Xithian Hulk 1.jpg",
+    "Xithian Hulk 2.jpg",
+    "Xithian Hulk 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Xithian Shambler",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Abomination"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Activate}}, destroy an adjacent creature: Xithian Shambler moves into to that creature's space, then gets +attack and +health equal to that creature's attack and health.",
+     "attack": "3",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Activate}}, destroy an adjacent creature: Xithian Shambler moves into to that creature's space, then gets +attack and +health equal to that creature's attack and health.",
+     "attack": "6",
+     "health": "7"
+    },
+    {
+     "level": 3,
+     "text": "{{Activate}}, destroy an adjacent creature: Xithian Shambler moves into to that creature's space, then gets +attack and +health equal to that creature's attack and health. You may use this ability twice per turn.",
+     "attack": "9",
+     "health": "10"
+    }
+   ],
+   "images": [
+    "Xithian Shambler 1.jpg",
+    "Xithian Shambler 2.jpg",
+    "Xithian Shambler 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Xrath, Dreadknight of Varna",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Regenerate|2}}<br/>\nEach other friendly Zombie gets {{Regenerate|2}}.",
+     "attack": "5",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Regenerate|4}}<br/>\nEach other friendly Zombie gets {{Regenerate|4}}.",
+     "attack": "9",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Regenerate|8}}<br/>\nEach other friendly Zombie gets {{Regenerate|8}}.",
+     "attack": "14",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Xrath, Dreadknight of Varna 1.jpg",
+    "Xrath, Dreadknight of Varna 2.jpg",
+    "Xrath, Dreadknight of Varna 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Zimus, the Returned",
+   "faction": "Nekrium",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 2,
+     "text": "",
+     "attack": "10",
+     "health": "5"
+    }
+   ],
+   "images": [
+    "Zimus, the Undying 2.jpg"
+   ],
+   "altImages": [
+    "Zimus, the Undying AA 2.jpg"
+   ]
+  },
+  {
+   "name": "Zimus, the Undying",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human",
+    "Zombie",
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "5",
+     "health": "2"
+    },
+    {
+     "level": 2,
+     "text": "{{Vengeance}}: {{Spawn}} a {{cardtt|Zimus, the Returned}}.",
+     "attack": "10",
+     "health": "5"
+    },
+    {
+     "level": 3,
+     "text": "{{Vengeance}}: {{Spawn}} a Zimus, the Undying.",
+     "attack": "14",
+     "health": "7"
+    }
+   ],
+   "images": [
+    "Zimus, the Undying 1.jpg",
+    "Zimus, the Undying 2.jpg",
+    "Zimus, the Undying 3.jpg"
+   ],
+   "altImages": [
+    "Zimus, the Undying AA 1.jpg",
+    "Zimus, the Undying AA 2.jpg",
+    "Zimus, the Undying AA 3.jpg"
+   ]
+  },
+  {
+   "name": "Zombie",
+   "faction": "Nekrium",
+   "rarity": "Token",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "*",
+     "health": "*"
+    }
+   ],
+   "images": [
+    "Zombie 1.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Zombie Infantry",
+   "faction": "Nekrium",
+   "rarity": "Common",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Zombie"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "",
+     "attack": "10",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "",
+     "attack": "15",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Zombie Infantry 1.jpg",
+    "Zombie Infantry 2.jpg",
+    "Zombie Infantry 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Zyx, Storm Herald",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Lightning Asir"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Mobility|1}}<br>\nZyx battles an additional time on your turn.",
+     "attack": "4",
+     "health": "6"
+    },
+    {
+     "level": 2,
+     "text": "{{Mobility|1}}<br>\nZyx battles an additional time on your turn.",
+     "attack": "7",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Mobility|1}}<br>\nZyx battles an additional time on your turn.",
+     "attack": "12",
+     "health": "20"
+    }
+   ],
+   "images": [
+    "Zyx, Storm Herald 1.jpg",
+    "Zyx, Storm Herald 2.jpg",
+    "Zyx, Storm Herald 3.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}

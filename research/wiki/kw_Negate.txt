@@ -1,0 +1,2 @@
+==Description==
+Negating an ability from a creature removes that ability from the creature. That creature can no longer gain that ability.

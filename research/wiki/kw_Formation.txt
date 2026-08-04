@@ -1,0 +1,6 @@
+==Description==
+A creature is in Formation when it is played in a space with a friendly creature in each adjacent space.
+
+A complete Formation has three creatures in it but only the one in the center is "in Formation". Side spaces only have one adjacent lane but formation cannot be completed with only two creatures. 
+
+Additionally, the Formation must be complete before the creature enters play. If an effect spawns creatures in adjacent lanes while it is entering play, Formation will not trigger. For example, replacing a {{cardtt|Spiritstone Druid}} with an {{cardtt|Ordnance Captain}} will not result in a Formation trigger.

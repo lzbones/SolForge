@@ -1,0 +1,6 @@
+==Description==
+Raid abilities trigger at the end of the turn if three or more friendly creatures initiated battle.
+
+Creatures need to be actively attacking to be counted. Defensive creatures that battle other creatures do not count towards the Raid trigger. Creatures that initiate battle but do not deal battle damage (by having zero or negative attack values) still count towards the Raid trigger.
+
+The creature with the Raid trigger does not need to be present for combat but it does need to be alive at the end of the turn for the ability to trigger. If a Raid creature is being destroyed at the end of the turn ({{cardtt|Blitzmane, the Destroyer}} summoned by {{cardtt|Dragonwake}}, for example) the resolution of the Raid trigger depends on the order in which the rest of the triggers resolve.

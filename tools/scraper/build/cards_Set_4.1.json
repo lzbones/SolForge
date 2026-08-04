@@ -1,0 +1,351 @@
+{
+ "set": "Set_4.1",
+ "count": 9,
+ "skipped": [],
+ "cards": [
+  {
+   "name": "Ator, Thunder Titan",
+   "faction": "Tempys",
+   "rarity": "Legendary",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Giant"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Each other friendly level 1 creature gets {{Assault}}: {{Aggressive}}.",
+     "attack": "6",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "Each other friendly level 2 or lower creature gets {{Assault}}: {{Aggressive}}.",
+     "attack": "9",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "Each other friendly creature gets {{Assault}}: {{Aggressive}}.",
+     "attack": "13",
+     "health": "13"
+    }
+   ],
+   "images": [
+    "Ator, Thunder Titan 2.jpg",
+    "Ator, Thunder Titan 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Esperian Sage",
+   "faction": "Alloyin",
+   "rarity": "Heroic",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Esperian Sage enters play, discard and level up a card. <br>\n{{Allied|Uterra}}: You may put a copy of this into another space.",
+     "attack": "3",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "When Esperian Sage enters play, discard and level up a card. <br>\n{{Allied|Uterra}}: You may put a copy of this into another space.",
+     "attack": "5",
+     "health": "2"
+    },
+    {
+     "level": 3,
+     "text": "When Esperian Sage enters play, discard and level up a card. <br>\n{{Allied|Uterra}}: You may put a copy of this into another space.",
+     "attack": "10",
+     "health": "4"
+    }
+   ],
+   "images": [
+    "Esperian Sage 2.jpg",
+    "Esperian Sage 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Nova, Grove Queen",
+   "faction": "Uterra",
+   "rarity": "Legendary",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Forgeborn"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: Put a 1/1 {{cardtt|Seedling}} into an adjacent available space. When a friendly creature is replaced, Nova gets +1 attack and +1 health.",
+     "attack": "3",
+     "health": "7"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: Put a 1/1 {{cardtt|Seedling}} into each adjacent available space. When a friendly creature is replaced, Nova gets +3 attack and +3 health.",
+     "attack": "5",
+     "health": "10"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: Put a 1/1 {{cardtt|Seedling}} into each available space. When a friendly creature is replaced, Nova gets +5 attack and +5 health.",
+     "attack": "10",
+     "health": "15"
+    },
+    {
+     "level": 4,
+     "text": "{{Forge}}: Put a 1/1 {{cardtt|Seedling}} into each available space. When a friendly creature is replaced, each friendly creature gets +10 attack and +10 health.",
+     "attack": "14",
+     "health": "19"
+    }
+   ],
+   "images": [
+    "Nova, Grove Queen 3.jpg",
+    "Nova, Grove Queen 1.jpg",
+    "Nova, Grove Queen 4.jpg"
+   ],
+   "altImages": [
+    "Nova, Grove Queen AA 3.jpg",
+    "Nova, Grove Queen AA 1.jpg",
+    "Nova, Grove Queen AA 4.jpg"
+   ]
+  },
+  {
+   "name": "Relic Hunter",
+   "faction": "Alloyin",
+   "rarity": "Legendary",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Breakthrough}} <br>\n{{Solbind}}: {{cardtt|Relic Scout}}<br>\n{{Upgrade}}: Relic Hunter gets +attack and +health equal to the creature it replaced.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "{{Breakthrough}} <br>\n{{Upgrade}}: Relic Hunter gets +attack and +health equal to the creature it replaced.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "{{Breakthrough}} <br>\n{{Upgrade}}: Relic Hunter gets +attack and +health equal to the creature it replaced.",
+     "attack": "15",
+     "health": "15"
+    }
+   ],
+   "images": [
+    "Relic Hunter 2.jpg",
+    "Relic Hunter 3.jpg"
+   ],
+   "altImages": [
+    "medium_SF2_a107(2)AA.jpg",
+    "medium_SF2_a107(3)AA.jpg"
+   ]
+  },
+  {
+   "name": "Relic Scout",
+   "faction": "Alloyin",
+   "rarity": "Token",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Robot"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Armor|1}} <br>\n{{Free}} <br>\nWhen Relic Scout is replaced, the creature that replaces it gets +1 attack, <br>\n+1 health and {{Armor|1}}.",
+     "attack": "1",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Armor|2}} <br>\n{{Free}} <br>\nWhen Relic Scout is replaced, the creature that replaces it gets +2 attack, <br>\n+2 health and {{Armor|2}}.",
+     "attack": "2",
+     "health": "2"
+    },
+    {
+     "level": 3,
+     "text": "{{Armor|3}} <br>\n{{Free}} <br>\nWhen Relic Scout is replaced, the creature that replaces it gets +3 attack, <br>\n+3 health and {{Armor|3}}.",
+     "attack": "3",
+     "health": "3"
+    }
+   ],
+   "images": [
+    "Relic Scout 2.jpg",
+    "Relic Scout 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Rumblestone Elemental",
+   "faction": "Tempys",
+   "rarity": "Heroic",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Earth Elemental"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Aggressive}} <br>\nWhen Rumblestone Elemental deals battle damage to a player, deal that much damage to itself as well.\n{{Assault}}: {{Spawn}} a copy of Rumblestone Elemental. Then repeat this for each copy.",
+     "attack": "2",
+     "health": "1"
+    },
+    {
+     "level": 2,
+     "text": "{{Aggressive}} <br>\nWhen Rumblestone Elemental deals battle damage to a player, deal that much damage to itself as well.\n{{Assault}}: {{Spawn}} a copy of Rumblestone Elemental. Then repeat this for each copy.",
+     "attack": "4",
+     "health": "2"
+    },
+    {
+     "level": 3,
+     "text": "{{Aggressive}} <br>\nWhen Rumblestone Elemental deals battle damage to a player, deal that much damage to itself as well.\n{{Assault}}: {{Spawn}} a copy of Rumblestone Elemental. Then repeat this for each copy.",
+     "attack": "6",
+     "health": "3"
+    }
+   ],
+   "images": [
+    "Rumblestone Elemental 2.jpg",
+    "Rumblestone Elemental 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Spite Hydra",
+   "faction": "Nekrium",
+   "rarity": "Heroic",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Hydra"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "When Spite Hydra deals battle damage to a creature, this gets +1 attack and +1 health. <br>\n{{Allied|Tempys}}: {{Activate}}: Deal 1 damage to another creature: Spite Hydra gets +1 attack and +1 health.",
+     "attack": "5",
+     "health": "5"
+    },
+    {
+     "level": 2,
+     "text": "When Spite Hydra deals battle damage to a creature, this gets +2 attack and +2 health. <br>\n{{Allied|Tempys}}: {{Activate}}: Deal 2 damage to another creature: Spite Hydra gets +2 attack and +2 health.",
+     "attack": "9",
+     "health": "9"
+    },
+    {
+     "level": 3,
+     "text": "When Spite Hydra deals battle damage to a creature, this gets +3 attack and +3 health. <br>\n{{Allied|Tempys}}: {{Activate}}: Deal 3 damage to another creature: Spite Hydra gets +3 attack and +3 health.",
+     "attack": "14",
+     "health": "14"
+    }
+   ],
+   "images": [
+    "Spite Hydra 2.jpg",
+    "Spite Hydra 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Tarsus Necrolord",
+   "faction": "Nekrium",
+   "rarity": "Legendary",
+   "set": "Set 4.1",
+   "types": [
+    "Creature"
+   ],
+   "subtypes": [
+    "Human"
+   ],
+   "levels": [
+    {
+     "level": 1,
+     "text": "{{Forge}}: {{Spawn}} a 3/3 {{cardtt|Zombie}} for each friendly creature that was destroyed this turn. <br>\nWhen a friendly {{cardtt|Zombie}} enters the field, Tarsus Necrolord gets +1 attack and +1 health.",
+     "attack": "4",
+     "health": "4"
+    },
+    {
+     "level": 2,
+     "text": "{{Forge}}: {{Spawn}} a 5/5 {{cardtt|Zombie}} for each friendly creature that was destroyed this turn. <br>\nWhen a friendly {{cardtt|Zombie}} enters the field, Tarsus Necrolord gets +2 attack and +2 health.",
+     "attack": "8",
+     "health": "8"
+    },
+    {
+     "level": 3,
+     "text": "{{Forge}}: {{Spawn}} a 9/9 {{cardtt|Zombie}} for each friendly creature that was destroyed this turn. <br>\nWhen a friendly {{cardtt|Zombie}} enters the field, Tarsus Necrolord gets +4 attack and +4 health.",
+     "attack": "12",
+     "health": "12"
+    }
+   ],
+   "images": [
+    "Tarsus Necrolord 2.jpg",
+    "Tarsus Necrolord 3.jpg"
+   ],
+   "altImages": []
+  },
+  {
+   "name": "Verdant Charge",
+   "faction": "Uterra",
+   "rarity": "Heroic",
+   "set": "Set 4.1",
+   "types": [
+    "Spell"
+   ],
+   "subtypes": [],
+   "levels": [
+    {
+     "level": 1,
+     "text": "Each friendly creature gets +1 attack, +1 health, and {{Regenerate|1}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 2,
+     "text": "Each friendly creature gets +3 attack, +3 health, and {{Regenerate|3}}.",
+     "attack": "",
+     "health": ""
+    },
+    {
+     "level": 3,
+     "text": "Each friendly creature gets +6 attack, +6 health, and {{Regenerate|6}}.",
+     "attack": "",
+     "health": ""
+    }
+   ],
+   "images": [
+    "Verdant Charge 1.jpg"
+   ],
+   "altImages": []
+  }
+ ]
+}
