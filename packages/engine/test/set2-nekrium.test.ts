@@ -2,13 +2,14 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import {
   applyAction, applyChoice, collectInto, createGame, destroyCreature, getCardScript,
-  keywordValue, loadCards, runBatches, spawnCreature,
-  type Game, type ScrapedSet,
+  healPlayer, keywordValue, loadCards, runBatches, spawnCreature,
+  type Game, type PlayerId, type ScrapedSet,
 } from "../src/index.js";
 
 const set1 = JSON.parse(readFileSync(new URL("../../../tools/scraper/build/cards_Set_1.json", import.meta.url), "utf8")) as ScrapedSet;
 const set2 = JSON.parse(readFileSync(new URL("../../../tools/scraper/build/cards_Set_2.json", import.meta.url), "utf8")) as ScrapedSet;
-const cards = loadCards(set1, set2);
+const set22 = JSON.parse(readFileSync(new URL("../../../tools/scraper/build/cards_Set_2.2.json", import.meta.url), "utf8")) as ScrapedSet;
+const cards = loadCards(set1, set2, set22);
 
 const deckOf = (id: string) => Array(30).fill(id) as string[];
 
@@ -360,6 +361,27 @@ describe("Shallow Grave (friendly creature gets Vengeance: Spawn this this turn)
     spawnCreature(g, [], 0, "cavern-hydra", 3, { lane: 1 });
     applyAction(g, { type: "playCard", handIndex: 0 });
     expect(g.state.pending).toBeNull(); // no legal target: fizzle
+  });
+});
+
+describe("Spirit Reaver (Set 2.2; when the enemy player gains health: +N/+N)", () => {
+  it("has data and a registered script", () => {
+    expect(cards["spirit-reaver"]).toBeTruthy();
+    expect(getCardScript("spirit-reaver")).not.toBeNull();
+  });
+
+  it("grows on enemy heals only", () => {
+    const g = gameWith("spirit-reaver");
+    spawnCreature(g, [], 0, "spirit-reaver", 1, { lane: 2 });
+    const reaver = g.state.players[0].lanes[2]!;
+    const heal = (p: PlayerId, n: number) =>
+      runBatches(g, [], collectInto(() => healPlayer(g, [], p, n)));
+    heal(0, 5); // its own controller: no trigger
+    expect([reaver.attack, reaver.health]).toEqual([4, 6]);
+    heal(1, 3); // enemy heal: +2/+2
+    expect([reaver.attack, reaver.health]).toEqual([6, 8]);
+    heal(1, 10); // flat +2/+2 per heal event, not per point
+    expect([reaver.attack, reaver.health]).toEqual([8, 10]);
   });
 });
 

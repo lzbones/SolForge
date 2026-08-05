@@ -1,11 +1,9 @@
 /**
  * Set 2 (Rise of the Forgeborn) Uterra card scripts — see docs/CARD_SCRIPTING.md.
  *
- * TODO(runebark-guardian): "When you gain health, Runebark Guardian gets
- * +N/+N" 无法用现有 API 表达——TriggerEvent 没有"玩家获得治疗"的按次广播
- * （turnFlags.healed 只是 Ambush 用的布尔标志，不携带治疗量，也不区分次数）。
- * 建议引擎在 healPlayer 中 collectAll 一个 "playerHealed" 事件（payload 带
- * amount/targetPlayer）后实现。
+ * Runebark Guardian's "when you gain health" trigger is implemented via the
+ * engine's playerHealed broadcast (healPlayer collects it with
+ * targetPlayer/amount in the payload).
  *
  * Approximation notes (same conventions as set1-uterra.ts):
  *  - Oros, Deepwood's Chosen L4: scraped base stats are 0/0 and its "gets
@@ -308,7 +306,23 @@ registerCard({
   ),
 });
 
-// runebark-guardian: unscripted — see TODO in file header.
+// --- Runebark Guardian: "When you gain health, Runebark Guardian gets +N/+N"
+//     (flat per heal event, not per point of health). ---
+registerCard({
+  defId: "runebark-guardian",
+  levels: Object.fromEntries(
+    ([[1, 1], [2, 3], [3, 5]] as const).map(([lvl, n]) => [lvl, {
+      abilities: [{
+        id: "heal-grow",
+        trigger: "playerHealed" as const,
+        condition: (_game: Game, self: CreatureState, evt: TriggerPayload) => evt.targetPlayer === self.owner,
+        resolve: (ctx: Ctx, self: CreatureState) => {
+          buffCreature(ctx.game, ctx.events, self, n, n);
+        },
+      }],
+    }]),
+  ),
+});
 
 // --- Solstice Reveler: when you gain a Rank, each friendly creature gets
 //     +N/+N (L3: and Breakthrough). ---

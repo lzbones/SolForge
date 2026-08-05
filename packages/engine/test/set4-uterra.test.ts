@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import {
-  allCreatures, applyAction, applyChoice, createGame, getCardScript, grantKeyword, hasKeyword,
-  keywordValue, loadCards, spawnCreature,
+  allCreatures, applyAction, applyChoice, collectInto, createGame, getCardScript, grantKeyword,
+  hasKeyword, healPlayer, keywordValue, loadCards, runBatches, spawnCreature,
   type Game, type PlayerId, type ScrapedSet,
 } from "../src/index.js";
 
@@ -28,6 +28,11 @@ function gameWith(deckId: string, oppId = "technognome", startingHealth?: number
 /** Inject extra cards into a hand (higher-level plays, faction support). */
 function addToHand(g: Game, p: PlayerId, defId: string, level = 1): void {
   g.state.players[p].hand.push({ uid: g.state.nextUid++, defId, level, owner: p });
+}
+
+/** Heal a player outside of combat, resolving the playerHealed trigger batch. */
+function heal(g: Game, p: PlayerId, n: number): void {
+  runBatches(g, [], collectInto(() => healPlayer(g, [], p, n)));
 }
 
 const IDS = [
@@ -194,6 +199,37 @@ describe("Nova, Grove Queen (Forge: Seedlings; four levels)", () => {
     expect([lanes[2]!.attack, lanes[2]!.health]).toEqual([14, 19]);
     expect(lanes.every((c) => c !== null)).toBe(true);
   });
+
+  it("gets +1/+1 when a friendly creature is replaced (L1)", () => {
+    const g = gameWith("nova-grove-queen");
+    spawnCreature(g, [], 0, "nova-grove-queen", 1, { lane: 0 });
+    const nova = g.state.players[0].lanes[0]!;
+    spawnCreature(g, [], 0, "technognome", 1, { lane: 2 });
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // L1 Nova replaces the gnome
+    expect([nova.attack, nova.health]).toEqual([4, 8]); // 3/7 + 1/1
+  });
+
+  it("does not trigger when an ENEMY creature is replaced", () => {
+    const g = gameWith("nova-grove-queen");
+    spawnCreature(g, [], 0, "nova-grove-queen", 1, { lane: 0 });
+    const nova = g.state.players[0].lanes[0]!;
+    spawnCreature(g, [], 1, "technognome", 1, { lane: 2 });
+    runBatches(g, [], collectInto(() => {
+      spawnCreature(g, [], 1, "technognome", 1, { lane: 2, replace: true });
+    }));
+    expect([nova.attack, nova.health]).toEqual([3, 7]);
+  });
+
+  it("L4: each friendly creature gets +10/+10 on a friendly replacement", () => {
+    const g = gameWith("nova-grove-queen");
+    spawnCreature(g, [], 0, "nova-grove-queen", 4, { lane: 0 });
+    const nova4 = g.state.players[0].lanes[0]!;
+    spawnCreature(g, [], 0, "technognome", 1, { lane: 2 });
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // L1 Nova replaces the gnome
+    expect([nova4.attack, nova4.health]).toEqual([24, 29]); // 14/19 + 10/10
+    const played = g.state.players[0].lanes[2]!;
+    expect([played.attack, played.health]).toEqual([13, 17]); // 3/7 + 10/10
+  });
 });
 
 describe("Roaming Warclaw (Forge: optional 1/1 Raptor in another space)", () => {
@@ -307,21 +343,104 @@ describe("Whispers of Dendris (each friendly creature gets +Rank/+Rank)", () => 
   });
 });
 
-describe("Engine-gap cards (registered as vanilla bodies — TODO in scripts file)", () => {
-  it("Wegu, the Ancient keeps its inherent Defender", () => {
+describe("Kitaru Sprite (when this is replaced: Spawn a Kitaru Sprite)", () => {
+  it("spawns a fresh same-level Kitaru Sprite into another space", () => {
+    const g = gameWith("kitaru-sprite");
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 });
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // replace it
+    const sprites = [...allCreatures(g.state)].filter((c) => c.defId === "kitaru-sprite");
+    expect(sprites).toHaveLength(2); // the replacer + the spawned copy
+    const spawned = sprites.find((c) => c.lane !== 2)!;
+    expect([spawned.attack, spawned.health]).toEqual([3, 7]);
+  });
+});
+
+describe("Shardclaw Crusher (when replaced: the replacer gets +N/+N)", () => {
+  it("gives +5/+5 to the creature that replaced it", () => {
+    const g = gameWith("shardclaw-crusher");
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // 5/5
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // replace it
+    const crusher = g.state.players[0].lanes[2]!;
+    expect([crusher.attack, crusher.health]).toEqual([10, 10]); // 5/5 + 5/5
+  });
+});
+
+describe("Spiritstone Druid (when replaced: Spirits into adjacent spaces)", () => {
+  it("puts a 4/3 Spirit into each adjacent available space", () => {
+    const g = gameWith("spiritstone-druid");
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 });
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // replace it
+    const lanes = g.state.players[0].lanes;
+    expect(lanes[1]?.defId).toBe("spirit-uterra");
+    expect(lanes[3]?.defId).toBe("spirit-uterra");
+    expect([lanes[1]!.attack, lanes[1]!.health]).toEqual([4, 3]);
+    expect(lanes[0]).toBeNull();
+    expect(lanes[4]).toBeNull();
+  });
+
+  it("skips occupied adjacent spaces", () => {
+    const g = gameWith("spiritstone-druid");
+    spawnCreature(g, [], 0, "technognome", 1, { lane: 1 });
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 });
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // replace it
+    const lanes = g.state.players[0].lanes;
+    expect(lanes[1]!.defId).toBe("technognome"); // untouched
+    expect(lanes[3]?.defId).toBe("spirit-uterra");
+  });
+});
+
+describe("Tuskin Grovekeeper (when you gain health: Spawn a 3/3 token)", () => {
+  it("spawns a 3/3 Seedling on its controller's heals only", () => {
+    const g = gameWith("tuskin-grovekeeper");
+    spawnCreature(g, [], 0, "tuskin-grovekeeper", 1, { lane: 2 });
+    heal(g, 1, 4); // enemy heal: no trigger
+    expect([...allCreatures(g.state)].filter((c) => c.defId === "seedling")).toHaveLength(0);
+    heal(g, 0, 4);
+    const seedlings = [...allCreatures(g.state)].filter((c) => c.defId === "seedling");
+    expect(seedlings).toHaveLength(1);
+    expect([seedlings[0]!.attack, seedlings[0]!.health]).toEqual([3, 3]);
+  });
+
+  it("L3 spawns a 3/3 Treefolk instead", () => {
+    const g = gameWith("tuskin-grovekeeper");
+    spawnCreature(g, [], 0, "tuskin-grovekeeper", 3, { lane: 2 });
+    heal(g, 0, 1);
+    const treefolk = [...allCreatures(g.state)].filter((c) => c.defId === "treefolk");
+    expect(treefolk).toHaveLength(1);
+    expect([treefolk[0]!.attack, treefolk[0]!.health]).toEqual([3, 3]);
+  });
+});
+
+describe("Wegu, the Ancient (heal: +N/+N per health; threshold Negate Defender)", () => {
+  it("keeps its inherent Defender and grows +1/+1 per health gained", () => {
     const g = gameWith("wegu-the-ancient");
     applyAction(g, { type: "playCard", handIndex: 0, lane: 2 });
     const wegu = g.state.players[0].lanes[2]!;
     expect([wegu.attack, wegu.health]).toEqual([0, 1]);
     expect(hasKeyword(wegu, "Defender")).toBe(true);
+    heal(g, 0, 4);
+    expect([wegu.attack, wegu.health]).toEqual([4, 5]);
+    expect(hasKeyword(wegu, "Defender")).toBe(true); // still below 10 attack
   });
 
-  it("Kitaru Sprite plays as a vanilla 3/7 (replacement trigger unimplemented)", () => {
-    const g = gameWith("kitaru-sprite");
+  it("loses Defender once the buffs reach 10 attack", () => {
+    const g = gameWith("wegu-the-ancient");
     applyAction(g, { type: "playCard", handIndex: 0, lane: 2 });
-    applyAction(g, { type: "playCard", handIndex: 0, lane: 2 }); // replaced: no Spawn (engine gap)
-    const sprite = g.state.players[0].lanes[2]!;
-    expect([sprite.attack, sprite.health]).toEqual([3, 7]);
-    expect([...allCreatures(g.state)].filter((c) => c.defId === "kitaru-sprite")).toHaveLength(1);
+    const wegu = g.state.players[0].lanes[2]!;
+    heal(g, 0, 4);
+    heal(g, 0, 6);
+    expect([wegu.attack, wegu.health]).toEqual([10, 11]);
+    expect(hasKeyword(wegu, "Defender")).toBe(false);
+  });
+
+  it("L3 also gains Breakthrough at 100 attack", () => {
+    const g = gameWith("wegu-the-ancient");
+    spawnCreature(g, [], 0, "wegu-the-ancient", 3, { lane: 2 });
+    const wegu = g.state.players[0].lanes[2]!;
+    expect(hasKeyword(wegu, "Defender")).toBe(true);
+    heal(g, 0, 25); // +4/+4 per health => +100/+100
+    expect(wegu.attack).toBe(100);
+    expect(hasKeyword(wegu, "Breakthrough")).toBe(true);
+    expect(hasKeyword(wegu, "Defender")).toBe(false);
   });
 });

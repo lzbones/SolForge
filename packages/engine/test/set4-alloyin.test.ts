@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import {
-  applyAction, applyChoice, buffCreature, createGame, dealCreatureDamage, getCardScript,
-  hasKeyword, keywordValue, legalActions, loadCards, refreshStatics, spawnCreature,
+  applyAction, applyChoice, buffCreature, collectInto, createGame, dealCreatureDamage,
+  destroyCreature, getCardScript, hasKeyword, keywordValue, legalActions, loadCards,
+  refreshStatics, runBatches, spawnCreature,
   type Game, type PlayerId, type ScrapedSet,
 } from "../src/index.js";
 
@@ -310,6 +311,27 @@ describe("Palladium Wave (each enemy creature -2x Rank attack)", () => {
   });
 });
 
+describe("Relic Scout (when replaced: the replacer gets +N/+N and Armor N)", () => {
+  it("grants +1/+1 and Armor 1 to the creature that replaces it", () => {
+    const g = gameWith("technognome");
+    spawnCreature(g, [], 0, "relic-scout", 1, { lane: 0 }); // 1/1 Armor 1
+    applyAction(g, { type: "playCard", handIndex: 0, lane: 0 }); // replace the Scout
+    const gnome = g.state.players[0].lanes[0]!;
+    expect(gnome.defId).toBe("technognome");
+    expect([gnome.attack, gnome.health]).toEqual([4, 4]); // 3/3 + 1/1
+    expect(keywordValue(gnome, "Armor")).toBe(1);
+  });
+
+  it("does not grant anything when it dies without being replaced", () => {
+    const g = gameWith("technognome");
+    spawnCreature(g, [], 0, "relic-scout", 1, { lane: 0 });
+    const scout = g.state.players[0].lanes[0]!;
+    runBatches(g, [], collectInto(() => destroyCreature(g, [], scout)));
+    const gnome = g.state.players[0].lanes[0];
+    expect(gnome).toBeNull();
+  });
+});
+
 describe("Relic Hunter (Solbind Relic Scout; Upgrade absorbs the replaced creature)", () => {
   it("Solbind adds a Relic Scout to the deck at game start", () => {
     const g = gameWith("relic-hunter");
@@ -319,14 +341,16 @@ describe("Relic Hunter (Solbind Relic Scout; Upgrade absorbs the replaced creatu
     expect(all).toContain("relic-scout");
   });
 
-  it("gets +1/+1 when it replaces a Relic Scout (base stats)", () => {
+  it("absorbs the Scout AND gets its replaced-grant when replacing one", () => {
     const g = gameWith("relic-hunter");
     spawnCreature(g, [], 0, "relic-scout", 1, { lane: 0 }); // 1/1
     const hi = g.state.players[0].hand.findIndex((c) => c.defId === "relic-hunter");
     applyAction(g, { type: "playCard", handIndex: hi, lane: 0 });
     const hunter = g.state.players[0].lanes[0]!;
     expect(hunter.defId).toBe("relic-hunter");
-    expect([hunter.attack, hunter.health]).toEqual([6, 6]); // 5/5 + 1/1
+    // 5/5 + 1/1 absorb (Upgrade) + 1/1 and Armor 1 (the Scout's replaced-grant)
+    expect([hunter.attack, hunter.health]).toEqual([7, 7]);
+    expect(keywordValue(hunter, "Armor")).toBe(1);
     expect(hasKeyword(hunter, "Breakthrough")).toBe(true); // inherent
     expect(g.state.players[0].discard.at(-1)!.defId).toBe("relic-scout");
   });

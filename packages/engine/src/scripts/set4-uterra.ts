@@ -16,31 +16,30 @@
  *    printed Breakthrough/Aggressive only.
  *  - Lysian Rain: "give a creature or player +N health" — a creature gets a
  *    permanent +N health buff; a player gains N health via healPlayer.
- *  - Wegu, the Ancient's inherent Defender (parsed from its text) applies; the
- *    rest is blocked by the heal trigger gap below.
+ *  - Wegu, the Ancient's threshold rider ("While Wegu has N or more attack,
+ *    Negate Defender" — L3: it also gets Breakthrough) is a one-way
+ *    approximation: the check runs after each heal-triggered buff and
+ *    negateKeyword strips Defender permanently, so if Wegu's attack later
+ *    drops below the threshold Defender is not re-applied (the engine has no
+ *    un-negate primitive).
+ *  - Spiritstone Druid's Spirits use the "spirit-uterra" token, whose scraped
+ *    per-level stats (4/3, 6/4, 10/6) already match the text — no
+ *    overrideStats needed.
+ *  - Tuskin Grovekeeper's "Spawn a 3/3" goes to a random available space
+ *    (Spawn convention); the scraped Seedling/Sapling/Treefolk tokens have
+ *    "*" stats, so overrideStats.
  *
- * TODO(engine gaps):
- *  - kitaru-sprite / shardclaw-crusher / spiritstone-druid: "When this is
- *    replaced, ..." — the replaced creature leaves play before any trigger
- *    fires; spawnCreature only collects "enterReplace" on the ENTERING
- *    creature. Needs a replacement broadcast that also consults the replaced
- *    creature's script (Vengeance-snapshot style), e.g. collectAll
- *    "creatureReplaced" plus collectFor on the replaced snapshot.
- *  - nova-grove-queen: the Forge half is implemented; "When a friendly
- *    creature is replaced, ..." (all four levels) needs the same broadcast.
- *  - tuskin-grovekeeper / wegu-the-ancient: "When you gain health, ..." —
- *    no per-heal event exists (turnFlags.healed is a bare boolean without
- *    amount or count; same gap as runebark-guardian in set2-uterra.ts, which
- *    suggests a "playerHealed" collectAll in healPlayer). Wegu's threshold
- *    "Negate Defender / gets Breakthrough" rider depends on its heal buffs
- *    and is blocked with them.
+ * The former engine gaps are closed: "when this is replaced" scripts trigger
+ * on wasReplaced (snapshot self; evt carries the NEW creature), "when a
+ * friendly creature is replaced" on creatureReplaced, and "when you gain
+ * health" on playerHealed (evt.targetPlayer/amount).
  */
 import { registerCard } from "./registry.js";
 import {
-  buffCreature, grantKeyword, healCreature, healPlayer, spawnCreature,
+  buffCreature, getStats, grantKeyword, healCreature, healPlayer, negateKeyword, spawnCreature,
 } from "../effects.js";
 import {
-  allCreatures, findCreature, keywordValue, opposing,
+  allCreatures, findCreature, hasKeyword, keywordValue, opposing,
   type CardInstance, type CreatureState, type PlayerId,
 } from "../state.js";
 import { typeAt, type Faction } from "../types.js";
@@ -98,28 +97,103 @@ function isCreatureAt(game: Game, inst: CardInstance): boolean {
 // Creatures
 // ============================================================
 
-// kitaru-sprite: "When this is replaced, Spawn a Kitaru Sprite."
-// TODO: unimplementable — the replaced creature never observes the
-// replacement (see header). Registered as a vanilla body.
-registerCard({ defId: "kitaru-sprite", levels: {} });
+// --- Kitaru Sprite: "When this is replaced, Spawn a Kitaru Sprite." ---
+registerCard({
+  defId: "kitaru-sprite",
+  levels: Object.fromEntries(
+    ([1, 2, 3] as const).map((lvl) => [lvl, {
+      abilities: [{
+        id: "replaced-spawn",
+        trigger: "wasReplaced" as const,
+        resolve: (ctx: Ctx, self: CreatureState) => {
+          spawnCreature(ctx.game, ctx.events, self.owner, "kitaru-sprite", self.level, {});
+        },
+      }],
+    }]),
+  ),
+});
 
-// shardclaw-crusher: "When Shardclaw Crusher is replaced, the creature that
-// replaced it gets +N/+N." TODO: unimplementable — see header.
-registerCard({ defId: "shardclaw-crusher", levels: {} });
+// --- Shardclaw Crusher: "When Shardclaw Crusher is replaced, the creature
+//     that replaced it gets +N/+N." (wasReplaced's evt names the NEW creature) ---
+registerCard({
+  defId: "shardclaw-crusher",
+  levels: Object.fromEntries(
+    ([[1, 5], [2, 8], [3, 12]] as const).map(([lvl, n]) => [lvl, {
+      abilities: [{
+        id: "replaced-buff",
+        trigger: "wasReplaced" as const,
+        resolve: (ctx: Ctx, _s: CreatureState, evt: TriggerPayload) => {
+          const c = evt.sourceUid !== undefined ? findCreature(ctx.game.state, evt.sourceUid) : null;
+          if (c) buffCreature(ctx.game, ctx.events, c, n, n);
+        },
+      }],
+    }]),
+  ),
+});
 
-// spiritstone-druid: "When Spiritstone Druid is replaced, put a Spirit into
-// each adjacent available space." TODO: unimplementable — see header.
-registerCard({ defId: "spiritstone-druid", levels: {} });
+// --- Spiritstone Druid: "When Spiritstone Druid is replaced, put a Spirit
+//     into each adjacent available space." (spirit-uterra token — see header) ---
+registerCard({
+  defId: "spiritstone-druid",
+  levels: Object.fromEntries(
+    ([1, 2, 3] as const).map((lvl) => [lvl, {
+      abilities: [{
+        id: "replaced-spirits",
+        trigger: "wasReplaced" as const,
+        resolve: (ctx: Ctx, self: CreatureState) => {
+          for (const lane of adjacentOpen(ctx.game, self.owner, self.lane)) {
+            spawnCreature(ctx.game, ctx.events, self.owner, "spirit-uterra", self.level, { lane });
+          }
+        },
+      }],
+    }]),
+  ),
+});
 
-// tuskin-grovekeeper: "When you gain health, Spawn a 3/3 Seedling/Sapling/
-// Treefolk." TODO: unimplementable — no per-heal event (see header).
-registerCard({ defId: "tuskin-grovekeeper", levels: {} });
+// --- Tuskin Grovekeeper: "When you gain health, Spawn a 3/3 Seedling/
+//     Sapling/Treefolk." ---
+registerCard({
+  defId: "tuskin-grovekeeper",
+  levels: Object.fromEntries(
+    ([[1, "seedling"], [2, "sapling"], [3, "treefolk"]] as const).map(([lvl, token]) => [lvl, {
+      abilities: [{
+        id: "heal-sprout",
+        trigger: "playerHealed" as const,
+        condition: (_game: Game, self: CreatureState, evt: TriggerPayload) => evt.targetPlayer === self.owner,
+        resolve: (ctx: Ctx, self: CreatureState) => {
+          spawnCreature(ctx.game, ctx.events, self.owner, token, 1,
+            { overrideStats: { attack: 3, health: 3 } });
+        },
+      }],
+    }]),
+  ),
+});
 
-// wegu-the-ancient: "When you gain health, Wegu gets +N/+N for each health
-// you gained; at an attack threshold, Negate Defender (L3: and Breakthrough)."
-// TODO: unimplementable — no per-heal event (see header). Inherent Defender
-// applies via parsed keywords.
-registerCard({ defId: "wegu-the-ancient", levels: {} });
+// --- Wegu, the Ancient: "When you gain health, Wegu gets +N/+N for each
+//     health you gained"; at the attack threshold, Negate Defender (L3: it
+//     also gets Breakthrough) — one-way approximation, see header. ---
+registerCard({
+  defId: "wegu-the-ancient",
+  levels: Object.fromEntries(
+    ([[1, 1, 10], [2, 2, 25], [3, 4, 100]] as const).map(([lvl, per, gate]) => [lvl, {
+      abilities: [{
+        id: "heal-grow",
+        trigger: "playerHealed" as const,
+        condition: (_game: Game, self: CreatureState, evt: TriggerPayload) => evt.targetPlayer === self.owner,
+        resolve: (ctx: Ctx, self: CreatureState, evt: TriggerPayload) => {
+          const gained = evt.amount ?? 0;
+          if (gained > 0) buffCreature(ctx.game, ctx.events, self, per * gained, per * gained);
+          if (getStats(ctx.game, self).attack >= gate) {
+            if (lvl === 3 && !hasKeyword(self, "Breakthrough")) {
+              grantKeyword(ctx.events, self, { keyword: "Breakthrough", value: 0 });
+            }
+            if (hasKeyword(self, "Defender")) negateKeyword(ctx.events, self, "Defender");
+          }
+        },
+      }],
+    }]),
+  ),
+});
 
 // --- Bron, Wild Tamer (Set 4.2; Upgrade a Dinosaur: replace Bron with a
 //     same-level Dino Knight; battle damage to a player heals each other
@@ -181,28 +255,45 @@ registerCard({
 });
 
 // --- Nova, Grove Queen (Set 4.1, four levels; Forge: 1/1 Seedlings into one
-//     adjacent / each adjacent / each available space — the "when a friendly
-//     creature is replaced" half is an engine gap, see header TODO) ---
+//     adjacent / each adjacent / each available space; "when a friendly
+//     creature is replaced" Nova gets +N/+N — L4: each friendly creature) ---
 registerCard({
   defId: "nova-grove-queen",
   levels: Object.fromEntries(
-    ([[1, "one"], [2, "adjacent"], [3, "all"], [4, "all"]] as const).map(([lvl, mode]) => [lvl, {
-      abilities: [{
-        id: "forge-seedlings",
-        trigger: "enterFromHand" as const,
-        resolve: (ctx: Ctx, self: CreatureState) => {
-          const adjacent = adjacentOpen(ctx.game, self.owner, self.lane);
-          const lanes = mode === "all"
-            ? openLanes(ctx.game, self.owner)
-            : mode === "adjacent"
-              ? adjacent
-              : adjacent.length ? [ctx.rng.pick(adjacent)] : [];
-          for (const lane of lanes) {
-            spawnCreature(ctx.game, ctx.events, self.owner, "seedling", 1,
-              { lane, overrideStats: { attack: 1, health: 1 } });
-          }
+    ([[1, "one", 1], [2, "adjacent", 3], [3, "all", 5], [4, "all", 10]] as const).map(([lvl, mode, n]) => [lvl, {
+      abilities: [
+        {
+          id: "forge-seedlings",
+          trigger: "enterFromHand" as const,
+          resolve: (ctx: Ctx, self: CreatureState) => {
+            const adjacent = adjacentOpen(ctx.game, self.owner, self.lane);
+            const lanes = mode === "all"
+              ? openLanes(ctx.game, self.owner)
+              : mode === "adjacent"
+                ? adjacent
+                : adjacent.length ? [ctx.rng.pick(adjacent)] : [];
+            for (const lane of lanes) {
+              spawnCreature(ctx.game, ctx.events, self.owner, "seedling", 1,
+                { lane, overrideStats: { attack: 1, health: 1 } });
+            }
+          },
         },
-      }],
+        {
+          id: "replaced-rally",
+          trigger: "creatureReplaced" as const,
+          condition: (_game: Game, self: CreatureState, evt: TriggerPayload) =>
+            evt.sourceOwner === self.owner,
+          resolve: (ctx: Ctx, self: CreatureState) => {
+            if (lvl === 4) {
+              for (const c of ctx.game.state.players[self.owner].lanes) {
+                if (c) buffCreature(ctx.game, ctx.events, c, n, n);
+              }
+            } else {
+              buffCreature(ctx.game, ctx.events, self, n, n);
+            }
+          },
+        },
+      ],
     }]),
   ),
 });

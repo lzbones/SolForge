@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import {
   applyAction, applyChoice, collectInto, createGame, destroyCreature, getCardScript,
-  grantKeyword, hasKeyword, keywordValue, loadCards, runBatches, spawnCreature,
-  type Game, type ScrapedSet,
+  grantKeyword, hasKeyword, healPlayer, keywordValue, loadCards, runBatches, spawnCreature,
+  type Game, type PlayerId, type ScrapedSet,
 } from "../src/index.js";
 
 const set2 = JSON.parse(readFileSync(new URL("../../../tools/scraper/build/cards_Set_2.json", import.meta.url), "utf8")) as ScrapedSet;
@@ -23,18 +23,19 @@ function passTurns(g: Game, n: number): void {
 const SCRIPTED = [
   "brambleaxe-warrior", "branchweaver-druid", "chistlehearth-hunter", "dissolve", "dryads-boon",
   "esperian-wartusk", "glowhive-siren", "mending-spring", "mimicleaf", "nuada-faiths-flourish",
-  "oros-deepwoods-chosen", "poisoncoil", "solstice-reveler", "spore-torrent", "stouthide-stegadon",
-  "twinstrength", "umbruk-lasher", "uterradon-mauler", "uterradon-rex", "venomous-netherscale",
-  "verdant-grace",
+  "oros-deepwoods-chosen", "poisoncoil", "runebark-guardian", "solstice-reveler", "spore-torrent",
+  "stouthide-stegadon", "twinstrength", "umbruk-lasher", "uterradon-mauler", "uterradon-rex",
+  "venomous-netherscale", "verdant-grace",
 ];
+
+/** Heal a player outside of combat, resolving the playerHealed trigger batch. */
+function heal(g: Game, p: PlayerId, n: number): void {
+  runBatches(g, [], collectInto(() => healPlayer(g, [], p, n)));
+}
 
 describe("Set 2 Uterra script registration", () => {
   it("registers every scripted Set 2 Uterra card", () => {
     for (const id of SCRIPTED) expect(getCardScript(id), id).not.toBeNull();
-  });
-
-  it("does not register the TODO card (runebark-guardian: no heal trigger in the engine)", () => {
-    expect(getCardScript("runebark-guardian")).toBeNull();
   });
 });
 
@@ -235,6 +236,28 @@ describe("Poisoncoil (Activate: another creature gets Poison N)", () => {
     expect(req.options).toEqual([hydra.uid]);
     applyChoice(g, { id: req.id, accepted: true, targetUid: hydra.uid });
     expect(keywordValue(hydra, "Poison")).toBe(1);
+  });
+});
+
+describe("Runebark Guardian (when you gain health: +N/+N)", () => {
+  it("gets +1/+1 per heal event (not per point) on its controller's heals only", () => {
+    const g = gameWith("runebark-guardian");
+    spawnCreature(g, [], 0, "runebark-guardian", 1, { lane: 2 });
+    const rb = g.state.players[0].lanes[2]!;
+    heal(g, 1, 5); // enemy heal: no trigger
+    expect([rb.attack, rb.health]).toEqual([5, 5]);
+    heal(g, 0, 3);
+    expect([rb.attack, rb.health]).toEqual([6, 6]); // flat +1/+1
+    heal(g, 0, 10);
+    expect([rb.attack, rb.health]).toEqual([7, 7]); // still +1/+1, not +10/+10
+  });
+
+  it("L3 gets +5/+5 per heal", () => {
+    const g = gameWith("runebark-guardian");
+    spawnCreature(g, [], 0, "runebark-guardian", 3, { lane: 2 });
+    const rb = g.state.players[0].lanes[2]!;
+    heal(g, 0, 2);
+    expect([rb.attack, rb.health]).toEqual([21, 21]); // 16/16 + 5/5
   });
 });
 

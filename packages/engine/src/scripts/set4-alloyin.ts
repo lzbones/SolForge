@@ -30,9 +30,8 @@
  *  - Spiritsteel Infiltrator's threshold counts only its own permanent/temp
  *    attack (calling getStats inside a static would recurse through
  *    computeStatics), so other creatures' static auras don't count.
- *  - relic-scout / epoch-soldier token scripts are out of scope for this
- *    file; both work as vanilla tokens (relic-scout's "when replaced" grant
- *    and epoch-soldier's end-of-turn draw are unimplemented).
+ *  - relic-scout is scripted below ("when replaced" grant via wasReplaced);
+ *    epoch-soldier's end-of-turn draw remains unimplemented (vanilla token).
  */
 import { registerCard } from "./registry.js";
 import {
@@ -262,6 +261,27 @@ registerCard({
         condition: (game: Game, self: CreatureState) => replacedInstance(game, self) !== null,
         resolve: (ctx: Ctx, self: CreatureState) => {
           grantKeyword(ctx.events, self, { keyword: "Armor", value: armor });
+        },
+      }],
+    }]),
+  ),
+});
+
+// --- Relic Scout (Relic Hunter's Solbind token; "When Relic Scout is
+//     replaced, the creature that replaces it gets +N/+N and Armor N" —
+//     wasReplaced's evt names the NEW creature) ---
+registerCard({
+  defId: "relic-scout",
+  levels: Object.fromEntries(
+    ([1, 2, 3] as const).map((lvl) => [lvl, {
+      abilities: [{
+        id: "replaced-grant",
+        trigger: "wasReplaced" as const,
+        resolve: (ctx: Ctx, _s: CreatureState, evt: TriggerPayload) => {
+          const c = evt.sourceUid !== undefined ? findCreature(ctx.game.state, evt.sourceUid) : null;
+          if (!c) return;
+          buffCreature(ctx.game, ctx.events, c, lvl, lvl);
+          grantKeyword(ctx.events, c, { keyword: "Armor", value: lvl });
         },
       }],
     }]),

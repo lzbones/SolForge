@@ -23,6 +23,9 @@
  *    single friendly creature on board it grants only once (no second target).
  *  - Shallow Grave reuses set1's shared:vengeance-spawn-self +
  *    nekrium:keeper-expire ("this turn" expiration via a granted turnEnd cleanup).
+ *  - Spirit Reaver is a Set 2.2 card; its "when the enemy player gains
+ *    health" trigger rides the engine's playerHealed broadcast (this file is
+ *    the first to script a 2.2 card — there is no set22 file yet).
  */
 import { registerCard } from "./registry.js";
 import {
@@ -345,6 +348,24 @@ registerCard({
           const c = targetOf(ctx, choice);
           if (c) destroyCreature(ctx.game, ctx.events, c);
           destroyCreature(ctx.game, ctx.events, self);
+        },
+      }],
+    }]),
+  ),
+});
+
+// --- Spirit Reaver (Set 2.2): when the enemy player gains health, it gets +N/+N. ---
+registerCard({
+  defId: "spirit-reaver",
+  levels: Object.fromEntries(
+    ([[1, 2], [2, 3], [3, 4]] as const).map(([lvl, n]) => [lvl, {
+      abilities: [{
+        id: "enemy-heal-grow",
+        trigger: "playerHealed" as const,
+        condition: (_game: Game, self: CreatureState, evt: TriggerPayload) =>
+          evt.targetPlayer === opposing(self.owner),
+        resolve: (ctx: Ctx, self: CreatureState) => {
+          buffCreature(ctx.game, ctx.events, self, n, n);
         },
       }],
     }]),
