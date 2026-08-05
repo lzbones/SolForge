@@ -231,6 +231,7 @@ export function healPlayer(game: Game, events: GameEvent[], p: PlayerId, amount:
   game.state.players[p].health += amount;
   game.state.turnFlags.healed = true; // Ambush watches enemy heals
   events.push({ type: "heal", player: p, amount });
+  collectAll(game, "playerHealed", (c) => ({ sourceUid: c.uid, lane: c.lane, targetPlayer: p, amount }));
 }
 
 export function healCreature(game: Game, events: GameEvent[], c: CreatureState, amount: number): void {
@@ -291,7 +292,7 @@ export function spawnCreature(
   const existing = pl.lanes[lane];
   if (existing && !opts.replace) return null;
   const replaced = existing && opts.replace
-    ? { uid: existing.uid, defId: existing.defId, level: existing.level, attack: existing.attack, health: existing.health }
+    ? { ...existing }
     : null;
   if (existing && opts.replace) {
     pl.discard.push({ uid: existing.uid, defId: existing.defId, level: existing.level, owner: existing.owner });
@@ -320,6 +321,17 @@ export function spawnCreature(
       sourceUid: replaced.uid, sourceDefId: replaced.defId, sourceLevel: replaced.level,
       amount: replaced.attack, lane, fromHand: opts.fromHand ?? false,
     });
+    // replaced creature's own "when this is replaced" + board-wide broadcast:
+    // evt carries the NEW creature's identity.
+    snapshots(game).set(replaced.uid, replaced); // keep it resolvable in the batch
+    const enterEvt: TriggerPayload = {
+      sourceUid: c.uid, sourceDefId: defId, sourceLevel: c.level, sourceOwner: owner, lane,
+      fromHand: opts.fromHand ?? false,
+    };
+    collectFor(game, replaced, "wasReplaced", enterEvt);
+    for (const other of allCreatures(game.state)) {
+      if (other.uid !== c.uid) collectFor(game, other, "creatureReplaced", enterEvt);
+    }
   }
   if (opts.fromHand) {
     collectFor(game, c, "enterFromHand", { sourceUid: c.uid, sourceDefId: defId, sourceOwner: owner, lane, fromHand: true });

@@ -45,6 +45,9 @@ export type TriggerEvent =
   | "enterFromHand"     // played from hand (Forge, Assault, Formation, Allied conditions)
   | "enterPlay"         // any way of entering the field
   | "enterReplace"      // entered by replacing a creature (Upgrade)
+  | "wasReplaced"       // this creature was replaced by another (snapshot self)
+  | "creatureReplaced"  // any creature was replaced (board-wide)
+  | "playerHealed"      // a player gained health (evt.targetPlayer/amount)
   | "destroyed"         // this creature was destroyed (Vengeance)
   | "anyCreatureDestroyed"
   | "friendlyCreatureDestroyed"
