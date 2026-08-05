@@ -196,6 +196,15 @@ function pushDamageTriggers(
       sourceUid: source?.uid, sourceDefId: source?.defId, sourceOwner: source?.owner,
       amount, lane: target.lane,
     });
+    // board-wide: "whenever a creature is dealt damage" (Windspark Elemental etc.)
+    for (const c of allCreatures(game.state)) {
+      if (c.uid !== target.uid && c.uid !== source?.uid) {
+        collectFor(game, c, "anyCreatureDamaged", {
+          sourceUid: target.uid, sourceDefId: target.defId, sourceOwner: target.owner,
+          lane: target.lane, amount, targetPlayer: source?.owner, fromHand: battle,
+        });
+      }
+    }
   }
 }
 
