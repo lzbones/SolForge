@@ -290,6 +290,9 @@ export function spawnCreature(
   }
   const existing = pl.lanes[lane];
   if (existing && !opts.replace) return null;
+  const replaced = existing && opts.replace
+    ? { uid: existing.uid, defId: existing.defId, level: existing.level, attack: existing.attack, health: existing.health }
+    : null;
   if (existing && opts.replace) {
     pl.discard.push({ uid: existing.uid, defId: existing.defId, level: existing.level, owner: existing.owner });
   }
@@ -311,6 +314,13 @@ export function spawnCreature(
   events.push({ type: "spawn", player: owner, uid: c.uid, defId, level: lvl.level, lane });
   if (!opts.fromHand) game.state.turnFlags.unForgedEntry = true; // Ambush watches un-Forged entries
   collectFor(game, c, "enterPlay", { sourceUid: c.uid, sourceDefId: defId, sourceOwner: owner, lane, fromHand: opts.fromHand ?? false });
+  if (replaced) {
+    // Upgrade triggers: evt carries the REPLACED creature's identity/base stats.
+    collectFor(game, c, "enterReplace", {
+      sourceUid: replaced.uid, sourceDefId: replaced.defId, sourceLevel: replaced.level,
+      amount: replaced.attack, lane, fromHand: opts.fromHand ?? false,
+    });
+  }
   if (opts.fromHand) {
     collectFor(game, c, "enterFromHand", { sourceUid: c.uid, sourceDefId: defId, sourceOwner: owner, lane, fromHand: true });
   }

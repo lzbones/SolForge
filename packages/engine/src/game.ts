@@ -12,7 +12,7 @@ import {
   type CardInstance, type CreatureState, type GameState, type PendingChoice,
   type PlayerId, type PlayerState,
 } from "./state.js";
-import { isCreature, maxLevel, type CardDef, type Keyword } from "./types.js";
+import { maxLevel, typeAt, type CardDef, type Keyword } from "./types.js";
 import {
   canAttack, collectAll, collectFor, collectInto, dealCreatureDamage, dealPlayerDamage,
   drawCardsEffect, getStats, healCreature, isOffensive, refreshStatics, reshuffleEffect, resumeWithChoice,
@@ -142,7 +142,7 @@ export function legalActions(game: Game): Action[] {
     const d = defOf(game, inst);
     const free = cardHasKeyword(game, inst, "Free");
     if (s.playsLeft > 0 || free) {
-      if (isCreature(d)) {
+      if (typeAt(d, inst.level) === "Creature") {
         for (let lane = 0; lane < 5; lane++) actions.push({ type: "playCard", handIndex: i, lane });
       } else {
         actions.push({ type: "playCard", handIndex: i });
@@ -193,7 +193,7 @@ export function applyAction(game: Game, action: Action): GameEvent[] {
       if (!free) s.playsLeft--;
       s.cardsPlayedThisTurn++;
       levelUpCopy(game, inst, events);
-      if (isCreature(d)) {
+      if (typeAt(d, inst.level) === "Creature") {
         const lane = action.lane;
         if (lane === undefined || lane < 0 || lane >= 5) throw new RuleError("creature needs a lane 0..4");
         const initial = collectInto(() => {

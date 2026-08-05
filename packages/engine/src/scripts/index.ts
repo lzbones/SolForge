@@ -13,3 +13,7 @@ import "./set3-alloyin.js";
 import "./set3-nekrium.js";
 import "./set3-tempys.js";
 import "./set3-uterra.js";
+import "./set4-alloyin.js";
+import "./set4-nekrium.js";
+import "./set4-tempys.js";
+import "./set4-uterra.js";

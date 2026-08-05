@@ -36,8 +36,18 @@ export interface CardDef {
   images: string[];
 }
 
+/**
+ * Per-level card type. The scraped `types` array is per-level:
+ * ["Spell","Spell","Creature"] means L1/L2 are spells and L3 is a creature
+ * (the Set 4 "weapon" Legendaries). Single-entry arrays apply to all levels.
+ */
+export function typeAt(def: CardDef, level: number): CardType {
+  const t = def.types[Math.min(level, def.types.length) - 1] ?? def.types[0];
+  return t === "Spell" ? "Spell" : "Creature";
+}
+
 export function isCreature(def: CardDef): boolean {
-  return def.types.includes("Creature");
+  return typeAt(def, 1) === "Creature";
 }
 
 /** Highest level a card can reach in play (2-level cards like Metasight exist). */
