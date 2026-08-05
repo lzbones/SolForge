@@ -563,22 +563,28 @@ export function resumeWithChoice(game: Game, events: GameEvent[], answer: Choice
   const ctx = makeCtx(game, events, priors);
   const r = pending.resume;
   const declined = answer.accepted === false;
-  let ret: ResolveResult;
-  if (r.kind === "trigger") {
-    const self = findCreature(game.state, r.selfUid) ?? snapshots(game).get(r.selfUid);
-    const ability = self ? abilityOf({ defId: r.defId, abilityId: r.abilityId, selfUid: r.selfUid, selfLevel: r.selfLevel, evt: r.evt }) : null;
-    ret = self && ability && !declined ? ability.resolve(ctx, self, r.evt, answer) : undefined;
-  } else if (r.kind === "activate") {
-    const self = findCreature(game.state, r.selfUid);
-    const script = self ? getLevelScript(r.defId, self.level) : null;
-    const ability = script?.activates?.find((a) => a.id === r.abilityId);
-    ret = undefined;
-    if (self && ability && !declined) {
-      ret = ability.resolve(ctx, self, answer);
-      self.activatedThisTurn = true;
+  // Effects produced during the resumed resolve collect their triggers too.
+  const box: { ret: ResolveResult } = { ret: undefined };
+  const effectTriggers = collectInto(() => {
+    if (r.kind === "trigger") {
+      const self = findCreature(game.state, r.selfUid) ?? snapshots(game).get(r.selfUid);
+      const ability = self ? abilityOf({ defId: r.defId, abilityId: r.abilityId, selfUid: r.selfUid, selfLevel: r.selfLevel, evt: r.evt }) : null;
+      box.ret = self && ability && !declined ? ability.resolve(ctx, self, r.evt, answer) : undefined;
+    } else if (r.kind === "activate") {
+      const self = findCreature(game.state, r.selfUid);
+      const script = self ? getLevelScript(r.defId, self.level) : null;
+      const ability = script?.activates?.find((a) => a.id === r.abilityId);
+      if (self && ability && !declined) {
+        box.ret = ability.resolve(ctx, self, answer);
+        self.activatedThisTurn = true;
+      }
+    } else {
+      box.ret = spellResume.resumeSpell(game, events, r.defId, r.level, r.player, answer, priors);
     }
-  } else {
-    ret = spellResume.resumeSpell(game, events, r.defId, r.level, r.player, answer, priors);
+  });
+  const ret = box.ret;
+  if (effectTriggers.length) {
+    game.state.pendingQueue = [...effectTriggers, ...game.state.pendingQueue];
   }
   if (ret) {
     pause(game, r, ret, priors, game.state.pendingQueue);
