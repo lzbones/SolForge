@@ -72,6 +72,7 @@ export function createGame(
     deathCounter: 0, pending: null, pendingQueue: [],
     cardsPlayedThisTurn: 0, turnFlags: { moved: false, unForgedEntry: false, healed: false },
     deathsThisTurn: [0, 0],
+    deathLog: [],
   };
   const game = { state, rng };
   // Solbind: bound cards are added before the first draw.
@@ -485,6 +486,7 @@ function startOfTurn(game: Game, events: GameEvent[]): void {
   s.cardsPlayedThisTurn = 0;
   s.turnFlags = { moved: false, unForgedEntry: false, healed: false };
   s.deathsThisTurn = [0, 0];
+  s.deathLog = [];
   // reset per-turn flags for everyone
   for (const side of s.players) side.armorUsed = 0;
   for (const c of [...s.players[0].lanes, ...s.players[1].lanes]) {

@@ -48,6 +48,7 @@ export type TriggerEvent =
   | "wasReplaced"       // this creature was replaced by another (snapshot self)
   | "creatureReplaced"  // any creature was replaced (board-wide)
   | "playerHealed"      // a player gained health (evt.targetPlayer/amount)
+  | "creatureHealed"    // this creature was healed (evt.amount = actual heal)
   | "destroyed"         // this creature was destroyed (Vengeance)
   | "anyCreatureDestroyed"
   | "friendlyCreatureDestroyed"

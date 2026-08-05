@@ -239,6 +239,7 @@ export function healCreature(game: Game, events: GameEvent[], c: CreatureState, 
   c.damage -= healed;
   if (!isDead(c)) c.deathSeq = 0;
   events.push({ type: "healCreature", player: c.owner, lane: c.lane, amount: healed });
+  if (healed > 0) collectFor(game, c, "creatureHealed", { sourceUid: c.uid, lane: c.lane, amount: healed });
 }
 
 export function buffCreature(
@@ -416,6 +417,7 @@ export function deathCheck(game: Game, events: GameEvent[]): DeathInfo[] {
   const infos: DeathInfo[] = [];
   for (const c of dead) {
     game.state.deathsThisTurn[c.owner]++;
+    game.state.deathLog.push({ defId: c.defId, level: c.level, owner: c.owner });
     game.state.players[c.owner].lanes[c.lane] = null;
     // creature Overload: removed from the game instead of hitting the discard
     const cdef = game.state.cards[c.defId];

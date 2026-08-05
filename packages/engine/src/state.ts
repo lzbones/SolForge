@@ -107,6 +107,8 @@ export interface GameState {
   turnFlags: { moved: boolean; unForgedEntry: boolean; healed: boolean };
   /** Creatures destroyed this turn, per owner (reset each turn). */
   deathsThisTurn: [number, number];
+  /** Identity of creatures destroyed this turn (reset each turn). */
+  deathLog: { defId: string; level: number; owner: PlayerId }[];
 }
 
 export function emptyPlayer(): PlayerState {
