@@ -9,3 +9,7 @@ import "./set2-alloyin.js";
 import "./set2-nekrium.js";
 import "./set2-tempys.js";
 import "./set2-uterra.js";
+import "./set3-alloyin.js";
+import "./set3-nekrium.js";
+import "./set3-tempys.js";
+import "./set3-uterra.js";
