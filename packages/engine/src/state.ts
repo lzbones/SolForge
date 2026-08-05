@@ -103,6 +103,8 @@ export interface GameState {
   cardsPlayedThisTurn: number;
   /** Per-turn occurrence flags watched by Ambush cards (reset each turn). */
   turnFlags: { moved: boolean; unForgedEntry: boolean; healed: boolean };
+  /** Creatures destroyed this turn, per owner (reset each turn). */
+  deathsThisTurn: [number, number];
 }
 
 export function emptyPlayer(): PlayerState {

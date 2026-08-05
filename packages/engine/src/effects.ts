@@ -403,6 +403,7 @@ export function deathCheck(game: Game, events: GameEvent[]): DeathInfo[] {
   dead.sort((a, b) => a.deathSeq - b.deathSeq);
   const infos: DeathInfo[] = [];
   for (const c of dead) {
+    game.state.deathsThisTurn[c.owner]++;
     game.state.players[c.owner].lanes[c.lane] = null;
     game.state.players[c.owner].discard.push({ uid: c.uid, defId: c.defId, level: c.level, owner: c.owner });
     infos.push({
