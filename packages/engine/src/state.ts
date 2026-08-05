@@ -62,6 +62,8 @@ export interface CreatureState {
 export interface PlayerState {
   health: number;
   armor: number;
+  /** Armor already used this turn (player Armor prevents the first X damage each turn). */
+  armorUsed: number;
   poison: number;
   rank: number; // 1..5
   turnInRank: number; // 1..4
@@ -111,6 +113,7 @@ export function emptyPlayer(): PlayerState {
   return {
     health: STARTING_HEALTH,
     armor: 0,
+    armorUsed: 0,
     poison: 0,
     rank: 1,
     turnInRank: 1,

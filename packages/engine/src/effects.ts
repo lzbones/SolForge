@@ -220,8 +220,8 @@ export function dealPlayerDamage(
 ): void {
   if (amount <= 0) return;
   const pl = game.state.players[p];
-  const absorbed = Math.min(pl.armor, amount);
-  pl.armor -= absorbed;
+  const absorbed = Math.min(Math.max(0, pl.armor - pl.armorUsed), amount);
+  pl.armorUsed += absorbed;
   pl.health -= amount - absorbed;
   events.push({ type: "playerDamage", player: p, amount: amount - absorbed });
   pushDamageTriggers(game, source, null, p, amount - absorbed, battle);
@@ -417,7 +417,12 @@ export function deathCheck(game: Game, events: GameEvent[]): DeathInfo[] {
   for (const c of dead) {
     game.state.deathsThisTurn[c.owner]++;
     game.state.players[c.owner].lanes[c.lane] = null;
-    game.state.players[c.owner].discard.push({ uid: c.uid, defId: c.defId, level: c.level, owner: c.owner });
+    // creature Overload: removed from the game instead of hitting the discard
+    const cdef = game.state.cards[c.defId];
+    const clvl = cdef?.levels.find((l) => l.level === c.level);
+    const overloaded = clvl?.keywords?.some((k) => k.keyword === "Overload") ?? false;
+    game.state.players[c.owner][overloaded ? "removed" : "discard"].push(
+      { uid: c.uid, defId: c.defId, level: c.level, owner: c.owner });
     infos.push({
       uid: c.uid, defId: c.defId, level: c.level, owner: c.owner, lane: c.lane,
       snapshot: { ...c },

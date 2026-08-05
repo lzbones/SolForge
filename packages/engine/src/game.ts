@@ -486,6 +486,7 @@ function startOfTurn(game: Game, events: GameEvent[]): void {
   s.turnFlags = { moved: false, unForgedEntry: false, healed: false };
   s.deathsThisTurn = [0, 0];
   // reset per-turn flags for everyone
+  for (const side of s.players) side.armorUsed = 0;
   for (const c of [...s.players[0].lanes, ...s.players[1].lanes]) {
     if (c) c.armorUsed = 0;
   }
