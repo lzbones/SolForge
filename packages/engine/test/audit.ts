@@ -17,6 +17,7 @@ const EXCEPTIONS: Record<string, string> = {
   "lifeshaper-savant": "wiki data gap: attack/health unknown (tools/scraper/overrides.json)",
   "arcflight-squadron": "partial: extra-play restriction unsupported",
   "lucid-echoes": "", // implemented via player effects; keep here only if audit flags
+  "vault-intruder": "no script required: \"Forge: Look at the enemy player's hand\" is a pure information effect — it changes no game state, so there is nothing for the engine to implement",
 };
 
 function kwOnly(text: string): boolean {

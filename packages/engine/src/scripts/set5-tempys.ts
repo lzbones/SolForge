@@ -37,12 +37,12 @@
  *    cards_Set_2.2.json) into hand. Ice Torrent is not scripted in the set2
  *    files, so it is scripted below as a support card (spirit-torrent
  *    convention from set5-nekrium.ts); its Free at L2/L3 is inherent.
- *  - Windspark Elemental: UNIMPLEMENTED. "When an enemy creature takes
- *    non-battle damage" needs a board-wide damage broadcast; damage only
- *    fires triggers on the source (dealtDamageToCreature) and the target
- *    (damaged), and Windspark is normally neither. Registered so the defId
- *    resolves; it currently has no abilities. TODO: needs e.g. an
- *    "anyCreatureDamaged" broadcast carrying evt.battle.
+ *  - Windspark Elemental (Set 5.1): rides the anyCreatureDamaged board-wide
+ *    broadcast (effects.ts pushDamageTriggers). The payload carries the
+ *    DAMAGED creature in the evt.source fields and lane, plus the battle flag
+ *    in evt.fromHand (Demonweb Watcher convention from set6-nekrium.ts), so
+ *    the condition is "an enemy creature + non-battle". The burn hits the
+ *    enemy player, so it cannot chain into itself.
  *  - Dragonwake: "Search your deck for a Dragon" is a random pick from the
  *    matching deck cards (Aeromind Squadron convention — there is no
  *    deck-search choice kind); the original stays in the deck and the copy is
@@ -302,9 +302,24 @@ registerCard({
   },
 });
 
-// --- Windspark Elemental: UNIMPLEMENTED — no non-battle-damage broadcast
-//     exists for third-party watchers (see header note). TODO. ---
-registerCard({ defId: "windspark-elemental" });
+// --- Windspark Elemental (Set 5.1; when an enemy creature takes non-battle
+//     damage, deal N damage to the enemy player — see header) ---
+registerCard({
+  defId: "windspark-elemental",
+  levels: Object.fromEntries(
+    ([[1, 2], [2, 4], [3, 6]] as const).map(([lvl, n]) => [lvl, {
+      abilities: [{
+        id: "windspark-burn",
+        trigger: "anyCreatureDamaged" as const,
+        condition: (_game: Game, self: CreatureState, evt: TriggerPayload) =>
+          evt.fromHand !== true && evt.sourceOwner === opposing(self.owner),
+        resolve: (ctx: Ctx, self: CreatureState) => {
+          dealPlayerDamage(ctx.game, ctx.events, opposing(self.owner), n, self);
+        },
+      }],
+    }]),
+  ),
+});
 
 // --- Zarox, the Raging (battle damage to a player on your turn -> you may
 //     deal that much to an enemy creature; Allied Nekrium: any destruction

@@ -341,3 +341,42 @@ describe("Draconic Echoes (player effect: deferred end-of-turn burn)", () => {
     expect(g.state.playerEffects).toHaveLength(1); // never expires
   });
 });
+
+describe("Windspark Elemental (enemy creature takes non-battle damage: N to the enemy player)", () => {
+  it("burns the enemy player when an enemy creature takes non-battle damage", () => {
+    const g = gameWith("windspark-elemental");
+    spawnCreature(g, [], 0, "windspark-elemental", 1, { lane: 0 }); // 2/7
+    const foe = spawnCreature(g, [], 1, "cavern-hydra", 1, { lane: 2 })!;
+    const initial = collectInto(() => dealCreatureDamage(g, [], foe, 3));
+    runBatches(g, [], initial);
+    expect(foe.damage).toBe(3);
+    expect(g.state.players[1].health).toBe(120 - 2); // L1 burn
+  });
+
+  it("triggers off real spell damage (anyCreatureDamaged through the batch)", () => {
+    const g = gameWith("windspark-elemental");
+    spawnCreature(g, [], 0, "windspark-elemental", 3, { lane: 0 }); // L3: 6 burn
+    const foe = spawnCreature(g, [], 1, "cavern-hydra", 1, { lane: 1 })!;
+    addToHand(g, 0, "flame-jet", 1); // 3 damage to a creature
+    applyAction(g, { type: "playCard", handIndex: 5 });
+    applyChoice(g, { id: g.state.pending!.request.id, accepted: true, targetUid: foe.uid });
+    expect(foe.damage).toBe(3);
+    expect(g.state.players[1].health).toBe(120 - 6);
+  });
+
+  it("ignores battle damage and damage to friendly creatures", () => {
+    const g = gameWith("windspark-elemental");
+    spawnCreature(g, [], 0, "windspark-elemental", 2, { lane: 0 }); // L2: 4 burn
+    const attacker = spawnCreature(g, [], 0, "cavern-hydra", 1, { lane: 1 })!;
+    const foe = spawnCreature(g, [], 1, "cavern-hydra", 1, { lane: 2 })!;
+    // battle damage to the enemy creature: no burn
+    const battle = collectInto(() => dealCreatureDamage(g, [], foe, 3, attacker, true));
+    runBatches(g, [], battle);
+    expect(foe.damage).toBe(3);
+    expect(g.state.players[1].health).toBe(120);
+    // non-battle damage to a FRIENDLY creature: no burn
+    const friendly = collectInto(() => dealCreatureDamage(g, [], attacker, 2));
+    runBatches(g, [], friendly);
+    expect(g.state.players[1].health).toBe(120);
+  });
+});
