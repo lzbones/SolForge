@@ -21,7 +21,33 @@ import type { GameEvent } from "./triggers.js";
 import type {
   Ability, ChoiceAnswer, ChoiceRequest, Ctx, ResolveResult, StaticAbility, TriggerEvent, TriggerPayload,
 } from "./triggers.js";
-import { getGrantedAbility, getLevelScript } from "./scripts/registry.js";
+import { getGrantedAbility, getLevelScript, getPlayerEffect } from "./scripts/registry.js";
+
+// ---------- player-level persistent effects ----------
+
+/** Encode a player as a negative selfUid so batches can address player effects. */
+export const PLAYER_UID_BASE = -1000;
+export function playerUidOf(p: PlayerId): number { return PLAYER_UID_BASE - p; }
+export function playerOfUid(uid: number): PlayerId { return (PLAYER_UID_BASE - uid) as PlayerId; }
+
+/** Attach a persistent player effect (registry ref). remaining: applications left (null = permanent). */
+export function addPlayerEffect(
+  game: Game, events: GameEvent[], player: PlayerId, ref: string, remaining: number | null,
+): void {
+  game.state.playerEffects.push({ ref, player, remaining });
+  events.push({ type: "playerEffect", player, ref, remaining });
+}
+
+function playerPseudo(game: Game, uid: number): CreatureState {
+  const p = playerOfUid(uid);
+  return {
+    uid, defId: "@player", level: 0, owner: p, lane: -1,
+    attack: 0, health: 0, damage: 0, defensive: false,
+    keywords: [], tempKeywords: [], staticKeywords: [], silenced: false,
+    grantedAbilities: [], tempMods: [], deathSeq: 0, extraBattles: 0, hasBattled: false,
+    armorUsed: 0, movedThisTurn: false, activatedThisTurn: false,
+  };
+}
 
 // ---------- draw / reshuffle (shared primitives, also used by game.ts) ----------
 
@@ -162,11 +188,20 @@ export function collectFor(
   }
 }
 
-/** Collect `event` abilities of every creature on the board. */
+/** Collect `event` abilities of every creature on the board + player-level effects. */
 export function collectAll(
   game: Game, event: TriggerEvent, evtFor: (c: CreatureState) => TriggerPayload,
 ): void {
   for (const c of allCreatures(game.state)) collectFor(game, c, event, evtFor(c));
+  for (const fx of game.state.playerEffects) {
+    const def = getPlayerEffect(fx.ref);
+    if (!def || def.trigger !== event) continue;
+    const pseudo = playerPseudo(game, playerUidOf(fx.player));
+    const evt = { ...evtFor(pseudo), sourceOwner: evtFor(pseudo).sourceOwner ?? fx.player };
+    if (!def.condition || def.condition(game, fx.player, evt)) {
+      q({ defId: "@player", abilityId: fx.ref, selfUid: playerUidOf(fx.player), selfLevel: 0, evt });
+    }
+  }
 }
 
 // ---------- damage / heal / buff ----------
@@ -479,6 +514,18 @@ function deathTriggersFor(game: Game, info: DeathInfo): void {
 // ---------- batch runner ----------
 
 function abilityOf(item: BatchItem): Ability | null {
+  if (item.defId === "@player") {
+    const def = getPlayerEffect(item.abilityId);
+    if (!def) return null;
+    return {
+      id: item.abilityId,
+      trigger: def.trigger,
+      ...(def.targeted ? { targeted: true } : {}),
+      ...(def.condition ? { condition: (g: Game, self: CreatureState, evt: TriggerPayload) => def.condition!(g, self.owner, evt) } : {}),
+      ...(def.prompt ? { prompt: (g: Game, self: CreatureState, evt: TriggerPayload) => def.prompt!(g, self.owner, evt) } : {}),
+      resolve: (ctx, self, evt, choice) => def.resolve(ctx, self.owner, evt, choice),
+    };
+  }
   const granted = getGrantedAbility(item.abilityId);
   if (granted) return granted;
   const script = getLevelScript(item.defId, item.selfLevel);
@@ -535,7 +582,9 @@ export function runBatches(game: Game, events: GameEvent[], initial: BatchItem[]
         if (!ability) continue;
         byItem.set(item, ability);
       }
-      const self = findCreature(game.state, item.selfUid) ?? snapshots(game).get(item.selfUid);
+      const self = findCreature(game.state, item.selfUid)
+        ?? snapshots(game).get(item.selfUid)
+        ?? (item.selfUid < 0 ? playerPseudo(game, item.selfUid) : null);
       if (!self) continue;
       // Dead creatures lose their pending triggers — except damage-family
       // triggers: combat is simultaneous, so a creature that dealt/took fatal
@@ -553,6 +602,18 @@ export function runBatches(game: Game, events: GameEvent[], initial: BatchItem[]
         }
       }
       const ret = ability.resolve(makeCtx(game, events, []), self, item.evt, null);
+      if (item.defId === "@player") {
+        // deferred player effects count down applications and expire
+        const fx = game.state.playerEffects.find(
+          (f) => f.ref === item.abilityId && f.player === playerOfUid(item.selfUid),
+        );
+        if (fx && fx.remaining !== null) {
+          fx.remaining--;
+          if (fx.remaining <= 0) {
+            game.state.playerEffects.splice(game.state.playerEffects.indexOf(fx), 1);
+          }
+        }
+      }
       if (ret) { // multi-step chain: first resolve produced another request
         pause(game, { kind: "trigger", defId: item.defId, abilityId: item.abilityId, selfUid: item.selfUid, selfLevel: item.selfLevel, evt: item.evt },
           ret, [], currentQueue.slice(i + 1));
@@ -614,7 +675,8 @@ export function resumeWithChoice(game: Game, events: GameEvent[], answer: Choice
   const box: { ret: ResolveResult } = { ret: undefined };
   const effectTriggers = collectInto(() => {
     if (r.kind === "trigger") {
-      const self = findCreature(game.state, r.selfUid) ?? snapshots(game).get(r.selfUid);
+      const self = findCreature(game.state, r.selfUid) ?? snapshots(game).get(r.selfUid)
+        ?? (r.selfUid < 0 ? playerPseudo(game, r.selfUid) : null);
       const ability = self ? abilityOf({ defId: r.defId, abilityId: r.abilityId, selfUid: r.selfUid, selfLevel: r.selfLevel, evt: r.evt }) : null;
       box.ret = self && ability && !declined ? ability.resolve(ctx, self, r.evt, answer) : undefined;
     } else if (r.kind === "activate") {

@@ -67,3 +67,31 @@ describe("Ambush", () => {
     expect(g.state.players[1].lanes.some((l) => l !== null)).toBe(true);
   });
 });
+
+describe("player-level persistent effects", () => {
+  it("deferred turn-end effect fires twice then expires", async () => {
+    const { registerPlayerEffect, addPlayerEffect, drawCardsEffect } = await import("../src/index.js");
+    registerPlayerEffect("test:echo-draw", {
+      trigger: "turnEnd",
+      condition: (game, player) => game.state.active === player,
+      resolve: (ctx, player) => {
+        drawCardsEffect(ctx.game, ctx.events, player, 2);
+      },
+    });
+    const g = createGame(cards, deckOf("gob-3-2"), deckOf("gob-3-2"), 5);
+    addPlayerEffect(g, [], 0, "test:echo-draw", 2);
+    expect(g.state.playerEffects).toHaveLength(1);
+    const handBefore = g.state.players[0].hand.length;
+    applyAction(g, { type: "endTurn" }); // p0 turn end: fires (2 draws)
+    expect(g.state.players[0].hand.length).toBe(handBefore + 2);
+    applyAction(g, { type: "endTurn" }); // p1 turn: condition false
+    applyAction(g, { type: "endTurn" }); // p0: fires again, then expires
+    expect(g.state.playerEffects).toHaveLength(0);
+    applyAction(g, { type: "endTurn" });
+    applyAction(g, { type: "endTurn" }); // p0: no more effect
+    const h = g.state.players[0].hand.length;
+    applyAction(g, { type: "endTurn" });
+    applyAction(g, { type: "endTurn" });
+    expect(g.state.players[0].hand.length).toBe(h);
+  });
+});

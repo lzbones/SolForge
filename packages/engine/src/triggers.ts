@@ -37,6 +37,7 @@ export type GameEvent =
   | { type: "destroyed"; player: PlayerId; lane: number; defId: string }
   | { type: "rankUp"; player: PlayerId; rank: number }
   | { type: "reshuffle"; player: PlayerId }
+  | { type: "playerEffect"; player: PlayerId; ref: string; remaining: number | null }
   | { type: "battle" }
   | { type: "choiceRequest"; request: ChoiceRequest }
   | { type: "gameOver"; winner: PlayerId };
@@ -177,6 +178,20 @@ export interface CardScript {
   ambush?: {
     watch: "thirdEnemyCard" | "enemyMove" | "enemyUnForgedEntry" | "enemyHeal" | "enemyPoisonDeath";
   };
+}
+
+/**
+ * A persistent player-level effect ("You get '...'" auras, "this turn and
+ * your next turn" deferred spells). Registered via registerPlayerEffect;
+ * instances live in state.playerEffects with a remaining-application count
+ * (null = permanent).
+ */
+export interface PlayerEffectDef {
+  trigger: TriggerEvent;
+  targeted?: boolean;
+  condition?(game: Game, player: PlayerId, evt: TriggerPayload): boolean;
+  prompt?(game: Game, player: PlayerId, evt: TriggerPayload): Omit<ChoiceRequest, "id"> | null;
+  resolve(ctx: Ctx, player: PlayerId, evt: TriggerPayload, choice: ChoiceAnswer | null): ResolveResult;
 }
 
 /** Control-flow signal: a choice is needed; batch pauses. */

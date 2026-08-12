@@ -16,6 +16,16 @@ export function registerGranted(ref: string, ability: Ability): void {
   granted.set(ref, ability);
 }
 
+/** Persistent player-level effects (auras / deferred spells). */
+import type { PlayerEffectDef } from "../triggers.js";
+const playerEffects = new Map<string, PlayerEffectDef>();
+export function registerPlayerEffect(ref: string, def: PlayerEffectDef): void {
+  playerEffects.set(ref, def);
+}
+export function getPlayerEffect(ref: string): PlayerEffectDef | null {
+  return playerEffects.get(ref) ?? null;
+}
+
 export function getCardScript(defId: string): CardScript | null {
   return scripts.get(defId) ?? null;
 }

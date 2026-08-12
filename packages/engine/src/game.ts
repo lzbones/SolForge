@@ -73,6 +73,7 @@ export function createGame(
     cardsPlayedThisTurn: 0, turnFlags: { moved: false, unForgedEntry: false, healed: false, poisonDeath: false },
     deathsThisTurn: [0, 0],
     deathLog: [],
+    playerEffects: [],
   };
   const game = { state, rng };
   // Solbind: bound cards are added before the first draw.

@@ -109,6 +109,8 @@ export interface GameState {
   deathsThisTurn: [number, number];
   /** Identity of creatures destroyed this turn (reset each turn). */
   deathLog: { defId: string; level: number; owner: PlayerId }[];
+  /** Persistent player-level effects (registry refs; remaining = applications left, null = permanent). */
+  playerEffects: { ref: string; player: PlayerId; remaining: number | null }[];
 }
 
 export function emptyPlayer(): PlayerState {
