@@ -271,6 +271,7 @@ export function applyAction(game: Game, action: Action): GameEvent[] {
     case "move": {
       const c = findCreature(s, action.uid);
       if (!c || c.owner !== p) throw new RuleError("no such creature");
+      refreshStatics(game); // keyword grants may have changed since the last read
       const mobility = keywordValue(c, "Mobility");
       if (!isOffensive(c) || c.movedThisTurn || mobility <= 0) throw new RuleError("cannot move");
       if (Math.abs(action.lane - c.lane) > mobility || pl.lanes[action.lane]) {
