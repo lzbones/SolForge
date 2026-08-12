@@ -228,14 +228,6 @@ registerCard({
     ([[1, 4], [2, 6], [3, 12]] as const).map(([lvl, armor]) => [lvl, {
       abilities: [
         {
-          // data parse gap: lowercase {{armor|N}} is not extracted (see header)
-          id: "inherent-armor",
-          trigger: "enterPlay" as const,
-          resolve: (ctx: Ctx, self: CreatureState) => {
-            grantKeyword(ctx.events, self, { keyword: "Armor", value: armor });
-          },
-        },
-        {
           id: "armor-strike",
           trigger: "enterFromHand" as const,
           targeted: true,
@@ -314,14 +306,6 @@ registerCard({
       [4, 4, 5, 3, "all"],       // friendly creatures get +5 attack and Armor 3
     ] as const).map(([lvl, baseArmor, atk, arm, scope]) => [lvl, {
       abilities: [
-        {
-          // data parse gap: lowercase {{armor|N}} is not extracted (see header)
-          id: "inherent-armor",
-          trigger: "enterPlay" as const,
-          resolve: (ctx: Ctx, self: CreatureState) => {
-            grantKeyword(ctx.events, self, { keyword: "Armor", value: baseArmor });
-          },
-        },
         {
           id: "anvilbreaker-rally",
           trigger: "spellPlayed" as const,

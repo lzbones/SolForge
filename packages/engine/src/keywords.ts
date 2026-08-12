@@ -10,8 +10,6 @@ import { KEYWORDS, type Keyword } from "./types.js";
 import type { KeywordValue } from "./state.js";
 export type { KeywordValue } from "./state.js";
 
-const KW_SET = new Set<string>(KEYWORDS);
-
 /**
  * Extract inherent keywords: template occurrences that appear before the first
  * plain sentence (i.e. in the "keyword block" at the top of the text).
@@ -28,8 +26,9 @@ export function extractKeywords(text: string): KeywordValue[] {
     const m = rest.match(/^\{\{(\w+)(?:\|([^}]*))?\}\}\s*(<br\s*\/?>)?\s*/);
     if (!m) break;
     const [, name, arg] = m;
-    if (KW_SET.has(name!)) {
-      out.push({ keyword: name as Keyword, value: arg ? Number(arg) || 0 : 0 });
+    const canonical = KEYWORDS.find((k) => k.toLowerCase() === name!.toLowerCase());
+    if (canonical) {
+      out.push({ keyword: canonical, value: arg ? Number(arg) || 0 : 0 });
     }
     // Stop consuming once a template is followed by ':' — that template is a
     // trigger prefix (Forge:, Activate:, Vengeance:, Flank:, Raid:, Assault:,
@@ -44,7 +43,8 @@ export function extractKeywords(text: string): KeywordValue[] {
 export function extractTriggerPrefixes(text: string): Keyword[] {
   const out: Keyword[] = [];
   for (const m of text.matchAll(/\{\{(\w+)(?:\|[^}]*)?\}\}\s*:/g)) {
-    if (KW_SET.has(m[1]!)) out.push(m[1] as Keyword);
+    const canonical = KEYWORDS.find((k) => k.toLowerCase() === m[1]!.toLowerCase());
+    if (canonical) out.push(canonical);
   }
   return dedupe(out.map((keyword) => ({ keyword, value: 0 }))).map((k) => k.keyword);
 }
