@@ -20,21 +20,20 @@ export type { KeywordValue } from "./state.js";
  */
 export function extractKeywords(text: string): KeywordValue[] {
   const out: KeywordValue[] = [];
-  // Work through the leading run of templates and <br>/whitespace only.
+  // Work through the leading run of templates, allowing <br>, whitespace and
+  // stray punctuation (e.g. "{{Free}}. <br>{{Aggressive}}") between them.
   let rest = text.trim();
   while (rest.length) {
-    const m = rest.match(/^\{\{(\w+)(?:\|([^}]*))?\}\}\s*(<br\s*\/?>)?\s*/);
+    const m = rest.match(/^\{\{(\w+)(?:\|([^}]*))?\}\}/);
     if (!m) break;
     const [, name, arg] = m;
     const canonical = KEYWORDS.find((k) => k.toLowerCase() === name!.toLowerCase());
     if (canonical) {
       out.push({ keyword: canonical, value: arg ? Number(arg) || 0 : 0 });
     }
-    // Stop consuming once a template is followed by ':' — that template is a
-    // trigger prefix (Forge:, Activate:, Vengeance:, Flank:, Raid:, Assault:,
-    // Formation:, Allied:, Ambush:, Upgrade:) which we record but handle in scripts.
     rest = rest.slice(m[0].length);
-    if (rest.startsWith(":")) break;
+    if (rest.startsWith(":")) break; // trigger prefix (Forge:, Vengeance:, ...)
+    rest = rest.replace(/^[\s.,;]*(<br\s*\/?>)?[\s]*/, "");
   }
   return dedupe(out);
 }
