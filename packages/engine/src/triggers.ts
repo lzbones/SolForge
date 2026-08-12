@@ -56,6 +56,7 @@ export type TriggerEvent =
   | "opposingCreatureDestroyed" // the creature opposing this one died
   | "battleDamageToPlayer"      // this creature dealt battle damage to a player
   | "friendlyBattleDamageToPlayer" // any friendly creature dealt battle damage to a player
+  | "anyBattleDamageToPlayer"   // board-wide broadcast: battle damage hit a player (evt.sourceUid=attacker)
   | "battleDamageToCreature"    // this creature dealt battle damage to a creature
   | "dealtDamageToCreature"     // this creature dealt any damage to a creature
   | "damaged"                   // this creature was dealt damage
@@ -81,6 +82,8 @@ export interface TriggerPayload {
   fromHand?: boolean | undefined;
   /** For damage events: whether the damage was battle damage. */
   battle?: boolean | undefined;
+  /** For replace events: the replaced creature's base health. */
+  health?: number | undefined;
 }
 
 export interface ChoiceRequest {

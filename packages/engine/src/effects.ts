@@ -187,6 +187,10 @@ function pushDamageTriggers(
       for (const c of game.state.players[source.owner].lanes) {
         if (c && c.uid !== source.uid) collectFor(game, c, "friendlyBattleDamageToPlayer", evt);
       }
+      // board-wide to BOTH sides (Demonweb Watcher watches enemy attackers)
+      for (const c of allCreatures(game.state)) {
+        if (c.owner !== source.owner) collectFor(game, c, "anyBattleDamageToPlayer", evt);
+      }
     }
     if (battle && target) collectFor(game, source, "battleDamageToCreature", evt);
     if (target) collectFor(game, source, "dealtDamageToCreature", evt);
@@ -329,7 +333,7 @@ export function spawnCreature(
     // Upgrade triggers: evt carries the REPLACED creature's identity/base stats.
     collectFor(game, c, "enterReplace", {
       sourceUid: replaced.uid, sourceDefId: replaced.defId, sourceLevel: replaced.level,
-      amount: replaced.attack, lane, fromHand: opts.fromHand ?? false,
+      amount: replaced.attack, health: replaced.health, lane, fromHand: opts.fromHand ?? false,
     });
     // replaced creature's own "when this is replaced" + board-wide broadcast:
     // evt carries the NEW creature's identity.
