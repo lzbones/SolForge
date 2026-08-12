@@ -46,19 +46,22 @@
  *    does NOT fire creatureHealed — Vigorwisp never chains off it.
  *  - Vigorwisp: creatureHealed covers actual heals only (including Regenerate
  *    ticks); "+N health" buffs do not fire it (Everflow Eidolon convention).
- *  - Enduring Vitality: UNIMPLEMENTED. "You get, '...'" grants the PLAYER an
- *    ongoing aura; the engine has no player-level ability/static hook (same
- *    gap as Infernal Ritual in set6-nekrium.ts / Nexus Bubble in
- *    set6-alloyin.ts). Registered so the defId resolves; playing it is a
- *    no-op (Overload still sends it to removed). TODO.
+ *  - Enduring Vitality: "You get, 'When a friendly Uterra creature enters
+ *    play, it gets +1 attack and +1 health.'" is a permanent player effect
+ *    (registry ref uterra:enduring-vitality). The anyCreatureEnterPlay
+ *    broadcast is dispatched per-creature (collectFor), never through
+ *    collectAll, so player effects cannot see it; the trigger is approximated
+ *    with creaturePlayed, which covers Forged creatures only. Corner:
+ *    un-Forged (Spawned) friendly Uterra creatures do not get the buff.
+ *    Overload is an engine keyword (the card is still removed).
  *  - Subtype matching: the scraper stores combined subtype strings
  *    ("Darkforged Plant"), so Darkforged/Dinosaur/Dragon membership is a word
  *    match (set6-nekrium.ts convention).
  */
-import { registerCard, registerGranted } from "./registry.js";
+import { registerCard, registerGranted, registerPlayerEffect } from "./registry.js";
 import {
-  buffCreature, destroyCreature, grantKeyword, healCreature, healPlayer, isDeadEffective,
-  spawnCreature,
+  addPlayerEffect, buffCreature, destroyCreature, grantKeyword, healCreature, healPlayer,
+  isDeadEffective, spawnCreature,
 } from "../effects.js";
 import {
   allCreatures, findCreature, opposing,
@@ -494,6 +497,32 @@ registerCard({
   ),
 });
 
-// --- Enduring Vitality: UNIMPLEMENTED — player-granted ongoing aura; see
-//     header note. Overload is an engine keyword (the card is still removed). ---
-registerCard({ defId: "enduring-vitality" });
+// --- Enduring Vitality: "You get, 'When a friendly Uterra creature enters
+//     play, it gets +1 attack and +1 health.'" — a permanent player effect.
+//     The anyCreatureEnterPlay broadcast is dispatched per-creature
+//     (collectFor), never through collectAll, so player effects cannot see
+//     it; the trigger is approximated with creaturePlayed (collectAll), which
+//     covers Forged creatures only. Corner: un-Forged (Spawned) friendly
+//     Uterra creatures do not get the buff. Overload is an engine keyword. ---
+registerPlayerEffect("uterra:enduring-vitality", {
+  trigger: "creaturePlayed",
+  condition: (game: Game, player: PlayerId, evt: TriggerPayload) =>
+    evt.sourceOwner === player
+    && !!evt.sourceDefId && game.state.cards[evt.sourceDefId]?.faction === "Uterra",
+  resolve: (ctx: Ctx, player: PlayerId, evt: TriggerPayload) => {
+    // creaturePlayed's evt.sourceUid is the LISTENER's uid (the player
+    // pseudo-uid here); the played creature is identified by defId + lane.
+    const c = evt.lane !== undefined ? ctx.game.state.players[player].lanes[evt.lane] : null;
+    if (c && c.defId === evt.sourceDefId) buffCreature(ctx.game, ctx.events, c, 1, 1);
+  },
+});
+registerCard({
+  defId: "enduring-vitality",
+  spell: {
+    1: {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        addPlayerEffect(ctx.game, ctx.events, player, "uterra:enduring-vitality", null);
+      },
+    },
+  },
+});

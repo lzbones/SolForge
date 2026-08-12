@@ -308,3 +308,36 @@ describe("Dragonwake (Spawn a copy of a Dragon from your deck; L1/L2 copies expi
     expect(g.state.players[0].lanes.some((c) => c?.defId === "smolderscale-dragon")).toBe(true);
   });
 });
+
+describe("Draconic Echoes (player effect: deferred end-of-turn burn)", () => {
+  it("L1 deals 1-10 to the enemy player at this turn end and your next, then expires", () => {
+    const g = gameWith("draconic-echoes");
+    applyAction(g, { type: "playCard", handIndex: 0 });
+    expect(g.state.playerEffects).toHaveLength(1);
+    applyAction(g, { type: "endTurn" }); // p0: first burn
+    const after1 = g.state.players[1].health;
+    expect(120 - after1).toBeGreaterThanOrEqual(1);
+    expect(120 - after1).toBeLessThanOrEqual(10);
+    applyAction(g, { type: "endTurn" }); // p1: condition fails, no trigger
+    expect(g.state.players[1].health).toBe(after1);
+    applyAction(g, { type: "endTurn" }); // p0: second burn, then expires
+    const total = 120 - g.state.players[1].health;
+    expect(total).toBeGreaterThanOrEqual(2);
+    expect(total).toBeLessThanOrEqual(20);
+    expect(g.state.playerEffects).toHaveLength(0);
+  });
+
+  it("L3 burns 1-20 at the end of each of your turns (permanent)", () => {
+    const g = gameWith("draconic-echoes");
+    addToHand(g, 0, "draconic-echoes", 3);
+    applyAction(g, { type: "playCard", handIndex: 5 });
+    applyAction(g, { type: "endTurn" }); // p0: first burn
+    applyAction(g, { type: "endTurn" }); // p1: no trigger
+    const before = g.state.players[1].health;
+    applyAction(g, { type: "endTurn" }); // p0: burns again
+    const dealt = before - g.state.players[1].health;
+    expect(dealt).toBeGreaterThanOrEqual(1);
+    expect(dealt).toBeLessThanOrEqual(20);
+    expect(g.state.playerEffects).toHaveLength(1); // never expires
+  });
+});

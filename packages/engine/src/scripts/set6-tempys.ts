@@ -30,12 +30,15 @@
  *    creature). The mutual damage uses current attacks (getStats) at fight
  *    time — including the +N temp buff and static auras — and is non-battle
  *    spell damage dealt simultaneously (both attacks captured first).
- *  - Ice Grasp: UNIMPLEMENTED. "You get, 'When you play a Tempys spell, deal
- *    2 damage to the enemy player.'" grants the PLAYER an ongoing aura; the
- *    engine has no player-level ability/static hook (same gap as Infernal
- *    Ritual in set6-nekrium.ts / Nexus Bubble in set6-alloyin.ts). Registered
- *    so the defId resolves; playing it is a no-op (Overload still sends it to
- *    removed). TODO.
+ *  - Ice Grasp: "You get, 'When you play a Tempys spell, deal 2 damage to the
+ *    enemy player.'" is a permanent spellPlayed player effect (registry ref
+ *    tempys:ice-grasp; the spellPlayed broadcast goes through collectAll, so
+ *    player effects see it). The Tempys check reads the played card's def
+ *    faction (Sparkweaver Acolyte convention). Corner: the spellPlayed
+ *    broadcast fires after the spell resolves, so the aura is already
+ *    attached and Ice Grasp pings off its own cast (and a second Ice Grasp
+ *    triggers the first aura — the stacking is faithful). Overload is an
+ *    engine keyword (the card is still removed).
  *  - Cryophoenix (Set 6.2) is scripted below as a support card for Phoenix
  *    Call (ice-torrent / spirit-torrent convention; it can also be played from
  *    hand normally). Its enterPlay/moved damage uses its current attack.
@@ -50,10 +53,10 @@
  *    ("Darkforged Asir"), so Darkforged membership is a word match
  *    (set6-alloyin.ts convention).
  */
-import { registerCard } from "./registry.js";
+import { registerCard, registerPlayerEffect } from "./registry.js";
 import {
-  buffCreature, dealCreatureDamage, dealPlayerDamage, getStats, grantKeyword, negateKeyword,
-  spawnCreature,
+  addPlayerEffect, buffCreature, dealCreatureDamage, dealPlayerDamage, getStats, grantKeyword,
+  negateKeyword, spawnCreature,
 } from "../effects.js";
 import {
   allCreatures, findCreature, opposing,
@@ -411,9 +414,30 @@ registerCard({
   ),
 });
 
-// --- Ice Grasp: UNIMPLEMENTED — player-granted ongoing aura; see header note.
-//     Overload is an engine keyword (the card is still removed). ---
-registerCard({ defId: "ice-grasp" });
+// --- Ice Grasp: "You get, 'When you play a Tempys spell, deal 2 damage to
+//     the enemy player.'" — a permanent spellPlayed player effect (the
+//     spellPlayed broadcast goes through collectAll, so player effects see
+//     it). The Tempys faction check reads the played card's def
+//     (Sparkweaver Acolyte convention). Overload is an engine keyword. ---
+registerPlayerEffect("tempys:ice-grasp", {
+  trigger: "spellPlayed",
+  condition: (game: Game, player: PlayerId, evt: TriggerPayload) =>
+    evt.sourceOwner === player
+    && !!evt.sourceDefId && game.state.cards[evt.sourceDefId]?.faction === "Tempys",
+  resolve: (ctx: Ctx, player: PlayerId) => {
+    dealPlayerDamage(ctx.game, ctx.events, opposing(player), 2);
+  },
+});
+registerCard({
+  defId: "ice-grasp",
+  spell: {
+    1: {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        addPlayerEffect(ctx.game, ctx.events, player, "tempys:ice-grasp", null);
+      },
+    },
+  },
+});
 
 // --- Phoenix Call (Spawn a Cryophoenix at the spell's level; the on-entry
 //     burn is applied directly — no-prompt spells drop effect triggers, see

@@ -385,13 +385,26 @@ describe("Zombie Dreadknight (Forge: each friendly creature with Regenerate gets
   });
 });
 
-describe("Infernal Ritual (UNIMPLEMENTED player aura — no-op, Overload still applies)", () => {
-  it("resolves as a no-op and is removed from the game", () => {
+describe("Infernal Ritual (player aura: friendly Nekrium creatures in side spaces get Regenerate 2)", () => {
+  it("grants Regenerate 2 on cast and at later turn starts; it ticks at the controller's turn start", () => {
     const g = gameWith("infernal-ritual");
-    const side = spawnCreature(g, [], 0, "shadeclaw-zombie", 1, { lane: 0 })!; // side-space Nekrium
-    applyAction(g, { type: "playCard", handIndex: 0 });
+    const side = spawnCreature(g, [], 0, "grimgaunt-betrayer", 1, { lane: 0 })!; // 5/5 Nekrium, side space
+    const center = spawnCreature(g, [], 0, "grimgaunt-betrayer", 1, { lane: 2 })!; // center space
+    applyAction(g, { type: "playCard", handIndex: 0 }); // immediate sweep
     expect(g.state.pending).toBeNull();
-    expect(keywordValue(side, "Regenerate")).toBe(1); // only its inherent Regenerate 1 — TODO
+    expect(keywordValue(side, "Regenerate")).toBe(2);
+    expect(keywordValue(center, "Regenerate")).toBe(0);
+    // stacks with inherent Regenerate (1 + 2)
+    const zombie = spawnCreature(g, [], 0, "shadeclaw-zombie", 1, { lane: 1 })!; // inherent Regenerate 1
+    expect(keywordValue(zombie, "Regenerate")).toBe(1); // mid-turn entry: not yet
+    applyAction(g, { type: "endTurn" }); // p1's turn start sweep
+    expect(keywordValue(zombie, "Regenerate")).toBe(3);
+    // the granted Regenerate actually heals at the controller's next turn start
+    side.damage = 4;
+    applyAction(g, { type: "endTurn" }); // p0's turn start: regen tick heals 2, then a deduped sweep
+    expect(side.damage).toBe(2);
+    expect(keywordValue(side, "Regenerate")).toBe(2); // no double grant
+    // Overload: the spell is removed from the game
     expect(g.state.players[0].removed.some((i) => i.defId === "infernal-ritual")).toBe(true);
   });
 });

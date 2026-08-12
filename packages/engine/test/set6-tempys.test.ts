@@ -334,13 +334,37 @@ describe("Valifrax, Iztek's Champion (Flank: Iztek's Frost if opposed, else Izte
   });
 });
 
-describe("Ice Grasp (UNIMPLEMENTED player aura — no-op, Overload still applies)", () => {
-  it("resolves as a no-op and is removed from the game", () => {
+describe("Ice Grasp (player aura: your Tempys spells deal 2 damage to the enemy player)", () => {
+  it("pings on Tempys spells (including its own cast — see header), not on other factions", () => {
+    const g = gameWith("ice-grasp");
+    addToHand(g, 0, "energy-surge"); // Alloyin spell
+    applyAction(g, { type: "playCard", handIndex: 0 }); // the aura self-pings (see header note)
+    expect(g.state.pending).toBeNull();
+    expect(g.state.players[1].health).toBe(118);
+    expect(g.state.playerEffects).toHaveLength(1);
+    // non-Tempys spells do not trigger the aura
+    applyAction(g, { type: "playCard", handIndex: 4 });
+    expect(g.state.players[1].health).toBe(118);
+    // end of turn discards the hand and redraws 5 (all Ice Grasps here)
+    endRound(g);
+    // the second cast: the first aura pings, and the new aura self-pings too
+    applyAction(g, { type: "playCard", handIndex: 0 });
+    expect(g.state.players[1].health).toBe(114);
+    expect(g.state.playerEffects).toHaveLength(2);
+    // Overload: both casts are removed from the game
+    expect(g.state.players[0].removed.filter((i) => i.defId === "ice-grasp")).toHaveLength(2);
+  });
+
+  it("does not trigger on the opponent's Tempys spells", () => {
     const g = gameWith("ice-grasp");
     applyAction(g, { type: "playCard", handIndex: 0 });
-    expect(g.state.pending).toBeNull();
-    expect(g.state.players[1].health).toBe(120); // no aura — TODO
-    expect(g.state.players[0].removed.some((i) => i.defId === "ice-grasp")).toBe(true);
+    applyAction(g, { type: "endTurn" }); // p1's turn
+    const h0 = g.state.players[0].health;
+    const h1 = g.state.players[1].health;
+    addToHand(g, 1, "ice-grasp");
+    applyAction(g, { type: "playCard", handIndex: 5 }); // p1's own aura self-pings p0
+    expect(g.state.players[0].health).toBe(h0 - 2); // p1's aura only, not p0's
+    expect(g.state.players[1].health).toBe(h1);
   });
 });
 

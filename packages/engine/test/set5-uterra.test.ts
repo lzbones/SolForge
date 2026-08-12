@@ -327,13 +327,22 @@ describe("Everflow Eidolon (when it gains health, you gain that much; L3: 2x)", 
   });
 });
 
-describe("Ancestral Echoes (UNIMPLEMENTED — deferred player-level effect, TODO)", () => {
-  it("is registered and plays without effect", () => {
+describe("Ancestral Echoes (player effect: deferred end-of-turn team buff)", () => {
+  it("L1 gives each friendly creature +1/+2 at this turn end and your next, then expires", () => {
     const g = gameWith("ancestral-echoes");
     const mine = spawnCreature(g, [], 0, "cavern-hydra", 1, { lane: 0 })!; // 4/7
     applyAction(g, { type: "playCard", handIndex: 0 });
     expect(g.state.pending).toBeNull();
-    expect(mine.attack).toBe(4); // no buff: the end-of-turn riders are not implemented
-    expect(mine.health).toBe(7);
+    expect(g.state.playerEffects).toHaveLength(1);
+    applyAction(g, { type: "endTurn" }); // p0: +1/+2
+    expect(mine.attack).toBe(5);
+    expect(mine.health).toBe(9);
+    applyAction(g, { type: "endTurn" }); // p1: condition fails, no trigger
+    expect(mine.attack).toBe(5);
+    expect(mine.health).toBe(9);
+    applyAction(g, { type: "endTurn" }); // p0: +1/+2 again, then expires
+    expect(mine.attack).toBe(6);
+    expect(mine.health).toBe(11);
+    expect(g.state.playerEffects).toHaveLength(0);
   });
 });

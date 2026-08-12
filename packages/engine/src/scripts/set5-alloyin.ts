@@ -26,11 +26,10 @@
  *    per turn" is NOT supported — the engine gates activates on the
  *    activatedThisTurn boolean (legalActions/applyAction), so L3 also works
  *    once per turn. TODO (needs per-ability use counts in the engine).
- *  - Lucid Echoes: UNIMPLEMENTED. "At the end of this turn and your next
- *    turn" (L1/L2) and "at the end of each of your turns" (L3) need deferred
- *    / ongoing spell effects; the engine has no player-level turn hooks and
- *    no persistent effect state. Registered so the defId resolves; playing it
- *    is currently a no-op. TODO.
+ *  - Lucid Echoes: the deferred draw is a player-level effect (registry ref
+ *    alloyin:lucid-echoes-N). L1/L2 attach it with 2 applications ("this turn
+ *    and your next turn" — opponent turn ends fail the active-player condition
+ *    and do not count down); L3 attaches it permanently.
  *  - Ambriel Archangel: "while your only creature, you get Armor N" is a
  *    continuous player aura the engine cannot express. Approximated as a
  *    top-up (pl.armor = max(pl.armor, N)) on enterPlay and at every turn
@@ -56,9 +55,10 @@
  *    set2 files, so it is scripted below as a support card (same convention
  *    as relic-scout in set4-alloyin.ts).
  */
-import { registerCard } from "./registry.js";
+import { registerCard, registerPlayerEffect } from "./registry.js";
 import {
-  buffCreature, destroyCreature, drawCardsEffect, getStats, grantKeyword, spawnCreature,
+  addPlayerEffect, buffCreature, destroyCreature, drawCardsEffect, getStats, grantKeyword,
+  spawnCreature,
 } from "../effects.js";
 import { allCreatures, findCreature, hasKeyword, keywordValue, opposing } from "../state.js";
 import { maxLevel, typeAt } from "../types.js";
@@ -453,8 +453,28 @@ registerCard({
   ),
 });
 
-// --- Lucid Echoes (UNIMPLEMENTED — see header TODO) ---
-registerCard({ defId: "lucid-echoes" });
+// --- Lucid Echoes: L1/L2 attach a 2-application turnEnd player effect
+//     (this turn + your next turn — the opponent's turns fail the active
+//     condition and do not count); L3 attaches the permanent version. ---
+for (const [ref, n] of [["alloyin:lucid-echoes-1", 1], ["alloyin:lucid-echoes-2", 2]] as const) {
+  registerPlayerEffect(ref, {
+    trigger: "turnEnd",
+    condition: (game: Game, player: PlayerId) => game.state.active === player,
+    resolve: (ctx: Ctx, player: PlayerId) => {
+      drawCardsEffect(ctx.game, ctx.events, player, n);
+    },
+  });
+}
+registerCard({
+  defId: "lucid-echoes",
+  spell: Object.fromEntries(
+    ([[1, 1, 2], [2, 2, 2], [3, 2, null]] as const).map(([lvl, n, remaining]) => [lvl, {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        addPlayerEffect(ctx.game, ctx.events, player, `alloyin:lucid-echoes-${n}`, remaining);
+      },
+    }]),
+  ),
+});
 
 // --- Oreian Steelskin (creature gets Armor N, +1 more at Rank 2+) ---
 registerCard({

@@ -3,12 +3,11 @@
  * See docs/CARD_SCRIPTING.md.
  *
  * Approximation notes (same conventions as set4-uterra.ts / set5-nekrium.ts):
- *  - Ancestral Echoes: UNIMPLEMENTED. "At the end of this turn and your next
- *    turn" (L1/L2) and "at the end of each of your turns" (L3) are deferred
- *    player-level effects; the engine has no such hook and no persistent
- *    effect state (same gap as Immortal Echoes in set5-nekrium.ts / Draconic
- *    Echoes in set5-tempys.ts). Registered so the defId resolves; playing it
- *    is currently a no-op. TODO.
+ *  - Ancestral Echoes: the deferred team buff is a player-level effect
+ *    (registry ref uterra:ancestral-echoes-N). L1/L2 attach it with 2
+ *    applications ("this turn and your next turn" — opponent turn ends fail
+ *    the active-player condition and do not count down); L3 attaches it
+ *    permanently.
  *  - Cavern Serpent: the scraped text has no Forge prefix ("The enemy player
  *    gets Poison N"), so the grant fires on enterPlay — any entry, including
  *    Spawned copies. Player poison is a persistent stacking counter (wiki
@@ -55,9 +54,9 @@
  *    (evt.amount), per the Poison rulings (armor prevents the damage, and
  *    zero damage dealt fires no trigger at all).
  */
-import { registerCard } from "./registry.js";
+import { registerCard, registerPlayerEffect } from "./registry.js";
 import {
-  buffCreature, grantKeyword, healPlayer, spawnCreature,
+  addPlayerEffect, buffCreature, grantKeyword, healPlayer, spawnCreature,
 } from "../effects.js";
 import {
   allCreatures, findCreature, keywordValue, opposing,
@@ -314,9 +313,30 @@ registerCard({
 // Spells
 // ============================================================
 
-// --- Ancestral Echoes: UNIMPLEMENTED — deferred player-level end-of-turn
-//     buffs need hooks the engine does not have (see header note). TODO. ---
-registerCard({ defId: "ancestral-echoes" });
+// --- Ancestral Echoes: deferred end-of-turn team buff via a player-level
+//     effect. L1/L2 attach it with 2 applications (this turn + your next
+//     turn); L3 permanently. The buffs are permanent (no "this turn"). ---
+for (const [ref, atk, hp] of [["uterra:ancestral-echoes-1", 1, 2], ["uterra:ancestral-echoes-2", 2, 4]] as const) {
+  registerPlayerEffect(ref, {
+    trigger: "turnEnd",
+    condition: (game: Game, player: PlayerId) => game.state.active === player,
+    resolve: (ctx: Ctx, player: PlayerId) => {
+      for (const c of ctx.game.state.players[player].lanes) {
+        if (c) buffCreature(ctx.game, ctx.events, c, atk, hp);
+      }
+    },
+  });
+}
+registerCard({
+  defId: "ancestral-echoes",
+  spell: Object.fromEntries(
+    ([[1, 1, 2], [2, 2, 2], [3, 2, null]] as const).map(([lvl, tier, remaining]) => [lvl, {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        addPlayerEffect(ctx.game, ctx.events, player, `uterra:ancestral-echoes-${tier}`, remaining);
+      },
+    }]),
+  ),
+});
 
 // --- Dendrify: replace a creature (L1: level 2 or lower) with a 7/7 Treefolk
 //     under the same controller. L3 Free/Overload are inherent. ---

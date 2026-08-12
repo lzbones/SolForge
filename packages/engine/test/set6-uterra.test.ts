@@ -321,15 +321,33 @@ describe("Vigorwisp (when it gains health, heal that much from each other friend
   });
 });
 
-describe("Enduring Vitality (UNIMPLEMENTED player aura — no-op, Overload still applies)", () => {
-  it("resolves as a no-op and is removed from the game", () => {
+describe("Enduring Vitality (player aura: your Forged Uterra creatures get +1/+1)", () => {
+  it("buffs friendly Uterra creatures played from hand; un-Forged spawns are not covered (see header)", () => {
     const g = gameWith("enduring-vitality");
-    const side = spawnCreature(g, [], 0, "cavern-hydra", 1, { lane: 0 })!; // 4/7
+    addToHand(g, 0, "mosstodon");
     applyAction(g, { type: "playCard", handIndex: 0 });
     expect(g.state.pending).toBeNull();
-    const a = collectInto(() => spawnCreature(g, [], 0, "cavern-hydra", 1, { lane: 1 }));
+    expect(g.state.playerEffects).toHaveLength(1);
+    // Forged Uterra creature: +1/+1 (7/4 -> 8/5)
+    applyAction(g, { type: "playCard", handIndex: 4, lane: 0 });
+    const moss = g.state.players[0].lanes[0]!;
+    expect(moss.attack).toBe(8);
+    expect(moss.health).toBe(5);
+    // un-Forged entry: approximation corner, no buff
+    const a = collectInto(() => spawnCreature(g, [], 0, "mosstodon", 1, { lane: 1 }));
     runBatches(g, [], a);
-    expect(side.attack).toBe(4); // no aura — TODO
+    expect(g.state.players[0].lanes[1]!.attack).toBe(7);
+    // Forged non-Uterra creature: no buff (lightning-wyrm is Tempys)
+    endRound(g);
+    addToHand(g, 0, "lightning-wyrm");
+    applyAction(g, { type: "playCard", handIndex: 5, lane: 2 });
+    expect(g.state.players[0].lanes[2]!.attack).toBe(4);
+    // enemy Forged Uterra creatures do not trigger p0's aura either
+    applyAction(g, { type: "endTurn" }); // p1's turn
+    addToHand(g, 1, "cavern-hydra");
+    applyAction(g, { type: "playCard", handIndex: 5, lane: 0 });
+    expect(g.state.players[1].lanes[0]!.attack).toBe(4);
+    // Overload: the spell is removed from the game
     expect(g.state.players[0].removed.some((i) => i.defId === "enduring-vitality")).toBe(true);
   });
 });

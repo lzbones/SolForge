@@ -407,13 +407,26 @@ describe("Wipe Clean (Overload: remove all abilities from each creature)", () =>
   });
 });
 
-describe("Nexus Bubble (UNIMPLEMENTED player aura — no-op, Overload still applies)", () => {
-  it("resolves as a no-op and is removed from the game", () => {
+describe("Nexus Bubble (player aura: friendly Alloyin creatures in the center space get Armor 3)", () => {
+  it("grants Armor 3 on cast and tops up later entries at each turn start (see header for corners)", () => {
     const g = gameWith("nexus-bubble");
-    const c = spawnCreature(g, [], 0, "vault-intruder", 1, { lane: 2 })!; // center space
-    applyAction(g, { type: "playCard", handIndex: 0 });
+    const side = spawnCreature(g, [], 0, "vault-intruder", 1, { lane: 0 })!; // side space
+    applyAction(g, { type: "playCard", handIndex: 0 }); // sweep: nothing qualifies yet
     expect(g.state.pending).toBeNull();
-    expect(keywordValue(c, "Armor")).toBe(0); // no effect yet — TODO
+    expect(keywordValue(side, "Armor")).toBe(0);
+    // mid-turn entry into the center waits for the next turn start
+    const center = spawnCreature(g, [], 0, "vault-intruder", 1, { lane: 2 })!; // 7/5 Alloyin
+    expect(keywordValue(center, "Armor")).toBe(0);
+    applyAction(g, { type: "endTurn" }); // p1's turn start sweep
+    expect(keywordValue(center, "Armor")).toBe(3);
+    expect(keywordValue(side, "Armor")).toBe(0); // side space excluded
+    applyAction(g, { type: "endTurn" }); // p0's turn start sweep — the census dedups
+    expect(keywordValue(center, "Armor")).toBe(3); // still exactly one grant
+    // enemy creatures are never swept (the aura belongs to p0)
+    const foe = spawnCreature(g, [], 1, "vault-intruder", 1, { lane: 2 })!;
+    applyAction(g, { type: "endTurn" });
+    expect(keywordValue(foe, "Armor")).toBe(0);
+    // Overload: the spell is removed from the game
     expect(g.state.players[0].removed.some((i) => i.defId === "nexus-bubble")).toBe(true);
   });
 });

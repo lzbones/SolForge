@@ -41,20 +41,26 @@
  *    (Sparky convention, set6-alloyin.ts). The Activate has no prompt, so it
  *    resolves outside a batch and triggers off the debuffs/Spawn are dropped —
  *    known engine gap (Marty McGear convention).
- *  - Infernal Ritual: UNIMPLEMENTED. "You get, '...'" grants the PLAYER an
- *    ongoing aura; the engine has no player-level ability/static hook (same
- *    gap as Nexus Bubble in set6-alloyin.ts). Registered so the defId
- *    resolves; playing it is a no-op (Overload still sends it to removed). TODO.
+ *  - Infernal Ritual: "You get, 'Each friendly Nekrium creature in a side
+ *    space gets Regenerate 2'" is a continuous player aura, but player-level
+ *    effects are trigger-only. Approximated with permanent grants: the spell
+ *    sweeps immediately and a permanent turnStart player effect re-sweeps at
+ *    every turn start (per-game uid census dedups; Nexus Bubble convention,
+ *    set6-alloyin.ts). Corners: Regenerate is not revoked when a creature
+ *    moves to the center space; mid-turn entries/moves into a side space wait
+ *    for the next turn start; a negateKeyword strips the grant permanently;
+ *    a second Infernal Ritual does not stack on already-granted creatures.
+ *    Overload is an engine keyword (the card is still removed).
  *  - Darkheart Conjurer's Solbind card Dysian Infusion is scripted below as a
  *    support card (spirit-torrent convention from set5-nekrium.ts).
  *  - Subtype matching: the scraper stores combined subtype strings
  *    ("Darkforged Grimgaunt"), so Darkforged/Web membership is a word match
  *    (set6-alloyin.ts convention).
  */
-import { registerCard, registerGranted } from "./registry.js";
+import { registerCard, registerGranted, registerPlayerEffect } from "./registry.js";
 import {
-  banishFromDiscard, buffCreature, dealPlayerDamage, destroyCreature, getStats, grantKeyword,
-  isDeadEffective, spawnCreature,
+  addPlayerEffect, banishFromDiscard, buffCreature, dealPlayerDamage, destroyCreature, getStats,
+  grantKeyword, isDeadEffective, spawnCreature,
 } from "../effects.js";
 import {
   allCreatures, findCreature, hasKeyword, opposing,
@@ -62,7 +68,7 @@ import {
 } from "../state.js";
 import { typeAt } from "../types.js";
 import type { Game } from "../game.js";
-import type { ChoiceAnswer, ChoiceRequest, Ctx, TriggerPayload } from "../triggers.js";
+import type { ChoiceAnswer, ChoiceRequest, Ctx, GameEvent, TriggerPayload } from "../triggers.js";
 
 // ---------- helpers ----------
 
@@ -505,9 +511,47 @@ registerCard({
   ),
 });
 
-// --- Infernal Ritual: UNIMPLEMENTED — player-granted ongoing aura; see
-//     header note. Overload is an engine keyword (the card is still removed). ---
-registerCard({ defId: "infernal-ritual" });
+// --- Infernal Ritual: "You get, 'Each friendly Nekrium creature in a side
+//     space gets Regenerate 2'" is a continuous player aura; player effects
+//     are trigger-only, so it is approximated with PERMANENT grants: the
+//     spell sweeps immediately and a permanent turnStart player effect
+//     re-sweeps every turn (per-game uid census dedups — Nexus Bubble
+//     convention, set6-alloyin.ts). Side space = any lane but the center.
+//     Corners: Regenerate is not revoked when a creature moves to the center;
+//     mid-turn entries/moves into a side space wait for the next turn start;
+//     a negateKeyword strips the grant for good; a second Infernal Ritual
+//     does not stack on already-granted creatures. ---
+const RITUAL_CENTER_LANE = 2;
+const ritualGranted = new WeakMap<Game, Set<number>>();
+
+function ritualSweep(game: Game, events: GameEvent[], player: PlayerId): void {
+  let granted = ritualGranted.get(game);
+  if (!granted) { granted = new Set(); ritualGranted.set(game, granted); }
+  for (const c of game.state.players[player].lanes) {
+    if (!c || c.lane === RITUAL_CENTER_LANE || granted.has(c.uid)) continue;
+    if (game.state.cards[c.defId]?.faction !== "Nekrium") continue;
+    grantKeyword(events, c, { keyword: "Regenerate", value: 2 });
+    granted.add(c.uid);
+  }
+}
+
+registerPlayerEffect("nekrium:infernal-ritual", {
+  trigger: "turnStart", // both players' turn starts: top up late entries
+  resolve: (ctx: Ctx, player: PlayerId) => {
+    ritualSweep(ctx.game, ctx.events, player);
+  },
+});
+registerCard({
+  defId: "infernal-ritual",
+  spell: {
+    1: {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        ritualSweep(ctx.game, ctx.events, player); // aura applies immediately
+        addPlayerEffect(ctx.game, ctx.events, player, "nekrium:infernal-ritual", null);
+      },
+    },
+  },
+});
 
 // ============================================================
 // Support cards (Solbind tokens scripted here — see header)

@@ -330,3 +330,30 @@ describe("Varna, Immortal King (Forge: respawn a friendly creature destroyed thi
     expect(mine.some((c) => c!.defId === "cavern-hydra" || c!.defId === "technognome")).toBe(true);
   });
 });
+
+describe("Immortal Echoes (player effect: deferred end-of-turn Spawn)", () => {
+  it("L1 Spawns a level 2-or-lower creature from the discard at both of your turn ends, then expires", () => {
+    const g = gameWith("immortal-echoes");
+    g.state.players[0].discard.push({ uid: g.state.nextUid++, defId: "xithian-tormentor", level: 1, owner: 0 });
+    applyAction(g, { type: "playCard", handIndex: 0 });
+    expect(g.state.playerEffects).toHaveLength(1);
+    applyAction(g, { type: "endTurn" }); // p0: Spawn #1 (un-Forged, so its Forge does not fire)
+    expect(g.state.players[0].lanes.filter(Boolean)).toHaveLength(1);
+    expect(g.state.players[0].lanes.some((c) => c?.defId === "xithian-tormentor" && c?.level === 1)).toBe(true);
+    applyAction(g, { type: "endTurn" }); // p1: condition fails, no trigger
+    expect(g.state.players[0].lanes.filter(Boolean)).toHaveLength(1);
+    applyAction(g, { type: "endTurn" }); // p0: Spawn #2, then expires
+    expect(g.state.players[0].lanes.filter(Boolean)).toHaveLength(2);
+    expect(g.state.playerEffects).toHaveLength(0);
+    // the pool is not consumed (Varna convention)
+    expect(g.state.players[0].discard.some((i) => i.defId === "xithian-tormentor")).toBe(true);
+  });
+
+  it("L1 skips creatures above level 2 in the pool", () => {
+    const g = gameWith("immortal-echoes");
+    g.state.players[0].discard.push({ uid: g.state.nextUid++, defId: "xithian-tormentor", level: 3, owner: 0 });
+    applyAction(g, { type: "playCard", handIndex: 0 });
+    applyAction(g, { type: "endTurn" });
+    expect(g.state.players[0].lanes.every((c) => c === null)).toBe(true);
+  });
+});

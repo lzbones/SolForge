@@ -29,3 +29,6 @@ import "./set7-alloyin.js";
 import "./set7-nekrium.js";
 import "./set7-tempys.js";
 import "./set7-uterra.js";
+import "./set21.js";
+import "./set22.js";
+import "./set23.js";

@@ -10,11 +10,16 @@
  *    extra play (state.playsLeft += 1) when the enemy's turn starts. Corners:
  *    the bonus is lost if Cacklebones leaves the field or is silenced before
  *    the enemy's turn starts (the real effect is player-level and persists).
- *  - Immortal Echoes: UNIMPLEMENTED. "At the end of this turn and your next
- *    turn" (L1/L2) and "at the end of each of your turns" (L3) need deferred
- *    player-level effects; the engine has no such hook and no persistent
- *    effect state (same gap as Lucid Echoes in set5-alloyin.ts). Registered
- *    so the defId resolves; playing it is currently a no-op. TODO.
+ *  - Immortal Echoes: the deferred Spawn is a player-level effect (registry
+ *    ref nekrium:immortal-echoes-N). L1/L2 attach it with 2 applications
+ *    ("this turn and your next turn" — opponent turn ends fail the
+ *    active-player condition and do not count down); L3 attaches it
+ *    permanently. "A creature that was destroyed this game" is approximated
+ *    from the discard pile (Varna convention): non-token creature cards in
+ *    the owner's discard are eligible at their current level. Corners: cards
+ *    that reached the discard without being destroyed (discards, level-up
+ *    copies) pollute the pool; Overload creatures go to the removed pile and
+ *    are missed; the Spawn does not remove the card from the discard.
  *  - Iniog, Carrion Demon L3: "When Iniog gains health, deal that much damage
  *    to the enemy player" is UNIMPLEMENTED — healCreature fires no trigger,
  *    and the Regenerate heal at turn start lands before turnStart triggers
@@ -50,10 +55,10 @@
  *  - Scourge Hydra's Forge can target itself ("a friendly creature"); the
  *    Hydra is the damage source.
  */
-import { registerCard } from "./registry.js";
+import { registerCard, registerPlayerEffect } from "./registry.js";
 import {
-  buffCreature, dealCreatureDamage, destroyCreature, getStats, grantKeyword, isDeadEffective,
-  spawnCreature,
+  addPlayerEffect, buffCreature, dealCreatureDamage, destroyCreature, getStats, grantKeyword,
+  isDeadEffective, spawnCreature,
 } from "../effects.js";
 import {
   allCreatures, findCreature, isDead, keywordValue, opposing,
@@ -456,9 +461,36 @@ registerCard({
   ),
 });
 
-// --- Immortal Echoes: UNIMPLEMENTED — deferred end-of-turn spawns need
-//     player-level turn hooks the engine does not have (see header note). TODO. ---
-registerCard({ defId: "immortal-echoes" });
+// --- Immortal Echoes: deferred end-of-turn Spawn via a player-level effect.
+//     L1/L2 attach it with 2 applications (this turn + your next turn); L3
+//     permanently. The destroyed-this-game pool is approximated from the
+//     discard pile (Varna convention — see header). ---
+for (const [ref, cap] of [["nekrium:immortal-echoes-1", 2], ["nekrium:immortal-echoes-2", 99]] as const) {
+  registerPlayerEffect(ref, {
+    trigger: "turnEnd",
+    condition: (game: Game, player: PlayerId) => game.state.active === player,
+    resolve: (ctx: Ctx, player: PlayerId) => {
+      const pool = ctx.game.state.players[player].discard.filter((inst) => {
+        if (inst.level > cap) return false;
+        const def = ctx.game.state.cards[inst.defId];
+        return !!def && isCreature(def) && def.rarity !== "Token";
+      });
+      if (!pool.length) return;
+      const pick = ctx.rng.pick(pool);
+      spawnCreature(ctx.game, ctx.events, player, pick.defId, pick.level, { lane: "random" });
+    },
+  });
+}
+registerCard({
+  defId: "immortal-echoes",
+  spell: Object.fromEntries(
+    ([[1, 1, 2], [2, 2, 2], [3, 2, null]] as const).map(([lvl, tier, remaining]) => [lvl, {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        addPlayerEffect(ctx.game, ctx.events, player, `nekrium:immortal-echoes-${tier}`, remaining);
+      },
+    }]),
+  ),
+});
 
 // --- Vigor Leech: give an enemy creature -N/-N, or give a friendly creature
 //     Regenerate N (mode chosen implicitly by the target — Countermeasure

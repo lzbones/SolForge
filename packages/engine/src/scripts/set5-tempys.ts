@@ -5,11 +5,12 @@
  * Approximation notes (same conventions as set4-tempys.ts / set5-nekrium.ts):
  *  - Blizzard Shaman: both picks (the moved creature and its destination) are
  *    random, so there is no choice; moveCreature no-ops on a blocked landing.
- *  - Draconic Echoes: UNIMPLEMENTED. "At the end of this turn and your next
- *    turn" (L1/L2) and "at the end of each of your turns" (L3) are deferred
- *    player-level effects; the engine has no such hook and no persistent
- *    effect state (same gap as Immortal Echoes in set5-nekrium.ts). Registered
- *    so the defId resolves; playing it is currently a no-op. TODO.
+ *  - Draconic Echoes: the deferred burn is a player-level effect (registry
+ *    ref tempys:draconic-echoes-N). L1/L2 attach it with 2 applications
+ *    ("this turn and your next turn" — opponent turn ends fail the
+ *    active-player condition and do not count down); L3 attaches it
+ *    permanently. "1 to N damage" is a uniform rng roll (Stinging Invocation
+ *    convention).
  *  - Everflame Aura: the two modes share one anyCreature choice and branch on
  *    the target's owner (Vigor Leech / Countermeasure convention).
  *  - Shatterbolt: "Negate Armor from a creature or player this turn" is
@@ -56,10 +57,10 @@
  *    Nekrium card in hand (hasFactionInHand, Spite Hydra convention) and fires
  *    on any creature's destruction, enemy or friendly.
  */
-import { registerCard } from "./registry.js";
+import { registerCard, registerPlayerEffect } from "./registry.js";
 import {
-  buffCreature, dealCreatureDamage, dealPlayerDamage, grantKeyword, moveCreature, negateKeyword,
-  spawnCreature,
+  addPlayerEffect, buffCreature, dealCreatureDamage, dealPlayerDamage, grantKeyword, moveCreature,
+  negateKeyword, spawnCreature,
 } from "../effects.js";
 import {
   allCreatures, findCreature, hasKeyword, opposing,
@@ -347,9 +348,28 @@ registerCard({
 // Spells (+ Ice Torrent support card for Torrent Valkyrie)
 // ============================================================
 
-// --- Draconic Echoes: UNIMPLEMENTED — deferred end-of-turn player damage
-//     needs player-level turn hooks the engine does not have (see header). TODO. ---
-registerCard({ defId: "draconic-echoes" });
+// --- Draconic Echoes: deferred end-of-turn burn via a player-level effect.
+//     "1 to N damage" is a uniform rng roll (Stinging Invocation convention);
+//     L1/L2 attach the effect with 2 applications, L3 permanently. ---
+for (const [ref, max] of [["tempys:draconic-echoes-1", 10], ["tempys:draconic-echoes-2", 20]] as const) {
+  registerPlayerEffect(ref, {
+    trigger: "turnEnd",
+    condition: (game: Game, player: PlayerId) => game.state.active === player,
+    resolve: (ctx: Ctx, player: PlayerId) => {
+      dealPlayerDamage(ctx.game, ctx.events, opposing(player), ctx.rng.int(max) + 1);
+    },
+  });
+}
+registerCard({
+  defId: "draconic-echoes",
+  spell: Object.fromEntries(
+    ([[1, 1, 2], [2, 2, 2], [3, 2, null]] as const).map(([lvl, tier, remaining]) => [lvl, {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        addPlayerEffect(ctx.game, ctx.events, player, `tempys:draconic-echoes-${tier}`, remaining);
+      },
+    }]),
+  ),
+});
 
 // --- Everflame Aura (N damage to an enemy creature, or Mobility M to a
 //     friendly creature — single choice, mode by target owner) ---

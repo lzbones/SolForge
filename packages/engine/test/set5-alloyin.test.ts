@@ -334,3 +334,33 @@ describe("War Machine (Forge: each other friendly creature gets +3 attack)", () 
     expect(g.state.players[0].lanes[2]!.attack).toBe(3);
   });
 });
+
+describe("Lucid Echoes (player effect: deferred end-of-turn draw)", () => {
+  it("L1 draws 1 extra card at the end of this turn and your next turn, then expires", () => {
+    const g = gameWith("lucid-echoes");
+    applyAction(g, { type: "playCard", handIndex: 0 });
+    expect(g.state.playerEffects).toHaveLength(1);
+    // end of turn discards the hand and redraws 5; the effect adds 1 on top
+    applyAction(g, { type: "endTurn" });
+    expect(g.state.players[0].hand.length).toBe(6);
+    applyAction(g, { type: "endTurn" }); // p1's turn: condition fails, no countdown
+    expect(g.state.playerEffects).toHaveLength(1);
+    applyAction(g, { type: "endTurn" }); // p0 again: second draw, then expires
+    expect(g.state.players[0].hand.length).toBe(6);
+    expect(g.state.playerEffects).toHaveLength(0);
+    applyAction(g, { type: "endTurn" });
+    applyAction(g, { type: "endTurn" }); // p0: expired — just the 5-card redraw
+    expect(g.state.players[0].hand.length).toBe(5);
+  });
+
+  it("L3 draws 2 extra cards at the end of each of your turns (permanent)", () => {
+    const g = gameWith("lucid-echoes");
+    addToHand(g, 0, "lucid-echoes", 3);
+    applyAction(g, { type: "playCard", handIndex: 5 });
+    endRound(g); // p0's turn end: 5-card redraw + 2
+    expect(g.state.players[0].hand.length).toBe(7);
+    endRound(g);
+    expect(g.state.players[0].hand.length).toBe(7);
+    expect(g.state.playerEffects).toHaveLength(1); // never expires
+  });
+});

@@ -23,17 +23,22 @@
  *  - Vault Intruder: "Look at the enemy player's hand" is information-only;
  *    there is no UI/AI disclosure channel to implement. Registered as a
  *    no-op so the defId resolves.
- *  - Nexus Bubble: UNIMPLEMENTED. "You get, 'Friendly Alloyin creatures in
- *    the center space get Armor 3'" grants the PLAYER an ongoing aura; the
- *    engine has no player-level ability/static hook (statics only come from
- *    creatures in play). Registered so the defId resolves; playing it is a
- *    no-op (Overload still sends it to the removed pile). TODO.
+ *  - Nexus Bubble: "You get, 'Friendly Alloyin creatures in the center space
+ *    get Armor 3'" is a continuous player aura, but player-level effects are
+ *    trigger-only. Approximated with permanent grants: the spell sweeps the
+ *    board immediately and a permanent turnStart player effect re-sweeps at
+ *    every turn start (per-game uid census dedups; Malice Hermit convention,
+ *    set5-uterra.ts). Corners: Armor is not revoked when a creature leaves
+ *    the center space; mid-turn entries/moves into the center wait for the
+ *    next turn start; a negateKeyword strips the grant permanently; a second
+ *    Nexus Bubble does not stack on already-granted creatures. Overload is
+ *    an engine keyword (the card is still removed).
  *  - Wipe Clean: "remove all abilities" = silence + strip all keywords
  *    (inherent/granted/temp) and granted ability refs. Static auras are NOT
  *    stripped (computeStatics does not check silenced and staticKeywords are
- *    recomputed by the engine), and "from each player" is a no-op — players
- *    have no abilities in the engine (only Nexus Bubble would grant one, and
- *    it is itself unimplemented).
+ *    recomputed by the engine), and "from each player" is a no-op — player-
+ *    level effects (state.playerEffects, e.g. Nexus Bubble's aura) are not
+ *    stripped either.
  *  - Sparky, Forge Guard Dog L3: spawns Forge Guardian Omega (a Set 1 token)
  *    at level 1 with overrideStats 20/20 — the printed Omega L1 token is
  *    25/25, but Sparky's text explicitly says "a 20/20 Forge Guardian Omega".
@@ -51,16 +56,16 @@
  *    is a substring/word match, which also counts e.g. Darkforged Robots as
  *    Robots (correct) and Robot Guardians as Robots.
  */
-import { registerCard, registerGranted } from "./registry.js";
+import { registerCard, registerGranted, registerPlayerEffect } from "./registry.js";
 import {
-  buffCreature, destroyCreature, drawCardsEffect, getStats, grantKeyword, isDeadEffective,
-  negateKeyword, spawnCreature,
+  addPlayerEffect, buffCreature, destroyCreature, drawCardsEffect, getStats, grantKeyword,
+  isDeadEffective, negateKeyword, spawnCreature,
 } from "../effects.js";
 import { allCreatures, findCreature, opposing } from "../state.js";
 import { maxLevel } from "../types.js";
 import type { Game } from "../game.js";
 import type { CardInstance, CreatureState, PlayerId } from "../state.js";
-import type { ChoiceAnswer, Ctx, TriggerPayload } from "../triggers.js";
+import type { ChoiceAnswer, Ctx, GameEvent, TriggerPayload } from "../triggers.js";
 
 // ---------- helpers ----------
 
@@ -501,5 +506,44 @@ registerCard({
   },
 });
 
-// --- Nexus Bubble (UNIMPLEMENTED — player-granted ongoing aura; see header TODO) ---
-registerCard({ defId: "nexus-bubble" });
+// --- Nexus Bubble: "You get, 'Friendly Alloyin creatures in the center space
+//     get Armor 3'" is a continuous player aura; player effects are
+//     trigger-only, so it is approximated with PERMANENT grants: the spell
+//     sweeps immediately and a permanent turnStart player effect re-sweeps
+//     every turn (a per-game uid census dedups the grants — Malice Hermit
+//     convention, set5-uterra.ts). Corners: the Armor is not revoked when a
+//     creature leaves the center space; a creature entering/moving into the
+//     center mid-turn waits for the next turn start; a negateKeyword strips
+//     the grant for good (the census blocks re-grant); a second Nexus Bubble
+//     is a no-op on already-granted creatures instead of stacking. ---
+const CENTER_LANE = 2;
+const nexusGranted = new WeakMap<Game, Set<number>>();
+
+function nexusSweep(game: Game, events: GameEvent[], player: PlayerId): void {
+  let granted = nexusGranted.get(game);
+  if (!granted) { granted = new Set(); nexusGranted.set(game, granted); }
+  for (const c of game.state.players[player].lanes) {
+    if (!c || c.lane !== CENTER_LANE || granted.has(c.uid)) continue;
+    if (game.state.cards[c.defId]?.faction !== "Alloyin") continue;
+    grantKeyword(events, c, { keyword: "Armor", value: 3 });
+    granted.add(c.uid);
+  }
+}
+
+registerPlayerEffect("alloyin:nexus-bubble", {
+  trigger: "turnStart", // both players' turn starts: top up late entries
+  resolve: (ctx: Ctx, player: PlayerId) => {
+    nexusSweep(ctx.game, ctx.events, player);
+  },
+});
+registerCard({
+  defId: "nexus-bubble",
+  spell: {
+    1: {
+      resolve: (ctx: Ctx, player: PlayerId) => {
+        nexusSweep(ctx.game, ctx.events, player); // aura applies immediately
+        addPlayerEffect(ctx.game, ctx.events, player, "alloyin:nexus-bubble", null);
+      },
+    },
+  },
+});
