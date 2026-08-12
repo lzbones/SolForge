@@ -10,8 +10,35 @@ import {
 import { answerChoice, choiceOwner, chooseAction } from "@solforge/ai";
 import set1 from "../../../tools/scraper/build/cards_Set_1.json" with { type: "json" };
 import set15 from "../../../tools/scraper/build/cards_Set_1.5.json" with { type: "json" };
+import set2 from "../../../tools/scraper/build/cards_Set_2.json" with { type: "json" };
+import set21 from "../../../tools/scraper/build/cards_Set_2.1.json" with { type: "json" };
+import set22 from "../../../tools/scraper/build/cards_Set_2.2.json" with { type: "json" };
+import set23 from "../../../tools/scraper/build/cards_Set_2.3.json" with { type: "json" };
+import set3 from "../../../tools/scraper/build/cards_Set_3.json" with { type: "json" };
+import set31 from "../../../tools/scraper/build/cards_Set_3.1.json" with { type: "json" };
+import set4 from "../../../tools/scraper/build/cards_Set_4.json" with { type: "json" };
+import set41 from "../../../tools/scraper/build/cards_Set_4.1.json" with { type: "json" };
+import set42 from "../../../tools/scraper/build/cards_Set_4.2.json" with { type: "json" };
+import set5 from "../../../tools/scraper/build/cards_Set_5.json" with { type: "json" };
+import set51 from "../../../tools/scraper/build/cards_Set_5.1.json" with { type: "json" };
+import set52 from "../../../tools/scraper/build/cards_Set_5.2.json" with { type: "json" };
+import set6 from "../../../tools/scraper/build/cards_Set_6.json" with { type: "json" };
+import set61 from "../../../tools/scraper/build/cards_Set_6.1.json" with { type: "json" };
+import set62 from "../../../tools/scraper/build/cards_Set_6.2.json" with { type: "json" };
+import set7 from "../../../tools/scraper/build/cards_Set_7.json" with { type: "json" };
+import set71 from "../../../tools/scraper/build/cards_Set_7.1.json" with { type: "json" };
+import set72 from "../../../tools/scraper/build/cards_Set_7.2.json" with { type: "json" };
+import set73 from "../../../tools/scraper/build/cards_Set_7.3.json" with { type: "json" };
 
-export const CARDS = loadCards(set1 as ScrapedSet, set15 as ScrapedSet);
+export const CARDS = loadCards(
+  set1 as ScrapedSet, set15 as ScrapedSet,
+  set2 as ScrapedSet, set21 as ScrapedSet, set22 as ScrapedSet, set23 as ScrapedSet,
+  set3 as ScrapedSet, set31 as ScrapedSet,
+  set4 as ScrapedSet, set41 as ScrapedSet, set42 as ScrapedSet,
+  set5 as ScrapedSet, set51 as ScrapedSet, set52 as ScrapedSet,
+  set6 as ScrapedSet, set61 as ScrapedSet, set62 as ScrapedSet,
+  set7 as ScrapedSet, set71 as ScrapedSet, set72 as ScrapedSet, set73 as ScrapedSet,
+);
 
 /** A starter-ish deck: 30 cards, legal (2 factions max, 3 copies max). */
 export function starterDeck(ids: string[]): string[] {
