@@ -77,7 +77,7 @@ function computeStatics(game: Game, c: CreatureState): { attack: number; health:
   const out = { attack: 0, health: 0, keywords: [] as KeywordValue[] };
   for (const side of [c.owner, opposing(c.owner)] as PlayerId[]) {
     for (const other of game.state.players[side].lanes) {
-      if (!other || isDead(other)) continue; // raw check: avoids getStats recursion
+      if (!other || isDead(other) || other.silenced) continue; // raw check: avoids getStats recursion
       const script = getLevelScript(other.defId, other.level);
       for (const s of script?.statics ?? []) s.apply(game, other, c, out);
     }
@@ -179,7 +179,7 @@ function pushDamageTriggers(
   if (source) {
     const evt: TriggerPayload = {
       sourceUid: source.uid, sourceDefId: source.defId, sourceOwner: source.owner,
-      amount, lane: target?.lane, targetPlayer: targetPlayer ?? undefined,
+      amount, lane: target?.lane, targetPlayer: targetPlayer ?? undefined, battle,
     };
     if (battle && targetPlayer !== null) {
       collectFor(game, source, "battleDamageToPlayer", evt);
@@ -194,7 +194,7 @@ function pushDamageTriggers(
   if (target) {
     collectFor(game, target, "damaged", {
       sourceUid: source?.uid, sourceDefId: source?.defId, sourceOwner: source?.owner,
-      amount, lane: target.lane,
+      amount, lane: target.lane, battle,
     });
     // board-wide: "whenever a creature is dealt damage" (Windspark Elemental etc.)
     for (const c of allCreatures(game.state)) {

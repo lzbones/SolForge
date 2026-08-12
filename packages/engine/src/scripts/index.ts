@@ -21,3 +21,7 @@ import "./set5-alloyin.js";
 import "./set5-nekrium.js";
 import "./set5-tempys.js";
 import "./set5-uterra.js";
+import "./set6-alloyin.js";
+import "./set6-nekrium.js";
+import "./set6-tempys.js";
+import "./set6-uterra.js";

@@ -79,6 +79,8 @@ export interface TriggerPayload {
   targetPlayer?: PlayerId | undefined;
   /** For enter-play events: whether the creature was played from hand (Forged). */
   fromHand?: boolean | undefined;
+  /** For damage events: whether the damage was battle damage. */
+  battle?: boolean | undefined;
 }
 
 export interface ChoiceRequest {
