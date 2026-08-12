@@ -175,7 +175,7 @@ export interface CardScript {
    * condition matches, a copy is Spawned and this card is discarded+leveled.
    */
   ambush?: {
-    watch: "thirdEnemyCard" | "enemyMove" | "enemyUnForgedEntry" | "enemyHeal";
+    watch: "thirdEnemyCard" | "enemyMove" | "enemyUnForgedEntry" | "enemyHeal" | "enemyPoisonDeath";
   };
 }
 

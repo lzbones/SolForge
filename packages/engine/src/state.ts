@@ -104,7 +104,7 @@ export interface GameState {
   /** Cards played by the active player this turn (Ambush: "third card played"). */
   cardsPlayedThisTurn: number;
   /** Per-turn occurrence flags watched by Ambush cards (reset each turn). */
-  turnFlags: { moved: boolean; unForgedEntry: boolean; healed: boolean };
+  turnFlags: { moved: boolean; unForgedEntry: boolean; healed: boolean; poisonDeath: boolean };
   /** Creatures destroyed this turn, per owner (reset each turn). */
   deathsThisTurn: [number, number];
   /** Identity of creatures destroyed this turn (reset each turn). */

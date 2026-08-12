@@ -431,6 +431,10 @@ export function deathCheck(game: Game, events: GameEvent[]): DeathInfo[] {
   for (const c of dead) {
     game.state.deathsThisTurn[c.owner]++;
     game.state.deathLog.push({ defId: c.defId, level: c.level, owner: c.owner });
+    // Ambush watch: a poisoned creature died during its controller's turn
+    if (keywordValue(c, "Poison") > 0 && game.state.active === c.owner) {
+      game.state.turnFlags.poisonDeath = true;
+    }
     game.state.players[c.owner].lanes[c.lane] = null;
     // creature Overload: removed from the game instead of hitting the discard
     const cdef = game.state.cards[c.defId];

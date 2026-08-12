@@ -70,7 +70,7 @@ export function createGame(
     cards, players, active: 0, turnNumber: 1, phase: "main",
     playsLeft: PLAYS_PER_TURN, battlesLeft: 1, winner: null, nextUid: uid,
     deathCounter: 0, pending: null, pendingQueue: [],
-    cardsPlayedThisTurn: 0, turnFlags: { moved: false, unForgedEntry: false, healed: false },
+    cardsPlayedThisTurn: 0, turnFlags: { moved: false, unForgedEntry: false, healed: false, poisonDeath: false },
     deathsThisTurn: [0, 0],
     deathLog: [],
   };
@@ -329,7 +329,8 @@ function checkAmbush(game: Game, events: GameEvent[]): void {
       (amb.watch === "thirdEnemyCard" && s.cardsPlayedThisTurn === 3) ||
       (amb.watch === "enemyMove" && s.turnFlags.moved) ||
       (amb.watch === "enemyUnForgedEntry" && s.turnFlags.unForgedEntry) ||
-      (amb.watch === "enemyHeal" && s.turnFlags.healed);
+      (amb.watch === "enemyHeal" && s.turnFlags.healed) ||
+      (amb.watch === "enemyPoisonDeath" && s.turnFlags.poisonDeath);
     if (!matched) continue;
     hand.splice(i, 1);
     const initial = collectInto(() => {
@@ -485,7 +486,7 @@ function startOfTurn(game: Game, events: GameEvent[]): void {
   const p = s.active;
   const pl = s.players[p];
   s.cardsPlayedThisTurn = 0;
-  s.turnFlags = { moved: false, unForgedEntry: false, healed: false };
+  s.turnFlags = { moved: false, unForgedEntry: false, healed: false, poisonDeath: false };
   s.deathsThisTurn = [0, 0];
   s.deathLog = [];
   // reset per-turn flags for everyone
