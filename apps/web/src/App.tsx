@@ -1,14 +1,16 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import {
-  applyAction, applyChoice, getStats, isOffensive,
-  type CreatureState, type Game, type GameEvent, type GameState,
+  applyAction, applyChoice, canAttack, getStats, hasKeyword, isOffensive,
+  type CreatureState, type Game, type GameEvent, type GameState, type PendingChoice,
 } from "@solforge/engine";
+import { choiceOwner } from "@solforge/ai";
 import {
   CARDS, getDeckOptions, hasSave, loadGame, newGameWith, saveGame, stepAi, uiSettings,
   type GameConfig,
 } from "./controller.js";
 import { artUrl, CardDetail, type HoverCard } from "./CardDetail.js";
 import { DeckBuilder } from "./DeckBuilder.js";
+import { isSfxEnabled, playSfx, setSfxEnabled } from "./sound.js";
 
 const HUMAN: 0 | 1 = 0;
 
@@ -112,6 +114,64 @@ interface Fx {
 
 let fxId = 1;
 
+// ---------- sequential battle planning ----------
+
+const LANE_STEP = 250; // ms between lane resolutions
+const LUNGE_MS = 500;  // matches the lunge keyframe duration
+
+interface BattlePlan {
+  /** lanes with any visible combat, in order */
+  lanes: number[];
+  /** expected playerDamage events (lane-timed), in engine emission order */
+  hits: { lane: number; player: 0 | 1 }[];
+}
+
+/**
+ * Predict which lanes fight (and where direct player damage lands) BEFORE the
+ * battle action mutates state. Mirrors runBattle's lane loop in the engine;
+ * the engine emits events lane-by-lane, the UI just plays them on a timeline.
+ */
+export function planBattle(game: Game): BattlePlan {
+  const s = game.state;
+  const lanes: number[] = [];
+  const hits: { lane: number; player: 0 | 1 }[] = [];
+  for (let lane = 0; lane < 5; lane++) {
+    const a = s.players[0].lanes[lane];
+    const b = s.players[1].lanes[lane];
+    const aFights = !!a && canAttack(a);
+    const bFights = !!b && canAttack(b);
+    if (!aFights && !bFights) continue;
+    const atkA = a ? getStats(game, a).attack : 0;
+    const atkB = b ? getStats(game, b).attack : 0;
+    const aDeals = aFights && atkA > 0;
+    const bDeals = bFights && atkB > 0;
+    // defenders hit back when attacked by a creature they can't attack themselves
+    const aBack = aFights && !!b && !canAttack(b) && atkB > 0;
+    const bBack = bFights && !!a && !canAttack(a) && atkA > 0;
+    if (!aDeals && !bDeals && !aBack && !bBack) continue; // nothing visible
+    lanes.push(lane);
+    if (aFights && a) {
+      if (b) {
+        if (atkA > 0 && hasKeyword(a, "Breakthrough") && atkA - Math.max(0, b.health - b.damage) > 0) {
+          hits.push({ lane, player: 1 });
+        }
+      } else if (atkA > 0) {
+        hits.push({ lane, player: 1 });
+      }
+    }
+    if (bFights && b) {
+      if (a) {
+        if (atkB > 0 && hasKeyword(b, "Breakthrough") && atkB - Math.max(0, a.health - a.damage) > 0) {
+          hits.push({ lane, player: 0 });
+        }
+      } else if (atkB > 0) {
+        hits.push({ lane, player: 0 });
+      }
+    }
+  }
+  return { lanes, hits };
+}
+
 export function App() {
   const gameRef = useRef<Game>(newGameWith({
     playerHealth: 120, aiHealth: 120, playerDeckId: "uterra", aiDeckId: "tempys",
@@ -122,18 +182,24 @@ export function App() {
   const [selectedHand, setSelectedHand] = useState<number | null>(null);
   const [hover, setHover] = useState<HoverCard | null>(null);
   const [fx, setFx] = useState<Fx[]>([]);
-  const [battling, setBattling] = useState(false);
+  const [lunging, setLunging] = useState<number[]>([]); // lanes currently playing their battle lunge
+  const [battlePlaying, setBattlePlaying] = useState(false); // sequential battle timeline running
   const [rankGlow, setRankGlow] = useState<0 | 1 | null>(null);
   const [aiRunning, setAiRunning] = useState(false);
   const [endDismissed, setEndDismissed] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [view, setView] = useState<"battle" | "decks">("battle");
+  const [sfxOn, setSfxOn] = useState(isSfxEnabled());
+  const [drag, setDrag] = useState<{ i: number; x: number; y: number } | null>(null);
+  const [dragLane, setDragLane] = useState<number | null>(null);
   const [cfg, setCfg] = useState<GameConfig>({
     playerHealth: 120, aiHealth: 120, playerDeckId: "uterra", aiDeckId: "tempys",
     aiDifficulty: "hard", aiSpeed: 900, seed: "",
   });
   const [saveNotice, setSaveNotice] = useState("");
   const aiTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const fxTimers = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const suppressClick = useRef(false);
   const historyRef = useRef<HTMLDivElement>(null);
   const prevLanes = useRef<Map<string, { defId: string; level: number }>>(new Map());
   const game = gameRef.current;
@@ -186,18 +252,18 @@ export function App() {
       } else if (e.type === "destroyed") {
         const ghost = prevLanes.current.get(`${e.player}:${e.lane}`);
         added.push({ id: fxId++, kind: "destroyed", player: e.player, lane: e.lane, ghost });
+        playSfx("destroy");
       } else if (e.type === "play" || e.type === "spawn") {
         const isSpell = e.type === "play" && e.lane === undefined;
         added.push({
           id: fxId++, kind: isSpell ? "cast" : "play",
           player: e.player, lane: e.lane, played: { defId: e.defId, level: e.level },
         });
-      } else if (e.type === "battle") {
-        setBattling(true);
-        setTimeout(() => setBattling(false), 550);
+        playSfx("play");
       } else if (e.type === "rankUp") {
         setRankGlow(e.player);
         setTimeout(() => setRankGlow(null), 1200);
+        playSfx("rankUp");
       }
     }
     if (added.length) {
@@ -207,11 +273,81 @@ export function App() {
     }
   };
 
-  const bump = (events: GameEvent[]) => {
-    spawnFx(events);
+  /** Timer helper tracked for cleanup on restart/unmount. */
+  const later = (ms: number, fn: () => void) => {
+    const t = setTimeout(() => {
+      fxTimers.current = fxTimers.current.filter((x) => x !== t);
+      fn();
+    }, ms);
+    fxTimers.current.push(t);
+  };
+  const clearFxTimers = () => {
+    for (const t of fxTimers.current) clearTimeout(t);
+    fxTimers.current = [];
+  };
+
+  /**
+   * Play a battle lane-by-lane: each fighting lane lunges and shows its damage
+   * numbers ~250ms apart; leftovers (deaths-trigger spawns, rank ups, game over)
+   * play after the last lane; onDone fires when the show is over.
+   */
+  const playBattleFx = (events: GameEvent[], plan: BattlePlan, onDone: () => void) => {
+    const perLane = new Map<number, GameEvent[]>();
+    const tail: GameEvent[] = [];
+    const hits = [...plan.hits];
+    const toLane = (lane: number, e: GameEvent) => {
+      const arr = perLane.get(lane) ?? [];
+      arr.push(e);
+      perLane.set(lane, arr);
+    };
+    let pastBattle = false;
+    for (const e of events) {
+      if (e.type === "battle") { pastBattle = true; continue; }
+      if (!pastBattle) { tail.push(e); continue; }
+      if (e.type === "damage" && e.target.lane !== undefined && plan.lanes.includes(e.target.lane)) {
+        toLane(e.target.lane, e);
+      } else if ((e.type === "healCreature" || e.type === "destroyed") && plan.lanes.includes(e.lane)) {
+        toLane(e.lane, e);
+      } else if (e.type === "playerDamage") {
+        // playerDamage carries no lane; consume the predicted hits in order for timing
+        const hi = hits.findIndex((h) => h.player === e.player);
+        if (hi >= 0) {
+          toLane(hits[hi]!.lane, e);
+          hits.splice(hi, 1);
+        } else {
+          tail.push(e);
+        }
+      } else {
+        tail.push(e);
+      }
+    }
+    setBattlePlaying(true);
+    plan.lanes.forEach((lane, i) => {
+      later(i * LANE_STEP, () => {
+        setLunging((old) => [...old, lane]);
+        later(LUNGE_MS, () => setLunging((old) => old.filter((l) => l !== lane)));
+        const evs = perLane.get(lane);
+        if (evs?.length) spawnFx(evs);
+        playSfx("clash");
+      });
+    });
+    later(plan.lanes.length * LANE_STEP + 150, () => {
+      spawnFx(tail);
+      setBattlePlaying(false);
+      onDone();
+    });
+  };
+
+  const bump = (events: GameEvent[], plan: BattlePlan | null, onDone: () => void) => {
     const entries = events.map(describeEvent).filter((x): x is LogEntry => x !== null);
     setLog((l) => mergeDiscards([...l, ...entries]).slice(-200));
     setVersion((v) => v + 1);
+    if (plan && plan.lanes.length > 0 && events.some((e) => e.type === "battle")) {
+      playBattleFx(events, plan, onDone);
+    } else {
+      spawnFx(events);
+      onDone();
+    }
   };
 
   /** Step the AI one action at a time so its turn is visible (animated). */
@@ -219,20 +355,23 @@ export function App() {
     setAiRunning(true);
     aiTimer.current = setTimeout(() => {
       snapshotLanes();
+      const plan = planBattle(game); // cheap; only used if this step is a battle
       const step = stepAi(game, HUMAN);
       if (step.done) {
         setAiRunning(false);
         if (steps > 0) setLog((l) => [...l, { kind: "marker", text: "—— 你的回合 ——" }]);
-        bump([]);
+        bump([], null, () => {});
         return;
       }
       if (steps === 0) setLog((l) => [...l, { kind: "marker", text: "—— 对方回合 ——" }]);
-      bump(step.events);
-      scheduleAiStep(steps + 1);
+      bump(step.events, plan, () => scheduleAiStep(steps + 1));
     }, uiSettings.aiSpeed);
   };
 
-  useEffect(() => () => { if (aiTimer.current) clearTimeout(aiTimer.current); }, []);
+  useEffect(() => () => {
+    if (aiTimer.current) clearTimeout(aiTimer.current);
+    clearFxTimers();
+  }, []);
 
   // auto-scroll history to the newest entry
   useEffect(() => {
@@ -243,35 +382,80 @@ export function App() {
   // dismiss hover on turn change
   useEffect(() => setHover(null), [s.turnNumber]);
 
-  const afterHumanAction = (events: GameEvent[]) => {
-    bump(events);
-    scheduleAiStep();
+  const afterHumanAction = (events: GameEvent[], plan: BattlePlan | null = null) => {
+    bump(events, plan, () => scheduleAiStep());
   };
 
   const pending = s.pending;
-  const inputLocked = !myTurn || !!pending || aiRunning;
+  const inputLocked = !myTurn || !!pending || aiRunning || battlePlaying;
 
   const clickHand = (i: number) => {
     if (inputLocked) return;
     setSelectedHand(selectedHand === i ? null : i);
   };
 
+  /** Play a creature from hand to a lane (shared by click-select and drag-drop). */
+  const playCreatureAt = (i: number, lane: number) => {
+    if (inputLocked) return;
+    const inst = me.hand[i];
+    if (!inst || !CARDS[inst.defId]?.types.includes("Creature")) return;
+    snapshotLanes();
+    snapshotForCancel();
+    try {
+      afterHumanAction(applyAction(game, { type: "playCard", handIndex: i, lane }));
+    } catch { /* illegal */ }
+    if (!game.state.pending) preActionState.current = null;
+    setSelectedHand(null);
+  };
+
   const clickLane = (lane: number) => {
     if (inputLocked) return;
-    if (selectedHand !== null) {
-      const inst = me.hand[selectedHand];
-      if (inst && CARDS[inst.defId]?.types.includes("Creature")) {
-        snapshotLanes();
-        snapshotForCancel();
-        try {
-          afterHumanAction(applyAction(game, { type: "playCard", handIndex: selectedHand, lane }));
-        } catch { /* illegal */ }
-        if (!game.state.pending) preActionState.current = null;
-        setSelectedHand(null);
-        return;
-      }
-    }
+    if (selectedHand !== null) playCreatureAt(selectedHand, lane);
     setSelectedHand(null);
+  };
+
+  /** Player-row lane under a screen point, if any (drag-drop target). */
+  const laneFromPoint = (x: number, y: number): number | null => {
+    const el = document.elementFromPoint(x, y);
+    const slot = el?.closest("[data-drop-lane]");
+    if (!slot) return null;
+    const v = Number(slot.getAttribute("data-drop-lane"));
+    return Number.isInteger(v) ? v : null;
+  };
+
+  /** Pointer-based drag: creatures can be dragged from hand onto a lane. */
+  const onHandPointerDown = (e: ReactPointerEvent, i: number) => {
+    if (e.button !== 0 || inputLocked) return;
+    const inst = me.hand[i];
+    if (!inst || !CARDS[inst.defId]?.types.includes("Creature")) return;
+    const startX = e.clientX;
+    const startY = e.clientY;
+    let active = false;
+    const move = (ev: PointerEvent) => {
+      if (!active) {
+        if (Math.hypot(ev.clientX - startX, ev.clientY - startY) < 8) return;
+        active = true;
+        setSelectedHand(null);
+        setHover(null);
+      }
+      setDrag({ i, x: ev.clientX, y: ev.clientY });
+      setDragLane(laneFromPoint(ev.clientX, ev.clientY));
+    };
+    const up = (ev: PointerEvent) => {
+      window.removeEventListener("pointermove", move);
+      window.removeEventListener("pointerup", up);
+      if (!active) return; // plain click — let onClick handle it
+      // Swallow the click fired after this drag (it may land on a common
+      // ancestor instead of the card, so auto-clear after this event tick).
+      suppressClick.current = true;
+      setTimeout(() => { suppressClick.current = false; }, 0);
+      const lane = laneFromPoint(ev.clientX, ev.clientY);
+      setDrag(null);
+      setDragLane(null);
+      if (lane !== null) playCreatureAt(i, lane);
+    };
+    window.addEventListener("pointermove", move);
+    window.addEventListener("pointerup", up);
   };
 
   const playSpell = (i: number) => {
@@ -305,9 +489,14 @@ export function App() {
 
   const restart = () => {
     if (aiTimer.current) clearTimeout(aiTimer.current);
+    clearFxTimers();
     gameRef.current = newGameWith(cfg);
     setLog([{ kind: "marker", text: "—— 你的回合 ——" }]);
     setFx([]);
+    setLunging([]);
+    setBattlePlaying(false);
+    setDrag(null);
+    setDragLane(null);
     setSelectedHand(null);
     setHover(null);
     setAiRunning(false);
@@ -329,9 +518,14 @@ export function App() {
       return;
     }
     if (aiTimer.current) clearTimeout(aiTimer.current);
+    clearFxTimers();
     gameRef.current = loaded;
     setLog([{ kind: "marker", text: "—— 读取存档 ——" }]);
     setFx([]);
+    setLunging([]);
+    setBattlePlaying(false);
+    setDrag(null);
+    setDragLane(null);
     setSelectedHand(null);
     setHover(null);
     setAiRunning(false);
@@ -342,6 +536,26 @@ export function App() {
 
   const choiceTargets = new Set(pending?.request.options ?? []);
   const deckOpts = showSettings ? getDeckOptions() : [];
+
+  // pending choice that the human must answer with a creature target
+  const TARGET_KINDS = ["friendlyCreature", "enemyCreature", "anyCreature", "anyCreatureOrPlayer"];
+  const targeting = !!pending && choiceOwner(game) === HUMAN && TARGET_KINDS.includes(pending.request.kind);
+  const targetingId = targeting && pending ? pending.request.id : null;
+
+  // "pick a target" cue whenever a new human target choice appears
+  useEffect(() => {
+    if (targetingId) playSfx("select");
+  }, [targetingId]);
+
+  // Esc cancels a cancelable pending play (undo via the pre-action snapshot)
+  useEffect(() => {
+    if (!pending) return;
+    const key = (e: KeyboardEvent) => {
+      if (e.key === "Escape") cancelPending();
+    };
+    window.addEventListener("keydown", key);
+    return () => window.removeEventListener("keydown", key);
+  }, [pending]);
 
   return (
     <div className="app">
@@ -364,17 +578,38 @@ export function App() {
       </header>
 
       <div style={{ display: view === "battle" ? "block" : "none" }}>
-      <div className={`board ${battling ? "battling" : ""}`}>
+      <div className="board"
+        onClick={(e) => {
+          // blank click while targeting cancels the pending play (valid targets stopPropagation)
+          if (!pending || !preActionState.current) return;
+          if ((e.target as HTMLElement).closest(".middle")) return;
+          cancelPending();
+        }}
+        onContextMenu={(e) => {
+          if (pending && preActionState.current) {
+            e.preventDefault();
+            cancelPending();
+          }
+        }}>
         <PlayerPlate player={ai} side={1} />
-        <LaneRow creatures={ai.lanes} game={game} enemy battling={battling}
+        <LaneRow creatures={ai.lanes} game={game} enemy lunging={lunging}
           hoverable
           onHover={setHover}
           highlight={pending ? choiceTargets : null}
           onSlotClick={pending ? (uid) => answerChoice(uid) : undefined} />
         <div className="middle">
           {aiRunning && s.phase !== "gameOver" && <span className="ai-thinking">对方行动中…</span>}
+          {battlePlaying && <span className="ai-thinking">战斗中…</span>}
           <button disabled={inputLocked || s.battlesLeft <= 0}
-            onClick={() => { snapshotLanes(); afterHumanAction(applyAction(game, { type: "battle" })); }}>
+            onClick={() => {
+              snapshotLanes();
+              const plan = planBattle(game);
+              let events: GameEvent[];
+              try {
+                events = applyAction(game, { type: "battle" });
+              } catch { return; }
+              afterHumanAction(events, plan);
+            }}>
             ⚔ Battle
           </button>
           <button disabled={inputLocked}
@@ -385,14 +620,17 @@ export function App() {
             <div className="gameover">{s.winner === HUMAN ? "你赢了！" : s.winner === 1 ? "你输了" : "平局"}</div>
           )}
         </div>
-        <LaneRow creatures={me.lanes} game={game} battling={battling}
+        <LaneRow creatures={me.lanes} game={game} lunging={lunging}
           hoverable
+          droppable
+          dropLane={dragLane}
           onHover={setHover}
           highlight={pending ? choiceTargets : null}
           onLaneClick={clickLane}
           onSlotClick={pending ? (uid) => answerChoice(uid) : undefined} />
         <PlayerPlate player={me} side={0} />
         <FxLayer fx={fx} />
+        {targeting && pending && <TargetArrow pending={pending} />}
       </div>
 
       {pending && (
@@ -448,11 +686,28 @@ export function App() {
             <CardFace key={inst.uid} defId={def.id} level={inst.level}
               selected={selectedHand === i}
               onHover={setHover}
+              onPointerDown={(e) => onHandPointerDown(e, i)}
               onLevelUp={myTurn && !pending && !aiRunning && s.playsLeft > 0 ? () => levelUpFromHand(i) : undefined}
-              onClick={() => (isCreature ? clickHand(i) : playSpell(i))} />
+              onClick={() => {
+                if (suppressClick.current) { suppressClick.current = false; return; }
+                if (isCreature) clickHand(i); else playSpell(i);
+              }} />
           );
         })}
       </div>
+
+      {drag && (() => {
+        const inst = me.hand[drag.i];
+        const def = inst && CARDS[inst.defId];
+        if (!inst || !def) return null;
+        const art = artUrl(def, inst.level);
+        return (
+          <div className="drag-ghost" style={{ left: drag.x, top: drag.y }}>
+            {art && <img src={art} alt={def.name} draggable={false} />}
+            <div className="fx-play-name">L{inst.level} {def.name}</div>
+          </div>
+        );
+      })()}
 
       {showSettings && (
         <div className="end-overlay" onClick={() => setShowSettings(false)}>
@@ -511,6 +766,21 @@ export function App() {
                 <option value={400}>快</option>
                 <option value={900}>中</option>
                 <option value={1600}>慢</option>
+              </select>
+              <span className="set-hint">即时生效</span>
+            </div>
+
+            <div className="set-row">
+              <label>音效</label>
+              <select value={sfxOn ? "on" : "off"}
+                onChange={(e) => {
+                  const v = e.target.value === "on";
+                  setSfxOn(v);
+                  setSfxEnabled(v);
+                  if (v) playSfx("select");
+                }}>
+                <option value="on">开</option>
+                <option value="off">关</option>
               </select>
               <span className="set-hint">即时生效</span>
             </div>
@@ -648,9 +918,12 @@ function LaneRow(props: {
   creatures: (CreatureState | null)[];
   game: Game;
   enemy?: boolean;
-  battling?: boolean;
+  lunging?: number[] | undefined;
   hoverable?: boolean;
   highlight?: Set<number> | null;
+  /** player row accepts drag-drops; dragLane = lane currently hovered by a drag */
+  droppable?: boolean;
+  dropLane?: number | null | undefined;
   onHover?: ((h: HoverCard | null) => void) | undefined;
   onLaneClick?: ((lane: number) => void) | undefined;
   onSlotClick?: ((uid: number) => void) | undefined;
@@ -661,8 +934,17 @@ function LaneRow(props: {
         const hl = cr && props.highlight?.has(cr.uid);
         return (
           <div key={lane}
-            className={`lane-slot ${hl ? "targetable" : ""}`}
-            onClick={() => (cr && props.onSlotClick ? props.onSlotClick(cr.uid) : props.onLaneClick?.(lane))}
+            className={`lane-slot ${hl ? "targetable" : ""} ${props.dropLane === lane ? "drop-target" : ""}`}
+            {...(cr ? { "data-uid": cr.uid } : {})}
+            {...(props.droppable ? { "data-drop-lane": lane } : {})}
+            onClick={(e) => {
+              if (cr && props.onSlotClick) {
+                e.stopPropagation(); // during targeting, board clicks mean "cancel"
+                if (props.highlight?.has(cr.uid)) props.onSlotClick(cr.uid);
+                return;
+              }
+              props.onLaneClick?.(lane);
+            }}
             onMouseEnter={() => {
               if (!cr || !props.onHover) return;
               const def = CARDS[cr.defId]!;
@@ -678,7 +960,7 @@ function LaneRow(props: {
             }}
             onMouseLeave={() => props.onHover?.(null)}>
             {cr
-              ? <CreatureCard c={cr} game={props.game} battling={props.battling ?? false} enemy={!!props.enemy} />
+              ? <CreatureCard c={cr} game={props.game} lunging={props.lunging?.includes(lane) ?? false} enemy={!!props.enemy} />
               : <span className="empty">{lane + 1}</span>}
           </div>
         );
@@ -687,47 +969,114 @@ function LaneRow(props: {
   );
 }
 
-function CreatureCard({ c, game, battling, enemy }: { c: CreatureState; game: Game; battling: boolean; enemy: boolean }) {
+/** Level indicator dots: filled up to the card's current level. */
+function LevelPips({ total, level }: { total: number; level: number }) {
+  return (
+    <span className="pips">
+      {Array.from({ length: total }, (_, i) => (
+        <span key={i} className={`pip ${i < level ? "on" : ""}`} />
+      ))}
+    </span>
+  );
+}
+
+function CreatureCard({ c, game, lunging, enemy }: { c: CreatureState; game: Game; lunging: boolean; enemy: boolean }) {
   const def = CARDS[c.defId]!;
   const stats = getStats(game, c);
   const art = artUrl(def, c.level);
   const ready = isOffensive(c);
   return (
-    <div className={`creature ${ready ? "ready" : "defensive"} ${battling && ready ? (enemy ? "lunge-down" : "lunge-up") : ""}`}>
-      {art && <img src={art} alt={def.name} />}
-      <div className="name">L{c.level} {def.name}</div>
-      <div className="stats">
-        <span className="atk">{stats.attack}</span> / <span className={c.damage > 0 ? "hp hurt" : "hp"}>{stats.health - c.damage}</span>
+    <div className={`creature faction-${def.faction.toLowerCase()} rarity-${def.rarity.toLowerCase()} ${ready ? "ready" : "defensive"} ${lunging && ready ? (enemy ? "lunge-down" : "lunge-up") : ""}`}>
+      <div className="cr-name">
+        <span className="cname">L{c.level} {def.name}</span>
+        <LevelPips total={def.levels.length} level={c.level} />
       </div>
+      <div className="cr-art">
+        {art && <img src={art} alt={def.name} draggable={false} />}
+        <span className="badge atk">{stats.attack}</span>
+        <span className={`badge hp ${c.damage > 0 ? "hurt" : ""}`}>{stats.health - c.damage}</span>
+      </div>
+      <div className="rarity-bar" />
     </div>
   );
 }
 
-function CardFace({ defId, level, selected, onClick, onHover, onLevelUp }: {
+function CardFace({ defId, level, selected, onClick, onHover, onLevelUp, onPointerDown }: {
   defId: string; level: number; selected: boolean;
   onClick: () => void;
   onHover: (h: HoverCard | null) => void;
   /** 弃牌升级（discard-to-level）；undefined 表示不可用 */
   onLevelUp?: (() => void) | undefined;
+  /** drag-to-play start (hand cards only) */
+  onPointerDown?: ((e: ReactPointerEvent) => void) | undefined;
 }) {
   const def = CARDS[defId]!;
   const lvl = def.levels.find((l) => l.level === level) ?? def.levels[0]!;
   const art = artUrl(def, level);
   const canLevel = level < def.levels.length;
   return (
-    <div className={`card faction-${def.faction.toLowerCase()} ${selected ? "selected" : ""}`}
+    <div className={`card faction-${def.faction.toLowerCase()} rarity-${def.rarity.toLowerCase()} ${selected ? "selected" : ""}`}
       onClick={onClick}
+      onPointerDown={onPointerDown}
       onMouseEnter={() => onHover({ def, level })}
       onMouseLeave={() => onHover(null)}>
-      {art && <img src={art} alt={def.name} />}
-      <div className="name">L{level} {def.name}</div>
-      {lvl.attack !== null && <div className="stats">{lvl.attack} / {lvl.health}</div>}
+      <div className="card-name">
+        <span className="cname">L{level} {def.name}</span>
+        <LevelPips total={def.levels.length} level={level} />
+      </div>
+      <div className="card-art">
+        {art && <img src={art} alt={def.name} draggable={false} />}
+        {lvl.attack !== null && (
+          <>
+            <span className="badge atk">{lvl.attack}</span>
+            <span className="badge hp">{lvl.health}</span>
+          </>
+        )}
+      </div>
       {canLevel && onLevelUp && (
         <button className="lv-btn" title={`弃掉这张牌，将 L${level + 1} 版本放入弃牌堆（消耗 1 个行动）`}
           onClick={(e) => { e.stopPropagation(); onLevelUp(); }}>
           ↟ 升级
         </button>
       )}
+      <div className="rarity-bar" />
     </div>
+  );
+}
+
+/** Curved SVG arrow from the pending choice's source to the cursor (Hearthstone-style). */
+function TargetArrow({ pending }: { pending: PendingChoice }) {
+  const [pos, setPos] = useState<{ x: number; y: number } | null>(null);
+  useEffect(() => {
+    const move = (e: MouseEvent) => setPos({ x: e.clientX, y: e.clientY });
+    window.addEventListener("mousemove", move);
+    return () => window.removeEventListener("mousemove", move);
+  }, []);
+  if (!pos) return null;
+  const r = pending.resume;
+  const uid = r.kind === "trigger" || r.kind === "activate" ? r.selfUid : null;
+  let el = uid !== null ? document.querySelector(`[data-uid="${uid}"]`) : null;
+  if (!el) el = document.querySelector(".choice-bar"); // spells: arrow from the prompt bar
+  if (!el) return null;
+  const b = el.getBoundingClientRect();
+  const sx = b.left + b.width / 2;
+  const sy = b.top + b.height / 2;
+  const dx = pos.x - sx;
+  const dy = pos.y - sy;
+  const len = Math.hypot(dx, dy) || 1;
+  const bend = Math.min(110, Math.max(24, len * 0.25));
+  // quadratic control point: perpendicular to the chord, biased upward
+  const cx = (sx + pos.x) / 2 + (-dy / len) * bend * 0.6;
+  const cy = (sy + pos.y) / 2 + (dx / len) * bend * 0.6 - bend * 0.4;
+  return (
+    <svg className="target-arrow">
+      <defs>
+        <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5"
+          markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M 0 0 L 10 5 L 0 10 z" />
+        </marker>
+      </defs>
+      <path d={`M ${sx} ${sy} Q ${cx} ${cy} ${pos.x} ${pos.y}`} markerEnd="url(#arrowhead)" />
+    </svg>
   );
 }

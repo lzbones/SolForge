@@ -24,12 +24,47 @@ header h1 { font-size: 18px; margin: 4px 0; display: inline-block; }
 .player-plate .hp { color: #ff7b72; }
 .player-plate .rank { color: #7dc4ff; }
 
-.creature { text-align: center; font-size: 12px; animation: dropIn 0.35s ease; }
-.creature img { width: 90px; height: 90px; border-radius: 6px; object-fit: cover; }
-.creature.defensive img { outline: 2px solid #8a6d3b; filter: saturate(0.75); }
-.creature.ready img { outline: 2px solid #3b8a54; }
-.creature .stats { font-weight: 700; }
-.creature .hp.hurt { color: #ff7b72; }
+/* ---------- creature frames (on board) ---------- */
+.creature { position: relative; width: 98px; margin: 0 auto; text-align: left; font-size: 10px;
+  border: 2px solid #33475a; border-radius: 8px; background: #16222e; padding: 3px 3px 6px;
+  animation: dropIn 0.35s ease; user-select: none; }
+.creature.faction-alloyin { border-color: #4aa3df; }
+.creature.faction-nekrium { border-color: #9b59b6; }
+.creature.faction-tempys { border-color: #e05545; }
+.creature.faction-uterra { border-color: #58b368; }
+.creature.ready { box-shadow: 0 0 8px #3b8a5455; }
+.creature.defensive { filter: saturate(0.8); }
+.cr-name { display: flex; align-items: center; justify-content: space-between; gap: 3px;
+  font-weight: 700; background: #0d141c; border-radius: 4px; padding: 1px 4px; margin-bottom: 3px; }
+.cr-name .cname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cr-art { position: relative; }
+.cr-art img { width: 86px; height: 86px; border-radius: 5px; object-fit: cover; display: block; margin: 0 auto; }
+.creature.defensive .cr-art img { outline: 2px solid #8a6d3b; }
+.creature.ready .cr-art img { outline: 2px solid #3b8a54; }
+
+/* attack / health badges (shared by hand cards and board creatures) */
+.badge { position: absolute; bottom: -5px; width: 26px; height: 26px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px;
+  color: #fff; text-shadow: 0 1px 2px #000; border: 2px solid #0d141c; box-shadow: 0 1px 4px #000a; }
+.badge.atk { left: -3px; background: radial-gradient(circle at 35% 35%, #d99a4e, #8a5a1e); }
+.badge.hp { right: -3px; background: radial-gradient(circle at 35% 35%, #5fc97e, #2a6e42); }
+.badge.hp.hurt { background: radial-gradient(circle at 35% 35%, #e0776b, #96352b); }
+.creature .badge { width: 22px; height: 22px; font-size: 11px; }
+
+/* level pips */
+.pips { display: inline-flex; gap: 2px; flex: 0 0 auto; }
+.pip { width: 6px; height: 6px; border-radius: 50%; background: #33475a; }
+.pip.on { background: #ffd166; box-shadow: 0 0 3px #ffd166; }
+.creature .pip { width: 5px; height: 5px; }
+
+/* rarity bar (green / blue / yellow / red) */
+.rarity-bar { position: absolute; left: 8px; right: 8px; bottom: 2px; height: 3px; border-radius: 2px; }
+.creature .rarity-bar { left: 6px; right: 6px; bottom: 1px; height: 2px; }
+.rarity-common .rarity-bar { background: #58b368; }
+.rarity-rare .rarity-bar { background: #4aa3df; }
+.rarity-heroic .rarity-bar { background: #ffd166; }
+.rarity-legendary .rarity-bar { background: #e05545; }
+.rarity-token .rarity-bar { background: #6b7a89; }
 
 /* battle lunge */
 .creature.lunge-up { animation: lungeUp 0.5s ease; }
@@ -43,21 +78,39 @@ button:disabled { opacity: 0.4; cursor: default; }
 
 /* ---------- hand ---------- */
 .hand { display: flex; gap: 8px; overflow-x: auto; padding: 8px 0; }
-.card { width: 130px; flex: 0 0 auto; border: 2px solid #33475a; border-radius: 8px; padding: 6px;
-  cursor: pointer; font-size: 11px; background: #16222e; transition: transform 0.12s, border-color 0.12s;
-  animation: slideIn 0.3s ease; }
+.card { width: 130px; flex: 0 0 auto; position: relative; border: 2px solid #33475a; border-radius: 10px;
+  padding: 5px 6px 10px; cursor: pointer; font-size: 11px; background: #16222e;
+  transition: transform 0.12s, border-color 0.12s, box-shadow 0.12s; animation: slideIn 0.3s ease;
+  user-select: none; touch-action: none; }
 .card:hover { transform: translateY(-4px); }
-.card.selected { border-color: #ffd166; transform: translateY(-8px); }
-.card img { width: 100%; border-radius: 4px; }
-.card .name { font-weight: 700; margin: 4px 0 2px; }
-.card .stats { font-weight: 700; }
-.card .lv-btn { margin-top: 4px; width: 100%; padding: 2px 0; font-size: 10px;
+.card.faction-alloyin { border-color: #4aa3df; box-shadow: inset 0 0 14px #4aa3df1e; }
+.card.faction-nekrium { border-color: #9b59b6; box-shadow: inset 0 0 14px #9b59b61e; }
+.card.faction-tempys { border-color: #e05545; box-shadow: inset 0 0 14px #e055451e; }
+.card.faction-uterra { border-color: #58b368; box-shadow: inset 0 0 14px #58b3681e; }
+.card.selected { border-color: #ffd166; transform: translateY(-8px); box-shadow: 0 0 12px #ffd16666; }
+.card-name { display: flex; align-items: center; justify-content: space-between; gap: 4px;
+  font-weight: 700; background: #0d141c; border-radius: 5px; padding: 2px 6px; margin-bottom: 4px; }
+.card-name .cname { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card-art { position: relative; }
+.card-art img { width: 100%; border-radius: 4px; display: block; }
+.card .lv-btn { margin-top: 8px; width: 100%; padding: 2px 0; font-size: 10px;
   background: #2a3a1e; border-color: #5a8236; color: #b8e08a; }
 .card .lv-btn:hover { background: #374d27; }
 .faction-alloyin { border-top-color: #4aa3df; }
 .faction-nekrium { border-top-color: #9b59b6; }
 .faction-tempys { border-top-color: #e05545; }
 .faction-uterra { border-top-color: #58b368; }
+
+/* drag-to-play ghost following the pointer */
+.drag-ghost { position: fixed; width: 110px; transform: translate(-50%, -65%); pointer-events: none;
+  z-index: 60; opacity: 0.92; text-align: center; }
+.drag-ghost img { width: 110px; height: 110px; border-radius: 8px; box-shadow: 0 8px 28px #000c; }
+.lane-slot.drop-target { border: 2px solid #6fe38a; box-shadow: 0 0 14px #6fe38a88; }
+
+/* targeting arrow while a choice is pending */
+.target-arrow { position: fixed; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 35; }
+.target-arrow path { stroke: #ffd166; stroke-width: 4; fill: none; filter: drop-shadow(0 0 6px #ffd16688); }
+.target-arrow marker path { fill: #ffd166; }
 
 /* ---------- hover detail panel ---------- */
 .card-detail { position: fixed; left: 16px; top: 60px; width: 330px; z-index: 30;
