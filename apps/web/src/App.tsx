@@ -745,12 +745,13 @@ export function App() {
               <label>AI 难度</label>
               <select value={cfg.aiDifficulty}
                 onChange={(e) => {
-                  const v = e.target.value as "easy" | "hard";
+                  const v = e.target.value as "easy" | "hard" | "expert";
                   setCfg({ ...cfg, aiDifficulty: v });
                   uiSettings.aiDifficulty = v;
                 }}>
                 <option value="easy">简单</option>
                 <option value="hard">困难</option>
+                <option value="expert">专家（MCTS）</option>
               </select>
               <span className="set-hint">即时生效</span>
             </div>

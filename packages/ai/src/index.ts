@@ -3,7 +3,8 @@
  *
  * - evaluateState(game, player): heuristic position score from `player`'s view.
  * - chooseAction(game, player, difficulty): "easy" is a fixed heuristic;
- *   "hard" runs a 1-ply greedy search over all legal actions on cloned games.
+ *   "hard" runs a 1-ply greedy search over all legal actions on cloned games;
+ *   "expert" runs MCTS (see mcts.ts).
  * - answerChoice(game, player): smart answers for pending ChoiceRequests.
  * - cloneGame(game): deep copy for simulation (state is pure data; the rng
  *   closure is rebuilt with a fixed seed — AI simulation does not need RNG
@@ -14,8 +15,9 @@ import {
   legalActions, makeRng, opposing, RuleError,
   type Action, type ChoiceAnswer, type CreatureState, type Game, type PlayerId,
 } from "@solforge/engine";
+import { mctsAction } from "./mcts.js";
 
-export type Difficulty = "easy" | "hard";
+export type Difficulty = "easy" | "hard" | "expert";
 
 // ---------- cloning ----------
 
@@ -51,15 +53,25 @@ const W_LEVELED = 1.5; // per leveled-up copy waiting in the discard pile
 const W_TRADE = 3; // winning the lane trade in combat
 
 function effectiveHp(game: Game, c: CreatureState): number {
-  return getStats(game, c).health - c.damage;
+  return finite(getStats(game, c).health) - finite(c.damage);
+}
+
+/**
+ * Stats can be NaN in a degenerate corner: cards scraped with "*" stats
+ * (tokens like Seedling) load as NaN, and a rollout can end up with such a
+ * card in hand and play it. Treat non-finite numbers as 0 so the evaluation
+ * always stays finite.
+ */
+function finite(x: number): number {
+  return Number.isFinite(x) ? x : 0;
 }
 
 /** Heuristic worth of a creature on the board (0 if it is dying). */
 function creatureValue(game: Game, c: CreatureState): number {
   const st = getStats(game, c);
-  const hp = st.health - c.damage;
+  const hp = finite(st.health) - finite(c.damage);
   if (hp <= 0) return 0;
-  let v = 2 * st.attack + hp;
+  let v = 2 * finite(st.attack) + hp;
   // small keyword adjustments
   if (hasKeyword(c, "Breakthrough")) v += 3;
   if (hasKeyword(c, "Aggressive")) v += 2;
@@ -78,7 +90,7 @@ export function evaluateState(game: Game, player: PlayerId): number {
   const me = s.players[player];
   const foe = s.players[opposing(player)];
   let score = 0;
-  score += W_HEALTH * (me.health - foe.health);
+  score += W_HEALTH * (finite(me.health) - finite(foe.health));
   score += W_RANK * (me.rank - foe.rank);
   score += W_HAND * (me.hand.length - foe.hand.length);
   const leveled = (p: typeof me): number => p.discard.reduce((n, c) => n + (c.level > 1 ? 1 : 0), 0);
@@ -192,6 +204,7 @@ export function answerChoice(game: Game, player: PlayerId): ChoiceAnswer {
 // ---------- action selection ----------
 
 export function chooseAction(game: Game, player: PlayerId, difficulty: Difficulty): Action {
+  if (difficulty === "expert") return mctsAction(game, player);
   return difficulty === "hard" ? hardAction(game, player) : easyAction(game);
 }
 

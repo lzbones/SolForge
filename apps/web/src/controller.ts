@@ -68,14 +68,14 @@ export interface GameConfig {
   aiHealth: number;
   playerDeckId: string;
   aiDeckId: string;
-  aiDifficulty: "easy" | "hard";
+  aiDifficulty: "easy" | "hard" | "expert";
   aiSpeed: number; // ms per AI step
   seed: string;    // "" = random
 }
 
 /** Live-mutable UI settings (read by the AI driver each step). */
 export const uiSettings = {
-  aiDifficulty: "hard" as "easy" | "hard",
+  aiDifficulty: "hard" as "easy" | "hard" | "expert",
   aiSpeed: 900,
 };
 
